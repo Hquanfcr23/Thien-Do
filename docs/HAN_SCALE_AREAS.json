@@ -1,0 +1,362 @@
+[
+  {
+    "id": "toan-vung",
+    "huyen": 24,
+    "km2": 237254,
+    "sumChildrenKm2": 237254.30998530943,
+    "unionKm2": 237254.30998530943,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh",
+    "huyen": 7,
+    "km2": 69561,
+    "sumChildrenKm2": 69560.87895973194,
+    "unionKm2": 69560.87895973194,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-1",
+    "huyen": 5,
+    "km2": 40202,
+    "sumChildrenKm2": 40201.64569573151,
+    "unionKm2": 40201.64569573151,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1",
+    "huyen": 3,
+    "km2": 21692,
+    "sumChildrenKm2": 21691.826203938403,
+    "unionKm2": 21691.826203938403,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 6866,
+    "sumChildrenKm2": 6865.640527480153,
+    "unionKm2": 6865.640527480153,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 6864,
+    "sumChildrenKm2": 6863.7498446982745,
+    "unionKm2": 6863.7498446982745,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 7962,
+    "sumChildrenKm2": 7962.435831759976,
+    "unionKm2": 7962.435831759976,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-2",
+    "huyen": 2,
+    "km2": 18510,
+    "sumChildrenKm2": 18509.81949179311,
+    "unionKm2": 18509.819491793114,
+    "errorKm2": 3.637978807091713e-12
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-2-xian-1",
+    "huyen": 1,
+    "km2": 6450,
+    "sumChildrenKm2": 6449.635821064891,
+    "unionKm2": 6449.635821064891,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-2-xian-2",
+    "huyen": 1,
+    "km2": 12060,
+    "sumChildrenKm2": 12060.18367072822,
+    "unionKm2": 12060.18367072822,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-2",
+    "huyen": 2,
+    "km2": 29359,
+    "sumChildrenKm2": 29359.23326400043,
+    "unionKm2": 29359.23326400043,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-2-jun-1",
+    "huyen": 2,
+    "km2": 29359,
+    "sumChildrenKm2": 29359.23326400043,
+    "unionKm2": 29359.23326400043,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 7377,
+    "sumChildrenKm2": 7377.418538684347,
+    "unionKm2": 7377.418538684347,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-tay-linh-fu-2-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 21982,
+    "sumChildrenKm2": 21981.814725316082,
+    "unionKm2": 21981.814725316082,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh",
+    "huyen": 10,
+    "km2": 101008,
+    "sumChildrenKm2": 101008.19826308527,
+    "unionKm2": 101008.19826308526,
+    "errorKm2": 1.4551915228366852e-11
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1",
+    "huyen": 5,
+    "km2": 53955,
+    "sumChildrenKm2": 53954.641728354494,
+    "unionKm2": 53954.641728354494,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1",
+    "huyen": 3,
+    "km2": 35976,
+    "sumChildrenKm2": 35976.317940443434,
+    "unionKm2": 35976.317940443434,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 18815,
+    "sumChildrenKm2": 18814.55683631195,
+    "unionKm2": 18814.55683631195,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 7375,
+    "sumChildrenKm2": 7375.332057567793,
+    "unionKm2": 7375.332057567793,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 9786,
+    "sumChildrenKm2": 9786.429046563693,
+    "unionKm2": 9786.429046563693,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-2",
+    "huyen": 2,
+    "km2": 17978,
+    "sumChildrenKm2": 17978.323787911057,
+    "unionKm2": 17978.323787911057,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+    "huyen": 1,
+    "km2": 10505,
+    "sumChildrenKm2": 10505.259173633232,
+    "unionKm2": 10505.259173633232,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+    "huyen": 1,
+    "km2": 7473,
+    "sumChildrenKm2": 7473.064614277825,
+    "unionKm2": 7473.064614277825,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2",
+    "huyen": 2,
+    "km2": 23257,
+    "sumChildrenKm2": 23256.545849009766,
+    "unionKm2": 23256.545849009766,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2-jun-1",
+    "huyen": 2,
+    "km2": 23257,
+    "sumChildrenKm2": 23256.545849009766,
+    "unionKm2": 23256.545849009766,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 7290,
+    "sumChildrenKm2": 7289.918101782973,
+    "unionKm2": 7289.918101782973,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 15967,
+    "sumChildrenKm2": 15966.627747226792,
+    "unionKm2": 15966.627747226792,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3",
+    "huyen": 3,
+    "km2": 23797,
+    "sumChildrenKm2": 23797.010685721,
+    "unionKm2": 23797.010685720998,
+    "errorKm2": 3.637978807091713e-12
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1",
+    "huyen": 3,
+    "km2": 23797,
+    "sumChildrenKm2": 23797.010685721,
+    "unionKm2": 23797.010685720998,
+    "errorKm2": 3.637978807091713e-12
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 5665,
+    "sumChildrenKm2": 5665.067648714973,
+    "unionKm2": 5665.067648714973,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 11099,
+    "sumChildrenKm2": 11099.48661045034,
+    "unionKm2": 11099.48661045034,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 7032,
+    "sumChildrenKm2": 7032.456426555688,
+    "unionKm2": 7032.456426555688,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang",
+    "huyen": 7,
+    "km2": 66685,
+    "sumChildrenKm2": 66685.23276249225,
+    "unionKm2": 66685.23276249223,
+    "errorKm2": 1.4551915228366852e-11
+  },
+  {
+    "id": "zhou-dong-giang-fu-1",
+    "huyen": 5,
+    "km2": 43218,
+    "sumChildrenKm2": 43217.750370557515,
+    "unionKm2": 43217.750370557515,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1",
+    "huyen": 3,
+    "km2": 26372,
+    "sumChildrenKm2": 26371.85367843007,
+    "unionKm2": 26371.853678430067,
+    "errorKm2": 3.637978807091713e-12
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 12531,
+    "sumChildrenKm2": 12531.360650518393,
+    "unionKm2": 12531.360650518393,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 6615,
+    "sumChildrenKm2": 6615.234276365587,
+    "unionKm2": 6615.234276365587,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 7225,
+    "sumChildrenKm2": 7225.258751546091,
+    "unionKm2": 7225.258751546091,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-2",
+    "huyen": 2,
+    "km2": 16846,
+    "sumChildrenKm2": 16845.89669212744,
+    "unionKm2": 16845.89669212744,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-2-xian-1",
+    "huyen": 1,
+    "km2": 7447,
+    "sumChildrenKm2": 7447.033471697986,
+    "unionKm2": 7447.033471697986,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-2-xian-2",
+    "huyen": 1,
+    "km2": 9399,
+    "sumChildrenKm2": 9398.863220429455,
+    "unionKm2": 9398.863220429455,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-2",
+    "huyen": 2,
+    "km2": 23467,
+    "sumChildrenKm2": 23467.482391934725,
+    "unionKm2": 23467.48239193473,
+    "errorKm2": 3.637978807091713e-12
+  },
+  {
+    "id": "zhou-dong-giang-fu-2-jun-1",
+    "huyen": 2,
+    "km2": 23467,
+    "sumChildrenKm2": 23467.482391934725,
+    "unionKm2": 23467.48239193473,
+    "errorKm2": 3.637978807091713e-12
+  },
+  {
+    "id": "zhou-dong-giang-fu-2-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 13097,
+    "sumChildrenKm2": 13096.807592771182,
+    "unionKm2": 13096.807592771182,
+    "errorKm2": 0
+  },
+  {
+    "id": "zhou-dong-giang-fu-2-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 10371,
+    "sumChildrenKm2": 10370.674799163546,
+    "unionKm2": 10370.674799163546,
+    "errorKm2": 0
+  }
+]

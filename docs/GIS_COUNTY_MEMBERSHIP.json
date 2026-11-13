@@ -1,0 +1,272 @@
+[
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-1-xian-1",
+    "shapeID": "17275852B76908318938169",
+    "name": "Jingtaixian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-1-xian-1",
+    "shapeID": "17275852B23253159048949",
+    "name": "Baiyinshi"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-1-xian-2",
+    "shapeID": "17275852B52118529676113",
+    "name": "Zhongweixian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-1-xian-2",
+    "shapeID": "17275852B78958916655376",
+    "name": "Zhongningxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-1-xian-3",
+    "shapeID": "17275852B29220754353225",
+    "name": "Jingyuanxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-2-xian-1",
+    "shapeID": "17275852B20312470606875",
+    "name": "Qingtongxiashi"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-2-xian-1",
+    "shapeID": "17275852B62782445600014",
+    "name": "Wuzhongshi"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-2-xian-1",
+    "shapeID": "17275852B89567569086781",
+    "name": "Lingwuxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-2-xian-2",
+    "shapeID": "17275852B35220952903738",
+    "name": "Tongxinxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-1-jun-2-xian-2",
+    "shapeID": "17275852B3472329779353",
+    "name": "Haiyuanxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B26681120779317",
+    "name": "Yinchuanshi"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B80477376222606",
+    "name": "Yongningxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B1612458148205",
+    "name": "Helanxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B21760145017790",
+    "name": "Pingluoxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B37493799025038",
+    "name": "Shizhuishanshi"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B65553722631482",
+    "name": "Huinongxian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B32909465051494",
+    "name": "Taolexian"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B56784937332062",
+    "name": "Ertuokeqi"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B72607841305823",
+    "name": "Wuhaishi"
+  },
+  {
+    "unitId": "zhou-tay-linh-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B92852559512567",
+    "name": "Huinongxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+    "shapeID": "17275852B83380661850476",
+    "name": "Hangjinqi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+    "shapeID": "17275852B79263520770816",
+    "name": "Dengkouxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+    "shapeID": "17275852B6563591332882",
+    "name": "Hangjinhouqi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+    "shapeID": "17275852B45264822840629",
+    "name": "Linheshi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+    "shapeID": "17275852B4230864536687",
+    "name": "Wuyuanxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+    "shapeID": "17275852B50024648693467",
+    "name": "Wulateqianqi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+    "shapeID": "17275852B12777490029839",
+    "name": "Dongshengshi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+    "shapeID": "17275852B68283317499250",
+    "name": "Dalateqi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+    "shapeID": "17275852B50201707862643",
+    "name": "Zungeerqi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B92543718728466",
+    "name": "Fuguxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B70463469741157",
+    "name": "Hequxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B54112477188231",
+    "name": "Baodexian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B71449682154252",
+    "name": "Pianguanxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B71560826208449",
+    "name": "Shenmuxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B2823373927353",
+    "name": "Jiaxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B28437543476073",
+    "name": "Xingxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B48866302661843",
+    "name": "Linxian"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+    "shapeID": "17275852B3088754118842",
+    "name": "Yijinhuoluoqi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+    "shapeID": "17275852B94979203224281",
+    "name": "Wushenqi"
+  },
+  {
+    "unitId": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+    "shapeID": "17275852B78338650280434",
+    "name": "Yulinshi"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-1-xian-1",
+    "shapeID": "17275852B41932351427715",
+    "name": "Ertuokeqianqi"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-1-xian-2",
+    "shapeID": "17275852B2020769088678",
+    "name": "Yanchixian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-1-xian-3",
+    "shapeID": "17275852B69887483986817",
+    "name": "Dingbaixian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-2-xian-1",
+    "shapeID": "17275852B25631219939186",
+    "name": "Jingbianxian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-2-xian-1",
+    "shapeID": "17275852B74624363636090",
+    "name": "Zichangxian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-2-xian-2",
+    "shapeID": "17275852B21226359210240",
+    "name": "Hengshanxian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-2-xian-2",
+    "shapeID": "17275852B56546823889197",
+    "name": "Mizhixian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-2-xian-2",
+    "shapeID": "17275852B65012922952769",
+    "name": "Zizhouxian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-1-jun-2-xian-2",
+    "shapeID": "17275852B75774687226557",
+    "name": "Suidexian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B25257392952717",
+    "name": "Huanxian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-2-jun-1-xian-1",
+    "shapeID": "17275852B7825306449652",
+    "name": "Huachixian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B66160899159190",
+    "name": "Wuqixian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B25721670330334",
+    "name": "Zhidanxian"
+  },
+  {
+    "unitId": "zhou-dong-giang-fu-2-jun-1-xian-2",
+    "shapeID": "17275852B99998846476531",
+    "name": "Ansaixian"
+  }
+]

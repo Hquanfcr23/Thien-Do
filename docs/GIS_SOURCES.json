@@ -1,0 +1,60 @@
+{
+  "geoBoundaries": {
+    "boundaryID": "CHN-ADM2-17275852",
+    "boundaryName": "China",
+    "boundaryISO": "CHN",
+    "boundaryYearRepresented": "2017",
+    "boundaryType": "ADM2",
+    "boundaryCanonical": "County Level",
+    "boundarySource": "National Administration of Surveying, Mapping and Geoinformation of China, Revolutionary GIS",
+    "boundaryLicense": "Open Data Commons Public Domain Dedication and License (PDDL) v1.0",
+    "licenseDetail": "revolutionarygis.wordpress.com/2017/04/11/china-shapefile-data/",
+    "licenseSource": "revolutionarygis.wordpress.com/2014/01/18/china-prefecture-shapefile-and-china-province-shapefile/",
+    "boundarySourceURL": "github.com/justinelliotmeyers/-1_400-/blob/master/%E4%B8%AD%E5%9B%BD%E5%8E%BF%E7%95%8C.shp",
+    "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+    "buildDate": "Dec 12, 2023",
+    "Continent": "Asia",
+    "UNSDG-region": "Eastern and South-Eastern Asia",
+    "UNSDG-subregion": "Eastern Asia",
+    "worldBankIncomeGroup": "Upper-middle-income Countries",
+    "admUnitCount": "2391",
+    "meanVertices": "66.0",
+    "minVertices": "6",
+    "maxVertices": "624",
+    "meanPerimeterLengthKM": "301.7719129227894",
+    "minPerimeterLengthKM": "24.72178145341725",
+    "maxPerimeterLengthKM": "3014.139447512775",
+    "meanAreaSqKM": "3960.94933452176",
+    "minAreaSqKM": "22.18066805291908",
+    "maxAreaSqKM": "197223.14589666863",
+    "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHN/ADM2/geoBoundaries-CHN-ADM2-all.zip",
+    "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHN/ADM2/geoBoundaries-CHN-ADM2.geojson",
+    "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHN/ADM2/geoBoundaries-CHN-ADM2.topojson",
+    "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHN/ADM2/geoBoundaries-CHN-ADM2-PREVIEW.png",
+    "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHN/ADM2/geoBoundaries-CHN-ADM2_simplified.geojson"
+  },
+  "naturalEarth": {
+    "version": "5.1.2",
+    "license": "Public domain",
+    "terms": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "baseURL": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/",
+    "files": [
+      "ne_50m_admin_0_countries.geojson",
+      "ne_10m_rivers_lake_centerlines.geojson",
+      "ne_10m_lakes.geojson",
+      "ne_10m_geography_regions_polys.geojson",
+      "ne_10m_populated_places.geojson"
+    ]
+  },
+  "sha256": {
+    "src\\data\\gis\\balanced-membership.json": "16f593a9d4880c4d34bb80e8d856dbb09989dfad968d6570f4ca961f6d7b9c4a",
+    "src\\data\\gis\\countries.json": "12c4e4dc9341be1147cd870dae719590b91388d28ecf41b0f35c1e2aa5bbad38",
+    "src\\data\\gis\\extent-counties.json": "f6a7dcb0764a3e5b39bcb437c2df0ddcb4b2ba613be64f0ec31b8b73ac36565c",
+    "src\\data\\gis\\han-seeds.json": "dca90e6ccc253367f41b618eecc73fa54f03b25f19ba94f70bb6e33ece7de4ae",
+    "src\\data\\gis\\henan-counties.json": "e5918980a5634fc3991211a51c688c1b0f30a9fe1246d350f0d440e66000bfc8",
+    "src\\data\\gis\\lakes.json": "2ba773b5bb9a6a376a300c0c1b8dda3180732c28579ec82a54253235bdf92921",
+    "src\\data\\gis\\places.json": "372e37b36188f740643c33fb4f2e39b9874863f6069669d9c4aa242fe7787f47",
+    "src\\data\\gis\\rivers.json": "395e4a03c9acc2e56937cfa0cf86c8b788fb5252ae1da9fee659a99d7b39eddd",
+    "src\\data\\gis\\terrain.json": "ddb16ee186b5fb4fd770b0682525b2a051cd19ba6f919b12446c8e79a598479c"
+  }
+}

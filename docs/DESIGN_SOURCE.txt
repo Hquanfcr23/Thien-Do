@@ -1,0 +1,795 @@
+ĐẾ NGHIỆP
+TRUNG HOA HOÀNG TRIỀU
+GAME DESIGN & IMPLEMENTATION BRIEF
+BẢN CẬP NHẬT v1.1
+Tài liệu định hướng gameplay, mô phỏng và bàn giao cho AI coding agent / developer
+ĐỊNH HƯỚNG CỐT LÕI
+Một game grand strategy + dynasty simulation quy mô vừa, chơi đơn, tập trung vào cơ chế quản trị đế quốc Trung Hoa giả tưởng. Ưu tiên chiều sâu quyết định, sự liên kết logic giữa các hệ thống và khả năng chơi được; không chạy theo đồ họa nặng hoặc AI phức tạp.
+
+Phiên bản 1.1  |  12 tháng 11 năm 2026
+Tài liệu cập nhật theo các quyết định đã thống nhất trong quá trình thiết kế
+
+Lịch sử phiên bản và các quyết định đã chốt
+Hạng mục
+Quyết định trong v1.1
+Thời gian
+12 lượt mỗi năm, tương ứng 12 tháng. Bốn mùa chỉ là lớp quy chiếu khí hậu/mùa vụ, không thay thế lượt tháng.
+Hành chính
+Cây gameplay Trung ương → Châu → Phủ → Quận → Huyện. Số lượng đơn vị không đồng đều; bản đồ thử nghiệm bắt đầu với 3–5 Châu.
+Kinh tế
+Giữ chiều sâu vừa phải nhưng đầy đủ logic: sản xuất, hàng hóa, thị trường, thuế, ngân khố, kho lương, thương mại, logistics và cơ sở hạ tầng.
+Công trình
+Bổ sung nhóm nông nghiệp, thủy lợi, thương nghiệp, phòng thủ và giao thông.
+Dân cư
+Ba nhóm lợi ích xã hội ở mức khái quát; quân nhân và quan chức được quản lý thêm theo vai trò nghề nghiệp.
+Triều đình
+Quan lại, phe phái, hoạn quan, hoàng tộc; có thể có cơ quan mật vụ/giám sát như Cẩm Y Vệ hoặc Đông Xưởng trong hồ sơ thời đại thích hợp.
+Triều đại
+Bổ sung hoàng đế, người thừa kế, thái tử, chính thống và khủng hoảng kế vị.
+Quân sự
+Bổ sung hệ thống cấm quân, quân thường trực, quân địa phương, biên quân, dân binh và các đạo quân có tên riêng theo thời đại.
+Ngoại giao và sự kiện
+Giữ mô phỏng thế lực bên ngoài ở mức chiến lược; sự kiện có lựa chọn và hệ quả dài hạn.
+Chế độ chơi
+Sandbox là chế độ duy nhất trong bản đầu. Campaign và Challenge để giai đoạn sau.
+Phạm vi loại trừ
+Chưa mô phỏng từng cá nhân, từng chuyến xe, chiến trường điều khiển vi mô hoặc AI tự lập kế hoạch phức tạp.
+
+Mục lục nội dung
+1. Tổng quan và triết lý thiết kế
+2. Vòng lặp gameplay
+3. Thế giới và bản đồ
+4. Hệ thống hành chính
+5. Thời gian và mô phỏng 12 tháng
+6. Kinh tế, tài nguyên và thị trường
+7. Giao thông, logistics và cơ sở hạ tầng
+8. Dân số và lợi ích xã hội
+9. Triều đình, phe phái và cơ quan đặc biệt
+10. Hoàng tộc và kế vị
+11. Quân sự và chiến tranh
+12. Ngoại giao và thế lực bên ngoài
+13. Sự kiện và quyết sách
+14. Giao diện và trải nghiệm
+15. Kiến trúc kỹ thuật và dữ liệu
+16. MVP, roadmap và tiêu chí hoàn thành
+Phụ lục A. Quy tắc sử dụng tên gọi lịch sử
+Phụ lục B. Nguồn tham khảo lịch sử
+1. Tổng quan và triết lý thiết kế
+Đế Nghiệp là game chiến thuật grand strategy kết hợp mô phỏng triều đại Trung Hoa giả tưởng. Người chơi đứng ở vị trí hoàng đế hoặc người đứng đầu triều đại, điều hành lãnh thổ qua nhiều năm bằng các quyết định về hành chính, kinh tế, nhân sự, chính trị, quân sự và ngoại giao.
+Trọng tâm không phải đồ họa 3D, mô phỏng từng cá nhân hay AI đối thủ quá thông minh. Trọng tâm là một bộ quy tắc có tính liên kết: người chơi hiểu vì sao một kết quả xảy ra, có nhiều cách giải quyết và phải đánh đổi giữa lợi ích ngắn hạn với ổn định dài hạn.
+1.1. Trụ cột trải nghiệm
+Cai trị một đế quốc có địa lý và đặc điểm vùng miền khác nhau; mỗi Châu, Phủ, Quận và Huyện có vai trò riêng.
+Kinh tế có chuỗi nhân quả: tài nguyên và lao động tạo sản phẩm; giao thông kết nối thị trường; thuế và thương mại tạo nguồn lực cho nhà nước.
+Triều đình là một hệ thống quyền lực: quan lại, hoàng tộc, võ tướng, sĩ tộc và hoạn quan có lợi ích khác nhau.
+Quân đội có cơ cấu, truyền thống, nguồn tuyển quân, nhiệm vụ và chi phí duy trì; hậu cần có ý nghĩa thật sự.
+Triều đại tồn tại qua nhiều thế hệ; kế vị là một rủi ro chính trị và cũng là cơ hội củng cố tính chính thống.
+Người chơi có quyền tự do Sandbox; không bắt buộc theo một chuỗi nhiệm vụ hoặc điều kiện chiến thắng cứng nhắc.
+1.2. Phạm vi sản phẩm
+Thuộc tính
+Phạm vi v1.1
+Thể loại
+Grand Strategy + Dynasty Simulation + Economic / Political Sandbox
+Bối cảnh
+Trung Hoa giả tưởng, có tham chiếu lịch sử; mỗi campaign về sau có thể dùng AdministrativeProfile / MilitaryProfile riêng.
+Chế độ
+Single-player, Sandbox.
+Bản đồ
+Trung Hoa quản lý chuyên sâu; vùng ngoài biên giới hiển thị thế lực và thông tin chiến lược.
+Nền tảng
+Web browser / desktop browser.
+Triết lý AI
+Rule-based simulation, state machines, điều kiện và sự kiện; không yêu cầu AI tự lập kế hoạch phức tạp.
+Ưu tiên
+Cơ chế gameplay, tính logic, khả năng đọc hiểu, khả năng mở rộng và kiểm thử.
+
+NGUYÊN TẮC CHỐNG PHÌNH SCOPE
+Không giản lược chiều sâu của quyết định; giản lược số lượng thực thể phải mô phỏng. Ví dụ: không mô phỏng từng chuyến xe nhưng phải mô phỏng được năng lực vận tải, chi phí, thời gian và hao hụt trên một tuyến.
+
+2. Vòng lặp gameplay
+Mỗi tháng, người chơi quan sát tình hình, điều chỉnh chính sách hoặc mệnh lệnh, sau đó cho thời gian tiến một lượt. Các hệ thống được cập nhật theo thứ tự xác định và kết quả được trình bày trong thông báo, bản đồ và nhật ký triều chính.
+1.  Quan sát: ngân khố, lương thực, dân số, thị trường, hành chính, quân đội, biên giới và triều đình.
+2.  Đánh giá: xác định điểm nghẽn, rủi ro hoặc cơ hội tại từng khu vực.
+3.  Ra quyết định: thuế, ngân sách, bổ nhiệm, công trình, vận tải, tuyển quân, triển khai quân, chính sách và ngoại giao.
+4.  Tiến tháng: mô phỏng sản xuất, tiêu dùng, giao thương, vận chuyển, thu chi, dân số, chính trị, quân sự và sự kiện.
+5.  Nhận hệ quả: biến động giá, thiếu lương, tham nhũng, đình trệ công trình, bất mãn, chiến tranh hoặc cơ hội.
+6.  Điều chỉnh chiến lược: thay đổi ưu tiên và tiếp tục điều hành.
+2.1. Các quyết định phải có đánh đổi
+Quyết định
+Lợi ích
+Chi phí / rủi ro
+Tăng thuế đất
+Tăng thu ngân khố.
+Nông dân giảm thặng dư; bất mãn và bỏ ruộng có thể tăng.
+Mở rộng cấm quân
+Tăng an ninh kinh đô và năng lực phản ứng.
+Tốn lương, ngân sách; có thể tăng ảnh hưởng của tướng lĩnh hoặc hoạn quan.
+Trao quyền Châu mục
+Giảm gánh nặng trung ương, tăng khả năng phản ứng địa phương.
+Quyền lực địa phương tăng; giám sát và thu thuế có thể suy yếu.
+Đầu tư kênh đào
+Tăng vận tải hàng hóa và lương thực.
+Tốn tiền, lao dịch, thời gian; có rủi ro thiên tai hoặc tham nhũng.
+Cải cách đặc quyền địa chủ
+Có thể tăng nguồn thu và quyền tiếp cận đất.
+Sĩ tộc chống đối, giảm ổn định chính trị.
+Đánh chiến dịch xa
+Có thể mở rộng lãnh thổ hoặc loại bỏ mối đe dọa.
+Hậu cần, chi phí, hao hụt quân và rủi ro chính trị nếu thất bại.
+
+3. Thế giới và bản đồ
+Trung Hoa là khu vực gameplay trọng tâm. Bản đồ có thể mở rộng ra thảo nguyên phía bắc, Tây Vực, bán đảo Triều Tiên, quần đảo Nhật Bản và các thế lực phía nam ở mức đối ngoại. Người chơi không quản lý chi tiết hành chính và kinh tế của các vùng bên ngoài như lãnh thổ nội địa.
+3.1. Những vùng địa lý lớn
+Vùng
+Đặc điểm gameplay gợi ý
+Trung Nguyên
+Đông dân, ruộng đất tốt, trung tâm chính trị và giao thông; giá trị chiến lược cao.
+Hoa Bắc
+Đồng bằng rộng, sản xuất ngũ cốc, dễ cơ động quân nhưng có thể chịu rủi ro hạn hán.
+Hoa Nam
+Sông ngòi, lúa nước, thương mại đường thủy, mật độ dân cư có thể tăng theo thời gian.
+Tây Bắc
+Khô hạn, biên viễn, cửa ngõ thảo nguyên; trọng yếu với kỵ binh và thương mại đường dài.
+Tây Nam
+Núi non, đường đi khó, tài nguyên đặc thù; phòng thủ thuận lợi nhưng vận tải tốn kém.
+Đông Bắc
+Vùng biên, đồng bằng và các hành lang tiếp cận; có ý nghĩa quân sự và thương mại.
+
+3.2. Hai lớp bản đồ
+Lớp địa hình cổ họa: núi, sông, hồ, đồng bằng, rừng, sa mạc, đường bộ, kênh đào, thành trì và địa danh.
+Lớp chiến lược: biên giới quốc gia, ranh giới đơn vị hành chính, quyền kiểm soát, quân đội, thành trì, tài nguyên và tuyến vận tải.
+Các bản đồ dữ liệu: kinh tế, dân số, lương thực, ổn định, hành chính, giao thông, quân sự và ảnh hưởng chính trị.
+3.3. Tương tác
+Zoom và pan; chọn Châu/Phủ/Quận/Huyện theo mức zoom và cấu trúc cha-con.
+Hover để xem tóm tắt; click để mở panel chi tiết của đơn vị, thành trì, tuyến đường hoặc đạo quân.
+Ẩn/hiện nhãn và lớp dữ liệu; tránh phủ quá nhiều thông tin lên bản đồ cùng lúc.
+Bản đồ dùng tọa độ thống nhất; vùng ngoài biên có độ chi tiết hình học thấp hơn.
+4. Hệ thống hành chính
+CÂY HÀNH CHÍNH GAMEPLAY
+TRUNG ƯƠNG → CHÂU → PHỦ → QUẬN → HUYỆN. Đây là quy ước phân cấp linh hoạt cho thế giới Đế Nghiệp, không phải khẳng định rằng mọi triều đại lịch sử Trung Hoa đều đồng thời sử dụng năm cấp này.
+
+4.1. Vai trò các cấp
+Cấp
+Vai trò
+Gameplay / quyền hạn
+Trung ương
+Điều hành toàn quốc.
+Chính sách, bổ nhiệm cấp cao, ngân sách, thuế tổng thể, chiến tranh, ngoại giao và giám sát.
+Châu
+Khu vực lớn, kết nối trung ương và địa phương.
+Điều phối nhiều Phủ, công trình liên vùng, quân vụ, thanh tra và báo cáo.
+Phủ
+Đầu mối quản lý vùng gồm các Quận.
+Kho lương, thương mại khu vực, thuế, an ninh và phối hợp công trình.
+Quận
+Đơn vị trung gian quản lý một cụm Huyện.
+Phân bổ nguồn lực địa phương, giám sát Huyện, duy trì trật tự và quản lý tuyến vận tải ngắn.
+Huyện
+Đơn vị cơ sở gần dân và hoạt động sản xuất.
+Dân số, ruộng đất, sản xuất, tài nguyên, thuế cơ sở, kho địa phương và ổn định.
+
+4.2. Quy mô bản đồ khởi đầu
+Prototype nên bắt đầu với 3–5 Châu. Số lượng Phủ, Quận và Huyện phụ thuộc quy mô, mật độ dân cư, địa hình, vai trò kinh tế và độ quan trọng chiến lược của từng Châu; không chia đều máy móc.
+Cấp
+Dải số lượng tham khảo cho prototype
+Nguyên tắc
+Châu
+3–5
+Đây là quy mô người chơi có thể nắm bắt ở giai đoạn đầu.
+Phủ
+Khoảng 2–3 mỗi Châu
+Châu trung tâm/đông dân có thể có nhiều hơn vùng núi hoặc biên viễn.
+Quận
+Khoảng 1–3 mỗi Phủ
+Quận có thể có phạm vi địa lý và số Huyện khác nhau.
+Huyện
+Khoảng 2–5 mỗi Quận
+Là đơn vị chi tiết chính cho dân số, sản lượng, thuế, tài nguyên và ổn định.
+
+Một cấu hình kiểm thử dễ quản lý: 3 Châu × 2 Phủ × 2 Quận × 3 Huyện = 36 Huyện. Nếu dùng 5 Châu với cấu trúc tương tự thì có 60 Huyện. Đây chỉ là cấu hình mẫu, không phải giới hạn cứng.
+4.3. Cách mô phỏng cấp trên
+Huyện là nơi lưu phần lớn dữ liệu sản xuất, dân số, tài nguyên và công trình địa phương.
+Quận, Phủ và Châu tổng hợp dữ liệu cấp dưới nhưng vẫn có ngân sách, năng lực quản lý, quan chức và mức độ ổn định riêng khi cần.
+Mệnh lệnh từ trung ương có thời gian truyền đạt và mức độ thực thi phụ thuộc giao thông, năng lực hành chính, lòng trung thành và tham nhũng.
+Cho phép chia tách, sáp nhập hoặc đổi địa giới; giữ ID ổn định và ghi lịch sử thay đổi.
+Không bắt buộc mỗi cấp đều phải có UI chi tiết tương đương; cấp càng cao càng thiên về điều phối và tổng hợp.
+4.4. Lịch sử và AdministrativeProfile
+Mỗi campaign có thể định nghĩa hồ sơ hành chính riêng: tên cấp, số tầng, chức quan, quyền hạn và quy tắc thăng/giáng cấp. Tần – Hán có thể dùng Quận/Huyện làm khung tham chiếu sớm; Đường dùng Đạo cùng Châu/Phủ/Huyện; Tống có Lộ và các đơn vị Phủ/Châu/Quân/Giám; Minh–Thanh có Tỉnh, Phủ, Châu, Huyện với nhiều khác biệt theo địa phương. Không ép mọi campaign phải dùng cùng một hệ thống.
+5. Thời gian và mô phỏng 12 tháng
+QUYẾT ĐỊNH ĐÃ CHỐT
+Một năm gồm 12 lượt, mỗi lượt tương ứng một tháng. Bốn mùa (Xuân, Hạ, Thu, Đông) chỉ dùng để nhóm hiệu ứng mùa vụ; không thay thế 12 lượt tháng.
+
+5.1. Lịch tháng và mùa
+Mùa
+Tháng
+Các yếu tố có thể được xét
+Xuân
+Tháng 1–3
+Chuẩn bị vụ mùa, gieo trồng tùy vùng, sửa đường sau mùa đông, tuyển quân và điều động đầu năm.
+Hạ
+Tháng 4–6
+Mưa lũ, hạn cục bộ, dịch bệnh, bảo trì đê điều, cao điểm vận tải đường thủy ở một số vùng.
+Thu
+Tháng 7–9
+Thu hoạch tùy vùng/cây trồng, tích trữ lương thực, thu thuế nông nghiệp và vận chuyển nông sản.
+Đông
+Tháng 10–12
+Dự trữ, kiểm kê, chi trả quân lương, sửa chữa, điều tra dân số/đất đai theo chu kỳ và chuẩn bị chiến lược năm sau.
+
+Không áp dụng lịch mùa vụ giống nhau cho toàn bản đồ. Lúa nước Hoa Nam, lúa mì/kê Hoa Bắc và cây trồng vùng cao có mùa gieo trồng, thu hoạch khác nhau. Dữ liệu crop profile theo vùng quyết định thời điểm sản xuất và thu hoạch.
+5.2. Quy trình xử lý mỗi tháng
+1.  Chốt lệnh đang chờ: chính sách, ngân sách, xây dựng, điều quân và ngoại giao.
+2.  Kinh tế: sản xuất, tiêu dùng, thuế, lương, giá cả và tồn kho.
+3.  Giao thông và logistics: hàng hóa, lương thực, quân nhu và mệnh lệnh di chuyển.
+4.  Dân số: sinh/tử, di cư, lao động, thiếu đói và biến động nhóm lợi ích ở mức tổng hợp.
+5.  Hành chính: hiệu quả thu thuế, thất thoát, năng lực thi hành và báo cáo địa phương.
+6.  Quân sự: tuyển quân, huấn luyện, hành quân, tiếp tế, tinh thần và xung đột.
+7.  Chính trị: quan hệ phe phái, lòng trung thành, ảnh hưởng, tham nhũng và kế vị.
+8.  Ngoại giao: thương mại, triều cống, quan hệ, đe dọa và trạng thái thế lực ngoài biên.
+9.  Sự kiện: kiểm tra điều kiện, tạo lựa chọn và ghi hệ quả.
+10.  Cập nhật nhật ký, thông báo, bản đồ và trạng thái save.
+5.3. Điều khiển thời gian
+Pause / tiếp tục; tiến một tháng; tốc độ mô phỏng 1×, 2×, 4× (có thể bổ sung 8× nếu hiệu năng cho phép).
+Các sự kiện quan trọng có thể tự tạm dừng theo thiết lập người chơi.
+Sau tháng 12, hiển thị báo cáo tổng kết năm: ngân sách, lương thực, dân số, sản lượng, công trình, quân đội và biến động chính trị.
+6. Kinh tế, tài nguyên và thị trường
+Kinh tế không bị giới hạn ở vài thanh chỉ số. Hệ thống phải có các quan hệ đầu vào/đầu ra dễ giải thích, nhưng mức chi tiết được kiểm soát bằng dữ liệu theo vùng, nhóm hàng và công thức có thể kiểm thử.
+6.1. Chỉ số tổng quan và hàng hóa
+Nhóm
+Ví dụ / vai trò
+Chỉ số quốc gia
+Ngân khố, lương thực dự trữ, nhân lực có thể huy động, uy tín/chính thống và năng lực hành chính.
+Lương thực
+Gạo, kê, lúa mì và các loại ngũ cốc khác; tiêu dùng dân sự, quân nhu, cứu trợ và dự trữ.
+Nguyên liệu
+Sắt, đồng, gỗ, đá, muối, ngựa, than hoặc nhiên liệu tùy công nghệ/campaign.
+Hàng thủ công
+Vải, lụa, gốm, giấy, công cụ, vũ khí và hàng hóa chế tác.
+Hàng thương mại
+Trà, tơ lụa, đồ gốm, muối, ngựa và các mặt hàng đặc sản theo vùng.
+Dịch vụ / năng lực
+Vận tải, lao động xây dựng, năng lực kho vận, năng lực khai mỏ và tay nghề.
+
+Danh mục hàng hóa không phải xuất hiện đồng loạt trong mọi campaign. Mỗi hàng hóa có thể bật/tắt theo thời đại, vùng địa lý, công nghệ và mức độ phát triển.
+6.2. Nông nghiệp và mùa vụ
+Đất canh tác, độ phì, thủy lợi, khí hậu, giống cây và lao động quyết định sản lượng.
+Mỗi huyện có vùng trồng chủ đạo và năng suất khác nhau; mùa vụ được cấu hình theo CropProfile.
+Thiên tai tác động lên sản lượng thực tế; kho lương và mạng lưới vận tải quyết định khả năng chống đói.
+Ruộng bỏ hoang, dân di cư, lao dịch quá mức và chiến tranh có thể làm giảm diện tích canh tác hoặc nhân lực nông nghiệp.
+Công trình nông nghiệp không chỉ cộng sản lượng cố định; nó có thể tăng năng suất, giảm rủi ro hoặc mở rộng diện tích canh tác.
+6.3. Khai mỏ, thủ công và chế biến
+Tài nguyên thô có thể được khai thác và chuyển thành hàng hóa đầu vào. Ví dụ: mỏ sắt cung cấp quặng; lò luyện chuyển quặng và nhiên liệu thành sắt; xưởng rèn dùng sắt để tạo công cụ hoặc vũ khí. Chuỗi sản xuất nên có ít bước nhưng thể hiện được nút thắt nguyên liệu, nhân công, vốn và vận tải.
+6.4. Thị trường và thương mại
+Mỗi vùng có sản lượng, nhu cầu và tồn kho của các hàng hóa chính.
+Giá tham chiếu biến động theo cung cầu, thuế, đường vận chuyển, an ninh và mùa vụ.
+Thương nhân/đầu mối chợ có thể gom hàng, phân phối và tạo nguồn thu thuế thương nghiệp.
+Thương mại nội địa có thể diễn ra giữa các Phủ/Châu; thương mại biên giới kết nối các ExternalPolity.
+Không cần mô phỏng từng thương nhân; dùng luồng giao dịch tổng hợp theo tuyến và kỳ tháng.
+6.5. Thuế, ngân khố và chi tiêu
+Nguồn thu
+Khoản chi
+Thuế đất/nông nghiệp; thuế hộ hoặc nghĩa vụ lao dịch theo campaign.
+Lương quan lại, quân lương, bảo trì công trình, hành chính và vận tải công.
+Thuế chợ, thương nghiệp, muối hoặc độc quyền nhà nước khi phù hợp.
+Xây dựng, cứu trợ, ngoại giao, quà tặng, chiến dịch quân sự và tiền thưởng.
+Thu nhập từ mỏ, xưởng nhà nước, thương mại và các khoản lệ phí.
+Bồi thường thiên tai, sửa chữa sau chiến tranh, trợ cấp và trả nợ nếu có.
+
+Thuế suất, cơ sở tính thuế và cách thu cần cấu hình theo campaign. Không áp đặt một mô hình thuế lịch sử duy nhất cho mọi thời đại. Tách thuế danh nghĩa khỏi thu thực tế; thu thực tế chịu ảnh hưởng của năng lực hành chính, tham nhũng, miễn giảm và sự tuân thủ.
+6.6. Công trình kinh tế
+Nhóm công trình
+Ví dụ
+Hiệu ứng chính
+Nông nghiệp
+Trang trại, ruộng khai khẩn, kho giống, nông trang.
+Tăng diện tích, sản lượng hoặc khả năng phục hồi.
+Thủy lợi
+Đê, đập, kênh, hồ chứa, trạm bơm thời đại phù hợp.
+Ổn định mùa vụ, giảm thiệt hại lũ/hạn, mở rộng canh tác.
+Thương nghiệp
+Chợ, thương cảng, bến hàng, trạm thuế.
+Tăng năng lực trao đổi, thu thuế và tập trung hàng hóa.
+Sản xuất
+Mỏ, lò luyện, xưởng rèn, xưởng dệt/gốm.
+Khai thác hoặc chế biến nguyên liệu thành hàng hóa.
+Phòng thủ
+Thành lũy, tường thành, tháp canh, kho quân nhu.
+Tăng khả năng phòng thủ, sức chống vây và an ninh.
+Giao thông
+Đường, cầu, bến phà, trạm dịch, kênh đào.
+Tăng tốc độ và năng lực vận chuyển; giảm chi phí/hao hụt.
+
+7. Giao thông, logistics và cơ sở hạ tầng
+Giao thông là một hệ thống gameplay độc lập, không phải chỉ số trang trí. Nó kết nối sản xuất với thị trường, trung ương với địa phương và hậu phương với tiền tuyến.
+7.1. Mạng lưới giao thông
+Tuyến / công trình
+Tác dụng và giới hạn
+Đường mòn / đường địa phương
+Chi phí thấp; năng lực vận tải và tốc độ thấp; nhạy cảm với thời tiết.
+Đường quan lộ / đường chính
+Tăng năng lực vận tải, tốc độ đi lại, điều động quân và truyền mệnh lệnh.
+Cầu / bến phà
+Mở kết nối qua sông; có thể trở thành điểm nghẽn hoặc vị trí phòng thủ.
+Sông có thể thông hành
+Vận tải hàng nặng hiệu quả; phụ thuộc mùa nước, luồng lạch và bến bãi.
+Kênh đào
+Kết nối các lưu vực hoặc vùng sản xuất với thị trường; chi phí xây dựng và bảo trì cao.
+Trạm dịch / trạm ngựa
+Hỗ trợ quan lại, sứ giả và truyền lệnh nhanh; có giới hạn ngựa, nhân lực và ngân sách.
+
+7.2. Các thuộc tính tuyến đường
+Chất lượng tuyến: ảnh hưởng tốc độ và hao hụt.
+Năng lực vận tải: lượng hàng hoặc quân nhu có thể đi qua mỗi tháng.
+Chi phí: ngân sách, nhân lực, phí qua trạm và bảo trì.
+Địa hình và thời tiết: núi, sông, tuyết, lũ, bùn lầy làm thay đổi thời gian và rủi ro.
+An ninh: cướp bóc, nổi loạn hoặc chiến sự có thể làm gián đoạn tuyến.
+Kết nối: mạng lưới gồm các nút là huyện, thành, kho, bến và cửa ải; hàng hóa đi theo tuyến khả dụng.
+7.3. Vận chuyển và phân phối lương thực
+Người chơi có thể chuyển lương thực từ vùng thặng dư đến vùng thiếu hụt, hoặc thiết lập ưu tiên cấp phát từ kho nhà nước. Mỗi lệnh vận chuyển có khối lượng, nguồn, đích, tuyến, thời gian dự kiến, chi phí và hao hụt. Thiếu đường hoặc thiếu năng lực vận tải khiến hàng đến chậm; không được tự động dịch chuyển hàng hóa tức thời giữa các huyện.
+7.4. Giao thông và quân sự
+Tuyến đường ảnh hưởng tốc độ hành quân và khả năng kéo theo lương thực, vũ khí, máy móc vây thành.
+Đường tốt làm tăng tốc phản ứng của quân đội nhưng cũng có thể giúp đối phương cơ động nhanh nếu kiểm soát tuyến.
+Cửa ải, cầu, bến phà và nút giao quan trọng có thể trở thành mục tiêu chiến lược.
+Quân đội có thể bị cô lập nếu đường tiếp tế bị cắt hoặc kho hậu cần bị chiếm.
+8. Dân số và lợi ích xã hội
+Dân số được mô phỏng ở cấp tổng hợp theo Huyện, với một số nhóm lợi ích chính. Không mô phỏng từng cá nhân hoặc từng hộ gia đình trong MVP.
+Nhóm lợi ích
+Nguồn lực / mong muốn
+Nguồn bất mãn thường gặp
+Nông dân và cư dân sản xuất
+Đất, nước, an ninh, thuế và nghĩa vụ có thể chịu đựng.
+Thuế quá cao, lao dịch, chiến tranh, mất mùa, chiếm đất và tham nhũng.
+Sĩ tộc / địa chủ / tầng lớp có thế lực địa phương
+Đất đai, đặc quyền, chức vụ, ảnh hưởng địa phương và tính ổn định.
+Cải cách làm giảm đặc quyền, thanh tra quá mạnh, phân quyền bị thu hẹp.
+Thương nhân / thợ thủ công
+Thị trường, giao thông, nguồn nguyên liệu, quyền kinh doanh và an ninh.
+Thuế thương nghiệp cao, độc quyền, cấm vận, chiến tranh và thiếu nguyên liệu.
+
+Quan lại, binh lính và hoạn quan được quản lý thêm như các nhóm nghề nghiệp/tổ chức có quyền lực và nguồn thu riêng; không bắt buộc coi tất cả là nhóm dân cư đại diện trong bảng lợi ích cơ sở.
+8.1. Các biến số dân số
+Tổng dân số, hộ chịu thuế và lực lượng lao động khả dụng.
+Tỷ lệ lao động nông nghiệp, thủ công và thương mại ở mức tổng hợp.
+Di cư do chiến tranh, đói kém, thuế, việc làm và an ninh.
+Sinh/tử và tổn thất do dịch bệnh, thiên tai, chiến tranh.
+Bất mãn và ủng hộ cải cách theo nhóm lợi ích.
+9. Triều đình, phe phái và cơ quan đặc biệt
+9.1. Nhân vật và quan lại
+Thuộc tính
+Tác động gameplay
+Năng lực
+Hiệu suất hành chính, tài chính, quân sự hoặc ngoại giao tùy chức vụ.
+Trung thành
+Khả năng tuân lệnh, duy trì cam kết hoặc chống đối.
+Tham vọng
+Mức độ tìm kiếm chức vị, ảnh hưởng hoặc quyền lực.
+Tham nhũng
+Thất thoát thuế, ngân sách, vật tư hoặc lạm quyền.
+Danh vọng / uy tín
+Mức độ được triều đình, quân đội và địa phương ủng hộ.
+Quan hệ / phe phái
+Liên kết với nhân vật, gia tộc, tổ chức và nhóm lợi ích.
+
+9.2. Các trung tâm quyền lực
+Phe / thế lực
+Lợi ích và công cụ ảnh hưởng
+Văn quan / sĩ tộc
+Chính sách, tuyển dụng quan lại, kinh tế, giáo dục, quan hệ địa phương và tính chính thống.
+Võ tướng
+Quân đội, biên phòng, chiến công, quyền chỉ huy và ảnh hưởng trong các đạo quân.
+Hoàng tộc
+Kế vị, đất phong, thân vương, hôn nhân và quan hệ huyết thống.
+Hoạn quan
+Tiếp cận nội đình, truyền chỉ, quản lý cơ quan nội vụ, tài sản hoàng gia và thông tin mật; quyền lực phụ thuộc thời đại/campaign.
+Thế lực địa phương
+Sĩ tộc, gia tộc lớn, thủ lĩnh vùng, mạng lưới thương nhân hoặc lực lượng quân sự địa phương.
+
+9.3. Cơ quan đặc biệt
+Cẩm Y Vệ, Đông Xưởng và các tổ chức tương tự là cơ chế có thể cấu hình cho campaign mang cảm hứng Minh, không phải cơ quan mặc định trong mọi thời đại. Cần phân biệt tổ chức an ninh/điều tra với đơn vị quân chiến đấu tuyến đầu.
+Tổ chức / chức năng
+Vai trò gameplay
+Rủi ro / đánh đổi
+Cẩm Y Vệ (錦衣衛)
+Bảo vệ hoàng đế, điều tra, tình báo, bắt giữ và giám sát theo quyền được giao.
+Lạm quyền, oan sai, tạo sợ hãi và làm quan lại đối đầu.
+Đông Xưởng (東廠)
+Cơ quan giám sát/tình báo gắn với hoạn quan trong bối cảnh Minh.
+Tăng quyền lực hoạn quan, tranh chấp với văn quan và Cẩm Y Vệ.
+Ngự sử / cơ quan giám sát
+Thanh tra quan lại, đàn hặc, kiểm tra công vụ và tham nhũng.
+Có thể bị phe phái thao túng hoặc tạo xung đột chính trị.
+Cơ quan mật vụ giả tưởng
+Tùy campaign; chỉ dùng khi có cơ sở bối cảnh rõ ràng.
+Không ghép tên cơ quan của nhiều triều đại mà không giải thích.
+
+9.4. Hành động của người chơi
+Bổ nhiệm, bãi nhiệm, thăng chức, điều chuyển và ban thưởng.
+Thanh tra, điều tra, ân xá, trừng phạt hoặc xét xử.
+Trao quyền tự chủ cho địa phương hoặc tăng giám sát từ trung ương.
+Tổ chức lại phe phái, phân quyền, cân bằng quan văn - võ tướng - hoạn quan - hoàng tộc.
+Thiết lập cơ quan đặc biệt và xác định quyền hạn, ngân sách, phạm vi hoạt động.
+10. Hoàng tộc và kế vị
+Triều đại không chỉ là một thanh ổn định. Người cai trị thay đổi theo thời gian; kế vị có thể diễn ra suôn sẻ hoặc gây khủng hoảng. Hệ thống phải cho phép câu chuyện triều đại phát sinh từ các mối quan hệ, lợi ích và quyết định của người chơi.
+10.1. Thành phần hoàng tộc
+Hoàng đế: tuổi, sức khỏe (chỉ dùng thuộc tính gameplay phù hợp), năng lực, uy tín và quan hệ với các phe.
+Thái tử / người thừa kế: vị trí kế vị, năng lực, tính chính thống, người bảo trợ và quan hệ với triều thần.
+Các hoàng tử/thân vương: quyền lợi, đất phong hoặc chức vụ, quân đội/quan lại ủng hộ và tham vọng.
+Hoàng hậu, phi tần hoặc thân quyến: quan hệ nội đình và ảnh hưởng có giới hạn theo campaign.
+10.2. Cơ chế kế vị
+Yếu tố
+Tác động
+Quy tắc kế vị
+Trưởng tử, chỉ định của hoàng đế, lựa chọn của triều đình hoặc quy tắc campaign.
+Tính chính thống
+Huyết thống, sắc lập, công trạng, sự công nhận của triều đình và khả năng kiểm soát kinh đô.
+Ủng hộ phe phái
+Văn quan, võ tướng, hoạn quan, hoàng tộc và quân đội có thể ủng hộ ứng viên khác nhau.
+Thời điểm chuyển ngôi
+Hoàng đế mất, thoái vị, bị phế, mất tích hoặc có biến cố đặc biệt.
+Kết quả
+Kế vị ổn định, tranh chấp trong triều, đảo chính, nội chiến hoặc phân liệt.
+
+10.3. Đào tạo người kế vị
+Người chơi có thể cho thái tử học trị quốc, quân sự, kinh tế, lễ chế hoặc ngoại giao; bổ nhiệm thầy dạy và giao nhiệm vụ quan sát/điều hành. Hiệu quả phát triển năng lực cần đánh đổi thời gian, sự bảo hộ và rủi ro người kế vị có mạng lưới riêng.
+11. Quân sự và chiến tranh
+Quân sự sử dụng mô hình chiến lược theo đạo quân/đơn vị trên bản đồ. Không điều khiển từng người lính hay từng động tác chiến thuật. Độ sâu nằm ở cơ cấu lực lượng, chất lượng, chỉ huy, vị trí, địa hình, hậu cần, tinh thần và chi phí duy trì.
+11.1. Phân biệt loại quân và tên đạo quân
+QUY TẮC THIẾT KẾ QUAN TRỌNG
+“Cấm quân”, “biên quân”, “quân địa phương” là nhóm chức năng/tổ chức. “Thần Sách Quân”, “Hổ Báo Kỵ”, “Long Vũ Quân” là tên riêng của một lực lượng hoặc truyền thống quân đội. “Kỵ binh”, “bộ binh”, “cung nỏ” là binh chủng. Ba lớp này không nên bị trộn thành một trường dữ liệu duy nhất.
+
+11.2. Các nhóm lực lượng
+Nhóm lực lượng
+Nhiệm vụ và đặc điểm
+Quân thường trực trung ương
+Lực lượng chuyên nghiệp do triều đình cấp ngân sách; có thể triển khai chiến dịch và bảo vệ các trung tâm chiến lược.
+Cấm quân / quân túc vệ
+Bảo vệ hoàng đế, cung thành, kinh đô và các mục tiêu trung ương. Tên gọi, quyền hạn và quy mô thay đổi theo triều đại.
+Quân địa phương
+Đóng tại Châu/Phủ/Quận hoặc thành trì; trấn áp bất ổn, tuần tra và bảo vệ khu vực.
+Biên quân / quân đồn trú
+Đóng ở biên giới, cửa ải và tiền đồn; quen địa hình, có trách nhiệm giám sát và phản ứng với ngoại địch.
+Dân binh / hương binh / đoàn luyện
+Lực lượng địa phương bán thời gian hoặc huy động khi khẩn cấp; chất lượng và khả năng chiến dịch hạn chế.
+Đạo quân chiến dịch
+Lực lượng được tập hợp từ nhiều đơn vị để tiến hành chiến tranh; có thể giải tán hoặc tái tổ chức sau chiến dịch.
+Thủy quân
+Bảo vệ sông, hồ, duyên hải và vận tải đường thủy; quy mô phụ thuộc bản đồ và thời đại.
+
+Các nhóm trên không nhất thiết loại trừ nhau. Trong lịch sử, cấm quân có thể là một bộ phận của quân thường trực trung ương; một đội quân chuyên nghiệp cũng có thể đồng thời mang nhiệm vụ bảo vệ kinh đô hoặc đóng giữ biên giới. Về dữ liệu, forceCategory mô tả cơ cấu tổ chức chính, còn roleTags mô tả nhiệm vụ; nhờ vậy game không đếm trùng quân số hoặc ngân sách.
+11.3. Binh chủng
+Binh chủng
+Vai trò gameplay
+Điểm yếu / điều kiện
+Bộ binh
+Giữ tuyến, chiếm thành, bảo vệ công trình và chiến đấu ở nhiều địa hình.
+Cơ động trung bình; phụ thuộc tiếp tế và trang bị.
+Kỵ binh nhẹ
+Trinh sát, truy kích, đột kích, quấy rối và cơ động nhanh.
+Kém hiệu quả ở núi rừng dày, đô thị và địa hình khó.
+Kỵ binh nặng / tinh nhuệ
+Xung kích, phá đội hình, bảo vệ nhân vật hoặc phản công.
+Chi phí ngựa/trang bị cao; cần đồng cỏ và nguồn ngựa.
+Cung thủ / nỏ thủ
+Hỏa lực tầm xa, phòng thủ thành và hỗ trợ bộ binh.
+Cần đạn dược, thời gian triển khai và bảo vệ cự ly.
+Công thành / công binh
+Xây công sự, phá thành, dựng cầu, sửa tuyến và vận hành máy móc vây thành.
+Tốn vật tư, chậm và cần bảo vệ.
+Thủy quân
+Kiểm soát sông/hồ/biển, hộ tống vận tải và đổ bộ khi phù hợp.
+Phụ thuộc tàu, thủy thủ, bến và điều kiện thủy văn.
+
+11.4. Tên riêng các đạo quân và hồ sơ theo thời đại
+Người chơi cần nhìn thấy những lực lượng có danh xưng riêng, truyền thống, danh tiếng và vai trò chiến lược. Một đội quân có thể được định nghĩa bằng tên chính thức, biệt danh, nhiệm vụ, binh chủng chủ đạo, cấp chỉ huy, nguồn tuyển quân, nơi đóng quân và mức độ trung thành.
+Tên gọi
+Bối cảnh tham chiếu
+Cách sử dụng trong game
+Hổ Báo Kỵ (虎豹騎)
+Tào Ngụy thời Tam Quốc. Nguồn nghiên cứu của Viện Lịch sử và Ngữ văn, Academia Sinica dẫn các ghi chép về lực lượng kỵ binh tinh nhuệ do Tào Thuần và các tướng thuộc họ Tào chỉ huy. [2]
+Mẫu lực lượng kỵ binh tinh nhuệ/tuỳ vệ - chiến dịch. Không dùng như đơn vị chuẩn của mọi triều đại.
+Thần Sách Quân (神策軍)
+Nhà Đường, đặc biệt phát triển thành lực lượng cấm vệ/trung ương thời Trung - Hậu Đường; có nguồn gốc quân sự biên cương và quá trình gắn với bảo vệ hoàng đế. [1][3]
+Mẫu lực lượng trung ương/cấm quân có ảnh hưởng chính trị lớn. Không đồng nhất với một đạo quân kỵ binh.
+Tả/Hữu Vũ Lâm Quân (左右羽林軍)
+Nhà Đường; nằm trong hệ thống lực lượng bảo vệ hoàng đế/kinh đô. [4][5]
+Mẫu cấm vệ chia thành hai doanh/cánh trái - phải.
+Tả/Hữu Long Vũ Quân (左右龍武軍)
+Nhà Đường; được tổ chức từ các đơn vị cận vệ, có tên gọi và lịch sử thay đổi theo thời kỳ. [5]
+Mẫu quân cận vệ/đơn vị tinh nhuệ gắn với trung ương.
+Tả/Hữu Thần Vũ Quân (左右神武軍)
+Nhà Đường thời Trung Đường; thuộc các đơn vị cấm vệ được tổ chức lại. [5]
+Có thể là lực lượng bảo vệ kinh thành hoặc hoàng đế theo hồ sơ thời đại.
+Bồng Nhật, Thiên Vũ, Long Vệ, Thần Vệ (捧日、天武、龍衛、神衛)
+Bốn đạo quân thượng đẳng của quân đội triều đình Bắc Tống theo nghiên cứu về thiết chế quân sự Tống. [6]
+Mẫu tên riêng của các đạo quân triều đình; chỉ đưa vào campaign Tống-inspired.
+Cấm quân (禁軍)
+Bắc Tống: lực lượng chuyên nghiệp do triều đình chi trả, phân biệt với các lực lượng địa phương và dân binh; cơ cấu thay đổi theo thời kỳ. [6]
+Mẫu quân thường trực trung ương/cấm vệ theo hồ sơ Tống-inspired.
+Tương quân (廂軍)
+Bắc Tống: lực lượng địa phương/provincial armies; vai trò và chất lượng thay đổi theo thời kỳ, không đồng nhất với cấm quân. [6]
+Mẫu quân địa phương, đồn trú và phục vụ công vụ theo campaign Tống-inspired.
+Cẩm Y Vệ (錦衣衛)
+Nhà Minh; lực lượng thân vệ hoàng đế và cơ quan có chức năng điều tra/giám sát đặc biệt, hợp tác hoặc cạnh tranh với các cơ quan nội đình. [7]
+Mặc định phân loại là tổ chức an ninh - tình báo - thân vệ, không coi là một binh chủng hay đạo quân dã chiến thông thường.
+Tả Kỵ Quân / Hữu Kỵ Quân
+Tên mẫu theo quy ước sáng tạo của Đế Nghiệp; không khẳng định đây là một đơn vị nổi tiếng cố định trong một triều đại cụ thể.
+Có thể sử dụng cho campaign giả tưởng hoặc đặt tên theo một hồ sơ lịch sử đã được kiểm chứng.
+
+Các tên trên là ví dụ có niên đại/bối cảnh khác nhau. Không đưa Hổ Báo Kỵ, Thần Sách Quân, quân Tống và Cẩm Y Vệ vào cùng một campaign lịch sử thuần túy nếu không giải thích đây là thế giới giả tưởng tổng hợp.
+11.5. Quy tắc đặt tên đội quân
+Tên lịch sử đã được kiểm chứng: giữ đúng tên, chữ Hán, âm Hán-Việt và khoảng thời gian tồn tại trong dữ liệu tham chiếu.
+Tên giả tưởng: có thể dùng cấu trúc Tả/Hữu, Tiền/Hậu/Trung, Long/Hổ/Thần/Thiết, Vệ/Quân/Kỵ/Binh, nhưng phải đánh dấu là tên sáng tạo của campaign.
+Một lực lượng có thể đổi tên, sáp nhập, chia tách hoặc được ban hiệu; phải lưu lịch sử tên gọi và đơn vị tiền thân.
+Tên gọi không tự động quyết định chỉ số sức mạnh. Danh tiếng, tinh thần, huấn luyện, quân số, trang bị, chỉ huy và hậu cần mới quyết định hiệu quả thực tế.
+11.6. Thuộc tính của một đạo quân
+Trường dữ liệu
+Ý nghĩa
+id / displayName / formalName
+ID ổn định, tên hiển thị và tên chính thức (có thể kèm chữ Hán).
+forceCategory
+CentralStanding, ImperialGuard, LocalGarrison, Frontier, Militia, Expeditionary, Naval...
+branches
+Các binh chủng thành phần: infantry, cavalry, crossbow, engineers, navy...
+roleTags
+PalaceGuard, CapitalDefense, BorderDefense, ShockCavalry, Siege, Escort...
+strength / quality / morale
+Quân số, chất lượng huấn luyện/trang bị và tinh thần.
+commanderId / loyalty
+Tướng chỉ huy, trung thành của tướng và mức liên kết với triều đình.
+locationId / supplyStatus
+Vị trí, nguồn tiếp tế, lượng lương thực/quân nhu và khả năng duy trì.
+recruitmentProfile / upkeep
+Nguồn tuyển, thời gian huấn luyện, tiền lương và tiêu hao theo tháng.
+history / honors
+Lịch sử chiến dịch, chiến công, tổn thất, danh hiệu và sự kiện.
+
+11.7. Hậu cần và chiến đấu
+Mỗi đạo quân tiêu hao lương thực, tiền lương và quân nhu theo tháng; quân đông làm tăng gánh nặng hậu cần.
+Tiếp tế lấy từ kho, vùng kiểm soát hoặc tuyến vận tải. Có thể bị cắt, đánh chặn hoặc gián đoạn.
+Địa hình, thời tiết, thành trì, chất lượng chỉ huy, tinh thần, trang bị và chênh lệch binh chủng ảnh hưởng kết quả chiến đấu.
+Chiến tranh có thể gồm hành quân, giao chiến, bao vây, đột kích, phòng thủ và rút lui; mỗi hành động có thời gian và chi phí.
+Không tạo màn chiến thuật real-time trong MVP; kết quả chiến đấu phải có báo cáo dễ hiểu, nêu rõ các yếu tố quyết định.
+12. Ngoại giao và thế lực bên ngoài
+Thế lực ngoài Trung Hoa được mô phỏng ở cấp chính trị - chiến lược. Mỗi thế lực có tên, loại hình, lãnh thổ khái quát, thủ lĩnh, sức mạnh, ổn định nội bộ, mức thống nhất và quan hệ với triều đình.
+12.1. Các nhóm thế lực
+Hung Nô hoặc liên minh thảo nguyên phù hợp với thời đại campaign.
+Các bộ tộc/liên minh thảo nguyên khác như Ô Hoàn, Tiên Ti hoặc nhóm kế tiếp tùy niên đại; không mặc định chúng cùng tồn tại.
+Các thành bang/tiểu quốc Tây Vực và ốc đảo dọc tuyến giao thương phía tây.
+Các vương quốc ở bán đảo Triều Tiên theo thời đại.
+Thế lực ở quần đảo Nhật Bản và phía nam Trung Hoa ở cấp đối ngoại xa.
+12.2. Hành động ngoại giao
+Hành động
+Tác động
+Triều cống / sắc phong
+Tạo quan hệ thứ bậc, uy tín và trao đổi lễ vật; điều kiện và ý nghĩa tùy campaign.
+Thương mại biên giới
+Tạo lợi ích kinh tế, nhưng có thể cung cấp vật tư chiến lược cho đối thủ.
+Hòa thân / hôn nhân ngoại giao
+Tạo quan hệ cá nhân và cam kết; có thể gây phản ứng trong triều.
+Liên minh / bảo hộ
+Chia sẻ lợi ích hoặc cam kết hỗ trợ; tăng rủi ro bị kéo vào chiến tranh.
+Đe dọa / phô trương lực lượng
+Tăng sức ép nhưng có thể khiến đối phương liên kết chống lại.
+Chiến tranh / can thiệp
+Tác động lãnh thổ, thương mại, uy tín và chi phí ngân khố.
+
+12.3. AI thế lực bên ngoài
+Dùng state machine và rule-based priorities. Ví dụ: thống nhất nội bộ → tăng sức ép biên giới; suy yếu → ưu tiên thương mại/triều cống; bị đe dọa → liên minh hoặc rút lui; có cơ hội → tập kích tuyến vận tải. Trạng thái và lựa chọn có thể dựa trên vài chỉ số, không cần AI lập kế hoạch dài hạn.
+13. Sự kiện và quyết sách
+Sự kiện phải tạo ra quyết định có ý nghĩa, không chỉ tự động cộng/trừ chỉ số. Một event có điều kiện kích hoạt, nội dung, các lựa chọn, chi phí, hệ quả tức thời và hiệu ứng kéo dài.
+13.1. Nhóm sự kiện
+Nhóm
+Ví dụ
+Địa phương
+Mất mùa, lũ lụt, hạn hán, dịch bệnh, thiếu lương, tranh chấp ruộng đất, cướp bóc.
+Kinh tế
+Mỏ mới, giá muối tăng, tắc nghẽn vận tải, thiếu sắt, thương nhân xin đặc quyền.
+Triều đình
+Tham nhũng, đàn hặc, tranh chấp chức vụ, xung đột phe phái, cải cách.
+Hoàng tộc
+Thái tử mất uy tín, hoàng tử kết bè phái, hoàng đế bệnh nặng, tranh chấp kế vị.
+Quân sự
+Tướng lập công, binh biến, thiếu quân lương, biên quân bất mãn, thành trì bị vây.
+Đối ngoại
+Sứ đoàn, triều cống, đột kích biên giới, liên minh bộ lạc, yêu cầu trao đổi con tin.
+
+13.2. Cấu trúc sự kiện
+Trigger: điều kiện thời gian, địa lý, chỉ số, nhân vật hoặc trạng thái.
+Choices: mỗi lựa chọn có yêu cầu, chi phí, hiệu ứng tức thời và cờ trạng thái.
+DelayedEffects: tác động sau một số tháng/năm hoặc điều kiện khác.
+HistoryLog: ghi lại quyết định và kết quả để người chơi xem lịch sử triều đại.
+Uniqueness / cooldown: tránh lặp vô hạn cùng một sự kiện; sự kiện chuỗi có thể mở khóa theo trạng thái.
+14. Giao diện và trải nghiệm
+Giao diện phải gợi cảm giác game chiến thuật lịch sử, không giống dashboard quản trị doanh nghiệp. Bản đồ chiếm phần lớn màn hình; panel chi tiết có thể mở theo đối tượng đang chọn.
+14.1. Màn hình chính
+Khu vực
+Nội dung
+Thanh trên
+Triều đại, hoàng đế, tháng/năm, ngân khố, lương thực, tình trạng quốc gia và điều khiển thời gian.
+Bản đồ giữa
+Biên giới, địa hình, đơn vị hành chính, thành trì, tuyến giao thông và quân đội.
+Panel bên phải
+Thông tin đơn vị hành chính, nhân vật, công trình, tuyến vận tải hoặc đạo quân đang chọn.
+Nhật ký dưới
+Sự kiện, báo cáo tháng, tin biên giới, cảnh báo thiếu lương, tiến độ công trình và chiến sự.
+Menu hệ thống
+Quốc gia, hành chính, kinh tế, giao thông, triều đình, hoàng tộc, quân sự, ngoại giao, sự kiện, save/load.
+
+14.2. Các màn hình quản lý bổ sung
+Bản đồ kinh tế: sản lượng, tài nguyên, giá hàng, kho lương và thuế.
+Bản đồ giao thông: chất lượng tuyến, năng lực vận chuyển, thời gian đi lại và điểm nghẽn.
+Màn hình quân sự: loại quân, đạo quân có tên riêng, vị trí, chỉ huy, tiếp tế, nhiệm vụ và lịch sử chiến dịch.
+Màn hình triều đình: chức vụ, phe phái, quan hệ, tham nhũng và cơ quan đặc biệt.
+Màn hình hoàng tộc: gia phả, thái tử, người kế vị, quan hệ và tính chính thống.
+15. Kiến trúc kỹ thuật và dữ liệu
+QUYẾT ĐỊNH KIẾN TRÚC
+Bản đầu là ứng dụng single-player chạy hoàn toàn trên frontend. Không yêu cầu backend, API server, tài khoản hoặc database server. Có thể deploy dưới dạng static web application; save game lưu cục bộ.
+
+15.1. Stack đề xuất
+Công nghệ
+Vai trò
+React + TypeScript
+UI và domain type rõ ràng.
+Vite
+Development server và static build.
+Zustand
+Quản lý state phía client.
+SVG
+Bản đồ vùng hành chính, đường biên, tuyến và tương tác.
+CSS / Tailwind
+Giao diện và theme.
+IndexedDB
+Nhiều save slot, autosave và dữ liệu campaign cục bộ.
+Zod
+Validate cấu hình, game data và save.
+Vitest
+Unit test công thức mô phỏng và logic.
+
+15.2. Tách engine khỏi UI
+Các công thức kinh tế, hành chính, dân số, giao thông, chiến đấu, ngoại giao và sự kiện nằm trong TypeScript module thuần, không phụ thuộc React hoặc DOM. UI chỉ hiển thị state và gửi action. Một monthly tick phải là hàm có thể chạy test với đầu vào xác định và trả ra state/log mới.
+15.3. Mô hình dữ liệu chính
+Entity / cấu hình
+Nội dung chính
+GameState
+Ngày tháng, quốc gia, đơn vị hành chính, dân số, kinh tế, công trình, nhân vật, lực lượng, quan hệ và event flags.
+AdministrativeUnit
+id, name, type, parentId, childrenIds, governorId, population, treasury, stability, development, resources, locationId.
+AdministrativeProfile
+Tên cấp, thứ tự cấp, loại chức quan và quy tắc quyền hạn theo campaign.
+EconomicRegion / Market
+Sản xuất, nhu cầu, tồn kho, giá, thuế, giao dịch và tuyến kết nối.
+TransportRoute
+Điểm đầu/cuối, loại tuyến, chất lượng, năng lực, chi phí, thời gian, an ninh và trạng thái.
+Building
+Loại công trình, cấp độ, chi phí, thời gian xây, bảo trì, yêu cầu và hiệu ứng.
+Character / Faction
+Thuộc tính nhân vật, chức vụ, phe, quan hệ, ảnh hưởng và lòng trung thành.
+Dynasty / Heir
+Hoàng đế, gia phả, người kế vị, quy tắc kế vị, tính chính thống và sự kiện.
+MilitaryUnit / MilitaryProfile
+Tên lực lượng, loại tổ chức, binh chủng, vai trò, chỉ huy, quân số, tiếp tế, lịch sử và danh mục tên theo thời đại.
+ExternalPolity
+Thế lực đối ngoại, vùng ảnh hưởng, thủ lĩnh, sức mạnh, quan hệ, trạng thái và lợi ích.
+EventDefinition
+Trigger, choices, costs, immediate effects, delayed effects và cooldown.
+
+15.4. Monthly simulation pipeline
+Engine cần có một hàm điều phối tick theo tháng. Thứ tự cập nhật phải được tài liệu hóa và có test. Nếu một hệ thống phụ thuộc kết quả hệ thống khác, thứ tự pipeline phải bảo đảm kết quả ổn định và không cập nhật trùng.
+15.5. Save/load
+IndexedDB với nhiều slot, autosave và lưu thủ công.
+Mỗi save có schemaVersion, campaignVersion và timestamp.
+Hỗ trợ export/import JSON để sao lưu và debug.
+Có migration khi đổi cấu trúc dữ liệu; validate save trước khi load.
+Không lưu dữ liệu quan trọng chỉ trong React component state.
+15.6. Quy tắc triển khai cho AI coding agent
+Trước khi code, kiểm tra repository hiện tại và báo cáo ngắn cấu trúc đang có; không ghi đè code khi chưa hiểu tác động.
+Chia việc thành milestone nhỏ; mỗi milestone phải tạo ra phần mềm chạy được và có thể kiểm chứng.
+Dùng TypeScript strict mode; tránh any nếu không thật sự cần; tách domain types, engine, UI, data và persistence.
+Không đưa công thức mô phỏng vào React component; không thêm backend, tài khoản hoặc service ngoài phạm vi khi chưa có yêu cầu mới.
+Sau mỗi thay đổi, chạy typecheck, lint, unit test (nếu có) và production build; báo cáo file đã tạo/sửa và giới hạn còn lại.
+Dữ liệu thế giới, tên gọi lịch sử, đơn vị quân, sự kiện và cấu hình campaign phải tách khỏi engine để có thể thay đổi mà không sửa công thức cốt lõi.
+TASK KHỞI ĐẦU GỢI Ý
+Kiểm tra repository; nếu chưa có project, tạo React + TypeScript bằng Vite, thiết lập cấu trúc thư mục tối thiểu, Zustand, Zod, theme Đế Nghiệp và domain types ban đầu cho GameState, Country, AdministrativeUnit, Calendar và MilitaryUnit. Đảm bảo npm install, npm run dev và npm run build hoạt động; chưa triển khai toàn bộ gameplay.
+
+16. MVP, roadmap và tiêu chí hoàn thành
+16.1. MVP có thể chơi
+Hệ thống
+Phạm vi tối thiểu cần chạy thực tế
+Bản đồ
+Một vùng Trung Hoa nhỏ, 3–5 Châu mẫu, cây hành chính có Phủ/Quận/Huyện; có vùng biên và một thế lực đối ngoại mẫu.
+Thời gian
+12 lượt/tháng, pause/tốc độ, tổng kết năm.
+Kinh tế
+Sản xuất nông nghiệp, một số hàng hóa, thuế, ngân khố, lương thực, tồn kho và tiêu dùng.
+Giao thông
+Một mạng đường/sông đơn giản, thời gian/chi phí vận chuyển và vận chuyển lương thực giữa huyện.
+Công trình
+Ít nhất một công trình nông nghiệp, thủy lợi, thương mại, phòng thủ và giao thông.
+Dân cư
+Ba nhóm lợi ích ở mức tổng hợp; di cư hoặc bất mãn theo một số điều kiện.
+Triều đình
+Hoàng đế, quan chức, vài nhân vật và ít nhất hai phe phái; có hoạn quan nếu campaign cho phép.
+Quân sự
+Quân thường trực, cấm quân và quân địa phương; một vài binh chủng; đạo quân có tên riêng; tiếp tế và một cơ chế chiến đấu chiến lược.
+Kế vị
+Có người kế thừa và sự kiện chuyển ngôi có hệ quả đơn giản.
+Sự kiện
+Thiên tai, thiếu lương, tham nhũng hoặc sự kiện triều đình với nhiều lựa chọn.
+Save/load
+Lưu, tải lại trang và tiếp tục được campaign.
+
+16.2. Roadmap
+Milestone
+Kết quả chính
+1 – Foundation
+Project, state, domain types, dữ liệu mẫu và save skeleton.
+2 – Map & Admin
+Bản đồ SVG, 3–5 Châu, cây Phủ/Quận/Huyện, panel và layer.
+3 – Calendar & Economy
+Monthly tick, mùa vụ, thuế, kho lương, sản xuất và tiêu dùng.
+4 – Logistics & Infrastructure
+Mạng đường/sông, vận chuyển, công trình và điểm nghẽn.
+5 – Population & Court
+Ba nhóm lợi ích, quan lại, phe phái, hoạn quan và cơ quan đặc biệt mẫu.
+6 – Dynasty & Military
+Kế vị, tổ chức lực lượng, tên quân, tuyển quân, tiếp tế và chiến đấu.
+7 – Diplomacy & Events
+Hung Nô/ngoại thế lực, ngoại giao, chuỗi sự kiện và nhật ký.
+8 – Sandbox Polish
+Cân bằng, UI, save/load, kiểm thử, tutorial nhẹ và deploy.
+
+16.3. Tiêu chí hoàn thành MVP
+Game chạy trên trình duyệt desktop và build static thành công.
+Người chơi chọn được Châu/Phủ/Quận/Huyện trên bản đồ và hiểu quan hệ cha-con.
+Có thể tiến tháng, quan sát mùa vụ và báo cáo cuối năm.
+Có thể thay đổi thuế, xây công trình và vận chuyển lương thực; tác động được mô phỏng.
+Ít nhất một tuyến giao thông ảnh hưởng đến thời gian hoặc năng lực vận tải.
+Quân đội có tên, loại lực lượng, chỉ huy, vị trí và trạng thái tiếp tế; có thể hành quân và giao chiến cơ bản.
+Có ít nhất một quyết định triều đình hoặc kế vị tạo ra hệ quả.
+Có thể save/load mà không mất trạng thái chính.
+Không có lỗi nghiêm trọng trong core loop; công thức engine có unit test.
+16.4. Chưa làm trong giai đoạn đầu
+Multiplayer, backend, cloud save, tài khoản hoặc đồng bộ thiết bị.
+Đồ họa 3D, hiệu ứng nặng hoặc mô phỏng vật lý.
+Mô phỏng từng cá nhân, từng hộ dân, từng chuyến xe hoặc từng người lính.
+AI tự lập kế hoạch phức tạp cho mọi quốc gia và nhân vật.
+Điều khiển chiến trường tactical real-time.
+Mô phỏng chi tiết mọi nước láng giềng.
+Hàng trăm công trình, chính sách hoặc binh chủng ngay trong MVP.
+Campaign và Challenge; trước tiên hoàn thiện Sandbox có vòng lặp chơi ổn định.
+Phụ lục A. Quy tắc sử dụng tên gọi và dữ kiện lịch sử
+A.1. Không trộn tên quân giữa các thời đại
+Những tên quân được đề xuất trong tài liệu có niên đại khác nhau. Hổ Báo Kỵ gắn với Tào Ngụy thời Tam Quốc; Thần Sách Quân, Vũ Lâm Quân, Long Vũ Quân và Thần Vũ Quân là các ví dụ thuộc những giai đoạn nhà Đường; Bồng Nhật, Thiên Vũ, Long Vệ và Thần Vệ là tên các đạo quân nổi bật trong thiết chế Bắc Tống; Cẩm Y Vệ gắn với nhà Minh. Đây là danh mục ví dụ để xây MilitaryProfile, không phải danh sách một quân đội cùng tồn tại.
+A.2. Cẩm Y Vệ không phải một binh chủng thông thường
+Cẩm Y Vệ trong mô hình gameplay nên là một tổ chức thân vệ/an ninh/điều tra đặc biệt của hoàng đế, có nhân sự, ngân sách, quyền hạn và quan hệ chính trị. Có thể sở hữu đội hộ vệ có khả năng chiến đấu, nhưng không coi toàn bộ cơ quan là bộ binh/kỵ binh tuyến đầu. Đông Xưởng là một cơ quan khác, gắn với hoạn quan trong bối cảnh Minh; có thể cạnh tranh hoặc phối hợp với Cẩm Y Vệ.
+A.3. Tên sáng tạo và tên có chứng cứ
+Nhãn dữ liệu
+Cách xử lý
+HistoricalAttested
+Có nguồn tham khảo, campaign và niên đại; dùng đúng tên và ghi chú.
+HistoricalInspired
+Lấy cảm hứng từ cơ cấu lịch sử nhưng đã điều chỉnh cho gameplay; không trình bày như nguyên mẫu chính xác.
+Fictional
+Tên và đơn vị sáng tạo của Đế Nghiệp; có thể dùng Tả Kỵ Quân, Hữu Kỵ Quân hoặc các tên tương tự.
+Unverified
+Chưa kiểm chứng; không đưa vào dữ liệu chính thức như sự kiện lịch sử.
+
+A.4. Gợi ý cấu hình profile
+Ví dụ: Campaign “Đường giả tưởng” có thể bật Vũ Lâm, Long Vũ, Thần Vũ và Thần Sách theo giai đoạn được lựa chọn; campaign “Tam Quốc giả tưởng” có thể bật Hổ Báo Kỵ và các lực lượng tương ứng; campaign “Minh giả tưởng” có thể bật Cẩm Y Vệ và Đông Xưởng. Các tên khác có thể sáng tạo nhưng cần gắn cờ Fictional.
+NGUYÊN TẮC LỊCH SỬ
+Khi nội dung chưa được kiểm chứng, ghi là “giả tưởng” hoặc “lấy cảm hứng”. Không gán tên, chức vụ, cơ cấu và lực lượng ở các thời đại cách xa nhau cho cùng một campaign lịch sử nếu không có giải thích rõ.
+
+Phụ lục B. Nguồn tham khảo lịch sử
+Các nguồn dưới đây được dùng để kiểm tra sơ bộ việc tên gọi và loại hình lực lượng có bối cảnh lịch sử khác nhau. Đây là cơ sở tham khảo cho thiết kế, không thay thế nghiên cứu chuyên sâu khi xây dựng một campaign lịch sử cụ thể.
+[1] The Reach of the Military: Tang. Cambridge Journal of Chinese History; mô tả sự thay đổi của thiết chế quân sự Đường từ phủ binh sang quân chuyên nghiệp và các đơn vị đóng giữ địa phương. Mở nguồn
+[2] 魏晋的中军 – Institute of History and Philology, Academia Sinica. Nghiên cứu về quân túc vệ thời Ngụy-Tấn, trích ghi chép về Hổ Báo Kỵ của Tào Ngụy và vai trò chiến đấu/tuần vệ. Mở nguồn
+[3] 唐代射生军考 – 史林 (2014). Bài nghiên cứu về Xạ Sinh Quân, Thần Uy Quân, Thiên Uy Quân và quá trình sáp nhập vào Thần Sách Quân thời Đường. Mở nguồn
+[4] Military Systems of Successive Dynasties: Tang. Tư liệu văn hiến về các lực lượng cấm vệ, Vũ Lâm, Long Vũ, Thần Vũ và sự thay đổi tên gọi trong thời Đường. Mở nguồn
+[5] 通典 / 舊唐書 – hệ thống chức quan và quân vệ Đường. Các bản văn hiến về Tả/Hữu Long Vũ, Thần Vũ, Vũ Lâm và các danh xưng lực lượng vệ quân. Mở nguồn
+[6] Military Institutions as a Defining Feature of the Song Dynasty. Cambridge Journal of Chinese History; trình bày quân chuyên nghiệp, cấm quân, tương quân, dân binh và các đạo quân Bắc Tống như Bồng Nhật, Thiên Vũ, Long Vệ, Thần Vệ. Mở nguồn
+[7] The Cambridge History of China, Volume 8: The Ming Dynasty, Part 2. Tham khảo về vệ sở, cấm vệ kinh thành, Cẩm Y Vệ và quan hệ với Đông/Tây Xưởng. Mở nguồn
+[8] Why Military Institutions Matter for Ming History. David Robinson, Cambridge Journal of Chinese History; bối cảnh thiết chế quân sự nhà Minh, lực lượng thường trực, hậu cần và tổ chức quân sự. Mở nguồn
+Tóm tắt định hướng v1.1
+ĐẾ NGHIỆP TRONG MỘT CÂU
+Một game grand strategy và mô phỏng triều đại Trung Hoa giả tưởng, nơi người chơi điều hành một đế quốc qua 12 lượt tháng mỗi năm, quản lý hệ thống Châu–Phủ–Quận–Huyện, kinh tế và mạng giao thông, triều đình và kế vị, các đạo quân có danh xưng riêng, chiến tranh hậu cần và quan hệ với thế lực bên ngoài — trong một Sandbox có chiều sâu, quy tắc rõ ràng và AI không phức tạp.
+
+Nguyên tắc xuyên suốt: xây gameplay và mô phỏng trước; giữ tính logic và hệ quả nhân quả; chỉ thêm độ chi tiết khi nó tạo ra quyết định có ý nghĩa; mỗi milestone phải có phần mềm chạy được và có thể kiểm chứng.

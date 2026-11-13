@@ -1,0 +1,32 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "95EF5519F54C6C7057C5D2D54D2FA80B10B8CF222B82723354F2D91153909E73",
+    "Path": "D:\\Project\\Thiên Đồ\\src\\engine\\calendar.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "F79859DF8E3A724E7F71D7A51E77EB5821C5D3F4433EE8761BB43AB6D7E10D38",
+    "Path": "D:\\Project\\Thiên Đồ\\src\\engine\\selectors.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "7FB7E535EF2344732055A84D7D26BA03C8382CC005AB3F133FBC4E3370BFF830",
+    "Path": "D:\\Project\\Thiên Đồ\\src\\domain\\schema.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0B60BD23BB0766974AC6115A7ABF096B47EBC42E206B116322F469D40F732C2D",
+    "Path": "D:\\Project\\Thiên Đồ\\src\\data\\foundation.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "778274273755C121EE3332C4A5B9915B72E9B8A5012B0A85E7F02FD228E5F496",
+    "Path": "D:\\Project\\Thiên Đồ\\src\\persistence\\saves.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "DAEEA083AB5512E53B880F9D0A288BA5F407B7A7E4917C1CF1A32DD3E75C4073",
+    "Path": "D:\\Project\\Thiên Đồ\\src\\state\\gameStore.ts"
+  }
+]

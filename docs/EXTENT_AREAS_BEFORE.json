@@ -1,0 +1,227 @@
+[
+  {
+    "id": "toan-vung",
+    "huyen": 24,
+    "km2": 33910
+  },
+  {
+    "id": "zhou-tay-linh",
+    "huyen": 7,
+    "km2": 12095
+  },
+  {
+    "id": "zhou-tay-linh-fu-1",
+    "huyen": 5,
+    "km2": 5443
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1",
+    "huyen": 3,
+    "km2": 4022
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 1573
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 147
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 2301
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-2",
+    "huyen": 2,
+    "km2": 1421
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-2-xian-1",
+    "huyen": 1,
+    "km2": 1260
+  },
+  {
+    "id": "zhou-tay-linh-fu-1-jun-2-xian-2",
+    "huyen": 1,
+    "km2": 161
+  },
+  {
+    "id": "zhou-tay-linh-fu-2",
+    "huyen": 2,
+    "km2": 6653
+  },
+  {
+    "id": "zhou-tay-linh-fu-2-jun-1",
+    "huyen": 2,
+    "km2": 6653
+  },
+  {
+    "id": "zhou-tay-linh-fu-2-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 2989
+  },
+  {
+    "id": "zhou-tay-linh-fu-2-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 3663
+  },
+  {
+    "id": "zhou-trung-ninh",
+    "huyen": 10,
+    "km2": 14194
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1",
+    "huyen": 5,
+    "km2": 4645
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1",
+    "huyen": 3,
+    "km2": 2074
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 508
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 648
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 917
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-2",
+    "huyen": 2,
+    "km2": 2571
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+    "huyen": 1,
+    "km2": 1029
+  },
+  {
+    "id": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+    "huyen": 1,
+    "km2": 1542
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2",
+    "huyen": 2,
+    "km2": 2843
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2-jun-1",
+    "huyen": 2,
+    "km2": 2843
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 1120
+  },
+  {
+    "id": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 1722
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3",
+    "huyen": 3,
+    "km2": 6707
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1",
+    "huyen": 3,
+    "km2": 6707
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 2930
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 2459
+  },
+  {
+    "id": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 1318
+  },
+  {
+    "id": "zhou-dong-giang",
+    "huyen": 7,
+    "km2": 7621
+  },
+  {
+    "id": "zhou-dong-giang-fu-1",
+    "huyen": 5,
+    "km2": 5024
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1",
+    "huyen": 3,
+    "km2": 2857
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 919
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 1019
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-1-xian-3",
+    "huyen": 1,
+    "km2": 920
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-2",
+    "huyen": 2,
+    "km2": 2167
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-2-xian-1",
+    "huyen": 1,
+    "km2": 926
+  },
+  {
+    "id": "zhou-dong-giang-fu-1-jun-2-xian-2",
+    "huyen": 1,
+    "km2": 1241
+  },
+  {
+    "id": "zhou-dong-giang-fu-2",
+    "huyen": 2,
+    "km2": 2597
+  },
+  {
+    "id": "zhou-dong-giang-fu-2-jun-1",
+    "huyen": 2,
+    "km2": 2597
+  },
+  {
+    "id": "zhou-dong-giang-fu-2-jun-1-xian-1",
+    "huyen": 1,
+    "km2": 2008
+  },
+  {
+    "id": "zhou-dong-giang-fu-2-jun-1-xian-2",
+    "huyen": 1,
+    "km2": 589
+  }
+]

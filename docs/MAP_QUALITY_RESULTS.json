@@ -1,0 +1,114 @@
+{
+  "clicks": [
+    {
+      "level": "zhou",
+      "id": "zhou-trung-ninh",
+      "name": "Trung Ninh Châu",
+      "count": 3
+    },
+    {
+      "level": "fu",
+      "id": "zhou-trung-ninh-fu-1",
+      "name": "Ninh Kinh Phủ",
+      "count": 7
+    },
+    {
+      "level": "jun",
+      "id": "zhou-trung-ninh-fu-1-jun-1",
+      "name": "Ninh Kinh Thượng Quận",
+      "count": 10
+    },
+    {
+      "level": "xian",
+      "id": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+      "name": "Ninh Kinh Bắc Bình Huyện",
+      "count": 24
+    }
+  ],
+  "zooms": [
+    {
+      "name": "far",
+      "labels": [
+        {
+          "text": "Thành Ninh Kinh",
+          "kind": "capital"
+        },
+        {
+          "text": "Đông Giang Châu",
+          "kind": "province"
+        },
+        {
+          "text": "Tây Lĩnh Châu",
+          "kind": "province"
+        },
+        {
+          "text": "Trung Ninh Châu",
+          "kind": "province"
+        }
+      ],
+      "overlaps": []
+    },
+    {
+      "name": "middle",
+      "labels": [
+        {
+          "text": "Thành Ninh Kinh",
+          "kind": "capital"
+        },
+        {
+          "text": "Giang Khẩu Phủ",
+          "kind": "district"
+        },
+        {
+          "text": "Đông Hải Phủ",
+          "kind": "district"
+        },
+        {
+          "text": "Ninh Kinh Phủ",
+          "kind": "district"
+        },
+        {
+          "text": "Hà Dương Phủ",
+          "kind": "district"
+        },
+        {
+          "text": "Bình Nguyên Phủ",
+          "kind": "district"
+        },
+        {
+          "text": "Thành Đông Hải",
+          "kind": "city"
+        }
+      ],
+      "overlaps": []
+    },
+    {
+      "name": "near",
+      "labels": [
+        {
+          "text": "Thành Ninh Kinh",
+          "kind": "capital"
+        },
+        {
+          "text": "Giang Khẩu Bắc Hòa Huyện",
+          "kind": "district"
+        },
+        {
+          "text": "Ninh Kinh Bắc An Huyện",
+          "kind": "district"
+        },
+        {
+          "text": "Ninh Kinh Nam Bình Huyện",
+          "kind": "district"
+        },
+        {
+          "text": "Bình Nguyên Bắc Bình Huyện",
+          "kind": "district"
+        }
+      ],
+      "overlaps": []
+    }
+  ],
+  "camera": "restored exactly",
+  "errors": []
+}
