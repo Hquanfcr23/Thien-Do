@@ -25,7 +25,7 @@ try{
  await expect(page.getByRole('heading',{name:'Sơn hà đồ',exact:true})).toBeVisible();
  await expect(page.getByTestId('map-camera')).not.toHaveAttribute('transform','translate(0 0) translate(700 425) scale(1) translate(-700 -425)');
  await labelsAt('far');
- const targets=[['zhou','zhou-trung-ninh',3],['fu','zhou-trung-ninh-fu-1',7],['jun','zhou-trung-ninh-fu-1-jun-1',10],['xian','zhou-trung-ninh-fu-1-jun-1-xian-2',24]];
+ const targets=[['zhou','zhou-trung-ninh',3],['fu','zhou-trung-ninh-fu-1',7],['xian','zhou-trung-ninh-fu-1-jun-1-xian-2',24]];
  for(const[level,id,count]of targets){
   const close=page.getByRole('button',{name:'Đóng bảng quản lý',exact:true});if(await close.count())await close.click();
   await page.getByRole('combobox',{name:'Cấp bản đồ'}).selectOption(level);

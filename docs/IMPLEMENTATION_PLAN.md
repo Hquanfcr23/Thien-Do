@@ -1,6 +1,22 @@
 # Kế hoạch triển khai Đế Nghiệp
 
-## Trạng thái hiện tại
+## Cập nhật hiện hành 14/11/2026
+
+Cập nhật 24 lượt điều hành/năm: hai lượt cho mỗi tháng, chỉ lượt thứ hai chạy monthly tick; save v6 cũ mở tại đầu tháng. Yêu cầu trực tiếp mới đã thay cấu trúc sang Trung ương → Châu → Phủ → Huyện và tập trung kinh tế tại Phủ: Châu ban chính sách; Phủ có ngân khố, kho lương công và sàn giao dịch; Huyện giữ sản xuất, dân cư và hàng trong dân. Giá Huyện suy ra từ giá Phủ/cước/hao hụt, không có market độc lập. Thuế hiện vật vận chuyển thật, hàng ngoài lương thanh lý có người mua trả bạc; công trình mua vật tư từng tháng từ sàn, đình trệ khi thiếu điều kiện. Save v5/migration v1–v4. Xem PHASE_3_REPORT.md cho 89 tests, benchmark 100 Huyện/294 tuyến/240 tháng, kết quả Playwright và các giới hạn cân bằng. Các đoạn roadmap bên dưới lưu lịch sử, được thay thế khi mâu thuẫn với chỉ thị mới này. Không triển khai Phase 4.
+
+## Cổng cân bằng Phase 3 ưu tiên hiện tại (14/11/2026)
+
+Theo chỉ thị mới, `src/tests/phase3-balance.test.ts` chỉ chạy 9 ca bắt buộc: mặc định, thuế thấp/cao, bán lương giữ dự trữ 0/4 tháng, xây chọn lọc, xây tràn lan, nâng cấp tuyến và hạn hán. Mỗi ca chạy 3 seed × 240 tháng; kết quả mới ghi riêng tại `PHASE_3_PRIORITY_BALANCE_RESULTS.json`, không ghi đè kết quả bộ 18 ca lịch sử.
+
+Quy định Full QA hiện hành: chạy 9 ca bắt buộc × 3 seed × 240 tháng, không tự động chạy bộ 18 ca lịch sử. Chỉ chạy Full QA khi có yêu cầu; cập nhật quy định này không kích hoạt kiểm thử.
+
+Để sau: ưu tiên thu hiện vật/thu bạc, không tự bán lương, cấm thương mại, đứt một tuyến trọng yếu, điều phối chủ động, hạn hán kết hợp bán hết/giữ 4 tháng/điều phối. Đóng toàn bộ tuyến và phá sản vẫn thuộc bộ kiểm tra sự cố riêng. Không chạy hay mở rộng các ca này trong vòng ưu tiên hiện tại. Bộ 18 ca ở các báo cáo phía dưới là kết quả lịch sử trước khi thay cổng cân bằng.
+
+## Cân bằng Phase 3 hoàn tất 14/11/2026
+
+Sửa dự trữ tư nhân theo vụ, rò bạc nội bộ, cầu mua thực, miễn lương sinh tồn ở thuế thường, quỹ vận hành, bảo trì theo vốn; thêm quy đổi một phần thuế mùa vụ có giới hạn. Có công cụ bán/mua/rút lệnh lương công, ngân sách trung ương/Phủ và chuyển kho vật lý, cứu trợ. Save v6 đọc v1–v5; sim revision 3, không cấp thêm tài sản khi di trú. 101 tests; 18 chiến lược × 3 seed × 240 tháng; Playwright cũ và mới đạt. Xem PHASE_3_REPORT.md và PHASE_3_BALANCE_RESULTS.json, gồm báo cáo trước/sau và đánh đổi. Typecheck/lint/tests đạt qua npm run check; build sandbox gặp OOM nhưng npm run build chạy riêng ngoài sandbox đạt. Không triển khai Phase 4.
+
+## Trạng thái nền tảng trước cập nhật
 Map Quality Rework: xem MAP_QUALITY_REWORK.md và MAP_QUALITY_RESULTS.json cho geometry union từ Huyện, nhãn theo zoom, camera, kiểm tra topology và nghiệm thu hình ảnh. Bounds trong save vẫn giữ tương thích, không còn là hình dạng lãnh thổ được render.
 Phase 2 được người dùng cho phép và đã triển khai: 3 Châu/7 Phủ/10 Quận/24 Huyện, SVG liên kết GameState, cây/aggregation, lưu schema v2 và migration v1. Quy ước tiền tệ cập nhật: lượng bạc, 1 lượng = 1000 đồng. Xem PHASE_2_REPORT.md cho kiểm thử và giới hạn địa đồ Fictional. UI prototype giữ nguyên phong cách; mobile hoãn Phase 1–3. Không triển khai Phase 3 khi chưa được cho phép.
 
@@ -66,3 +82,9 @@ Mỗi phase chia PR/milestone nhỏ theo data → engine → test → UI → bro
 
 ## Cập nhật Phase 2 — geographic rebuild
 Người dùng đã cho phép Phase 2 và yêu cầu thay hình học giả lập bằng GIS thực. Xem [báo cáo GIS](REAL_GIS_REPORT.md), [nguồn dữ liệu](GIS_SOURCES.json), [kết quả browser](REAL_GIS_RESULTS.json). Các ghi chú chờ phép Phase 2 ở trên là trạng thái Foundation cũ; không còn áp dụng. Phase 3 vẫn chưa được phép.
+
+
+## Phase 3 được cho phép theo yêu cầu mới
+Phạm vi trực tiếp mới gồm 3.1 thời gian/dân số/lao động; 3.2 sản xuất; 3.3 thị trường; 3.4 vận tải; 3.5 xây dựng/tài chính; 3.6 QA. Các hệ thống hạ tầng/dân số từ roadmap cũ được đưa vào Phase 3 theo yêu cầu người dùng. Xem PHASE_3_REPORT.md và các kết quả JSON. Phase 4 chưa được cho phép.
+
+Kiểm chứng Phase 3: 76 tests, 84 checkpoint kịch bản, benchmark 300 Huyện/240 tháng và Playwright production. Hạn chế/cân bằng được ghi rõ trong PHASE_3_REPORT.md.

@@ -9,7 +9,7 @@ describe('natural geographic atlas',()=>{
   expect(atlas.size).toBe(state.administrativeUnits.length);
   for(const u of state.administrativeUnits){const a=atlas.get(u.id)!;expect(area(a.shape),u.id).toBeGreaterThan(1);expect(a.shape.some(p=>inside(a.label,p[0]!)&&!p.slice(1).some(h=>inside(a.label,h))),u.id).toBe(true);}
  });
- it.each(['zhou','fu','jun','xian'])('%s covers the national outline with neither gaps nor overlaps',level=>{
+ it.each(['zhou','fu','xian'])('%s covers the national outline with neither gaps nor overlaps',level=>{
   const shapes=state.administrativeUnits.filter(u=>u.levelId===level).map(u=>atlas.get(u.id)!.shape);
   const union=clip.union(shapes[0]!,...shapes.slice(1));expect(area(clip.xor(union,atlas.get('capital')!.shape))).toBeLessThan(.001);
   for(let i=0;i<shapes.length;i++)for(let j=i+1;j<shapes.length;j++)expect(area(clip.intersection(shapes[i]!,shapes[j]!))).toBeLessThan(.001);

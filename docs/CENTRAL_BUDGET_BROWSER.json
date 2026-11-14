@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "delta": "+32,1 lượng/tháng",
+  "checks": [
+    "new game",
+    "central policy queued and applied",
+    "real treasury and grain movement",
+    "manual save",
+    "JSON export/import",
+    "reload retains policy and monthly delta"
+  ],
+  "errors": []
+}

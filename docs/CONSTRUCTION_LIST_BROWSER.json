@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "seven building cards",
+    "current and next level label",
+    "upgrade button tooltip content",
+    "county/prefecture restrictions",
+    "route selector and route quote",
+    "no browser runtime errors"
+  ],
+  "errors": []
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "months": 12,
+  "schemaVersion": 6,
+  "checked": [
+    "policy",
+    "construction",
+    "shipment",
+    "prefecture grain relief",
+    "population",
+    "annual report",
+    "save",
+    "JSON export/import",
+    "reload",
+    "v2 migration preserves balances",
+    "Phủ construction stalls on empty market",
+    "4x playback/pause"
+  ],
+  "errors": []
+}

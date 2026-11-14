@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "seven kinds",
+    "location restriction",
+    "tier-1 bill and finite progress",
+    "JSON export/import",
+    "autosave reload",
+    "tier-2 bill and maintenance",
+    "completion",
+    "real-route selection and order",
+    "legacy level five",
+    "legacy prepaid project resumes",
+    "legacy queued build retained",
+    "Phủ warehouse"
+  ],
+  "errors": [],
+  "fixture": "Only working capital and material stocks enlarged for QA; geography untouched"
+}

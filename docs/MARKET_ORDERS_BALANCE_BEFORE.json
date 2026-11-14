@@ -1,0 +1,4892 @@
+{
+  "seeds": [
+    1,
+    42,
+    1701
+  ],
+  "months": 240,
+  "cases": [
+    "open",
+    "closed",
+    "no-trade",
+    "low-tax",
+    "high-tax",
+    "hoard",
+    "sell-all",
+    "reserve-four",
+    "in-kind-only",
+    "cash-tax-only",
+    "coordinated",
+    "drought-open",
+    "drought-closed",
+    "drought-sell-all",
+    "drought-reserve-four",
+    "drought-in-kind-only",
+    "drought-cash-tax-only",
+    "drought-coordinated"
+  ],
+  "weather": "Drought cases: months 121–144 only; all other weather identical by seed",
+  "maxError": 2.3283064365386963e-10,
+  "results": [
+    {
+      "seed": 1,
+      "scenario": "open",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 6770.668281556962,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546845,
+          "prefectureCash": 14027.654892446495,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561572,
+          "prefectureCash": 12826.868904745512,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 603216,
+          "prefectureCash": 8592.08138701655,
+          "hunger": 144
+        }
+      ],
+      "population": 603216,
+      "prefectureCash": 8592.08138701655,
+      "publicGrain": 13455.145502352027,
+      "totalGrain": 294368.22612406785,
+      "stability": 98.67278756352856,
+      "hunger": 144,
+      "underfunded": 466,
+      "sales": 8010.222054486837,
+      "tax": 85323.63602246458,
+      "earlyRevenue": 6988.193320670111,
+      "administration": 73215.41566785876,
+      "maintenance": 14761.15566816962,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3407.7136792837073,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.06300000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.1888074321114752
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 228.86243177084594,
+          "grain": 2853.1712976000003,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 4268.103275961997,
+          "grain": 1332.1785708146313,
+          "publicOffers": 735.6798129234323,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2243.7233,
+          "publicOffers": 0,
+          "service": 0.6862357543171488
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 322.9454999999999,
+          "grain": 4284.259953726521,
+          "publicOffers": 0,
+          "service": 0.0969989571289117
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.32699999999997,
+          "grain": 1967.5444452433414,
+          "publicOffers": 38.5881220440993,
+          "service": 0.238658507406571
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "closed",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 3537.9626458911584,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540402,
+          "prefectureCash": 4265.683436163382,
+          "hunger": 49
+        },
+        {
+          "month": 120,
+          "population": 555547,
+          "prefectureCash": 3658.585792527583,
+          "hunger": 101
+        },
+        {
+          "month": 240,
+          "population": 595528,
+          "prefectureCash": 1532.038509262112,
+          "hunger": 173
+        }
+      ],
+      "population": 595528,
+      "prefectureCash": 1532.038509262112,
+      "publicGrain": 9971.450454800859,
+      "totalGrain": 206883.31588717224,
+      "stability": 96.71167074078761,
+      "hunger": 173,
+      "underfunded": 1013,
+      "sales": 2879.6373512694595,
+      "tax": 33399.163876343475,
+      "earlyRevenue": 2871.267610793443,
+      "administration": 35627.22997461701,
+      "maintenance": 5119.532743733671,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 115.87349999999999,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.0380741017735341
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 405.15966637329745,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 219.64949999999993,
+          "grain": 1771.9297905459625,
+          "publicOffers": 0,
+          "service": 0.05017812761533981
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 165.56084288881488,
+          "grain": 1337.42217297914,
+          "publicOffers": 364.764643751422,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2148.338885911597,
+          "publicOffers": 0,
+          "service": 0.04293832980538971
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 319.2334999999999,
+          "grain": 2514.9265023625812,
+          "publicOffers": 0,
+          "service": 0.02930625485730602
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.49499999999998,
+          "grain": 1834.0684592501557,
+          "publicOffers": 0,
+          "service": 0.054885383211370715
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "no-trade",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 5381.489415684168,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540593,
+          "prefectureCash": 11227.603782172106,
+          "hunger": 50
+        },
+        {
+          "month": 120,
+          "population": 558029,
+          "prefectureCash": 22156.196327115736,
+          "hunger": 94
+        },
+        {
+          "month": 240,
+          "population": 601133,
+          "prefectureCash": 24580.399113321895,
+          "hunger": 153
+        }
+      ],
+      "population": 601133,
+      "prefectureCash": 24580.399113321895,
+      "publicGrain": 13854.627977942062,
+      "totalGrain": 255156.6456373442,
+      "stability": 99.02414782343381,
+      "hunger": 153,
+      "underfunded": 755,
+      "sales": 5283.568542600789,
+      "tax": 78197.71245060435,
+      "earlyRevenue": 5598.618770753714,
+      "administration": 50372.23361537441,
+      "maintenance": 11844.22231120657,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 14780.357763387878,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 8846.237849934016,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.88949999999994,
+          "grain": 2855.1479891999998,
+          "publicOffers": 0,
+          "service": 0.2698466400526642
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 100.815,
+          "grain": 1341.2098084487636,
+          "publicOffers": 1175.7159436261175,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999993,
+          "grain": 2243.7233,
+          "publicOffers": 0,
+          "service": 0.589893743739196
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.64949999999993,
+          "grain": 4294.69373906718,
+          "publicOffers": 0,
+          "service": 0.009028723989588117
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.38299999999998,
+          "grain": 1944.1371976000003,
+          "publicOffers": 0,
+          "service": 0.02652019690271242
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "low-tax",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 532588,
+          "prefectureCash": 3378.695117325839,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 551883,
+          "prefectureCash": 4209.9497367279855,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 572052,
+          "prefectureCash": 2242.1798737477,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 622485,
+          "prefectureCash": 1194.0029580088174,
+          "hunger": 158
+        }
+      ],
+      "population": 622485,
+      "prefectureCash": 1194.0029580088174,
+      "publicGrain": 12019.303641345348,
+      "totalGrain": 209750.41918259265,
+      "stability": 97.0064548012529,
+      "hunger": 158,
+      "underfunded": 1174,
+      "sales": 723.9390212699255,
+      "tax": 34368.03980550717,
+      "earlyRevenue": 3157.4619040350753,
+      "administration": 30680.824687309,
+      "maintenance": 6833.04780614009,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 152.23245800881753,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 55.479000000000006,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.02744623846780883
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 229.34549999999987,
+          "grain": 3007.1262,
+          "publicOffers": 0,
+          "service": 0.23796326727740005
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 104.135,
+          "grain": 1394.1915,
+          "publicOffers": 0,
+          "service": 0.2343494355787142
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 171.52249999999998,
+          "grain": 2013.6865173608683,
+          "publicOffers": 0,
+          "service": 0.013599205995510793
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 335.2414999999999,
+          "grain": 3640.865887150798,
+          "publicOffers": 0,
+          "service": 0.011075286445904133
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 146.04699999999997,
+          "grain": 1963.4335368336833,
+          "publicOffers": 0,
+          "service": 0.017678348105536534
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "high-tax",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 524956,
+          "prefectureCash": 27877.06169576019,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 509198,
+          "prefectureCash": 73902.2113897494,
+          "hunger": 43
+        },
+        {
+          "month": 120,
+          "population": 493197,
+          "prefectureCash": 96062.97585978746,
+          "hunger": 83
+        },
+        {
+          "month": 240,
+          "population": 472768,
+          "prefectureCash": 115687.27641986698,
+          "hunger": 95
+        }
+      ],
+      "population": 472768,
+      "prefectureCash": 115687.27641986698,
+      "publicGrain": 41208.631393654425,
+      "totalGrain": 341880.6069038463,
+      "stability": 0,
+      "hunger": 95,
+      "underfunded": 0,
+      "sales": 21343.99575073541,
+      "tax": 207892.93508682185,
+      "earlyRevenue": 28232.15640767316,
+      "administration": 95318.50399999993,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 14291.494794500099,
+          "grain": 1516.095224031054,
+          "publicOffers": 1138.2666769208142,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 6699.400012718235,
+          "grain": 1994.5105266100556,
+          "publicOffers": 518.0766263256584,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 21427.6926178155,
+          "grain": 5602.843990550299,
+          "publicOffers": 2196.675198737923,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 11777.98341115465,
+          "grain": 4816.130508958482,
+          "publicOffers": 1017.5026755131688,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 16347.724828987046,
+          "grain": 5777.243139488352,
+          "publicOffers": 1704.6059856580998,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 29970.32993855715,
+          "grain": 5254.342616850793,
+          "publicOffers": 3428.029942764436,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 15172.6508161343,
+          "grain": 4757.330700823461,
+          "publicOffers": 1486.9775804218236,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "hoard",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 6770.668281556962,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546845,
+          "prefectureCash": 12891.043970636245,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561581,
+          "prefectureCash": 11583.853265045644,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 603229,
+          "prefectureCash": 7402.923525719045,
+          "hunger": 144
+        }
+      ],
+      "population": 603229,
+      "prefectureCash": 7402.923525719045,
+      "publicGrain": 22003.13440278001,
+      "totalGrain": 278012.3523802484,
+      "stability": 98.67278756352856,
+      "hunger": 144,
+      "underfunded": 591,
+      "sales": 0,
+      "tax": 82078.80472055919,
+      "earlyRevenue": 6988.193320670111,
+      "administration": 64379.902527393984,
+      "maintenance": 13557.407587410393,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3407.713679283632,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.06300000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.1888074321114752
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.77749999999992,
+          "grain": 5489.203286917878,
+          "publicOffers": 0,
+          "service": 0.2560639364093466
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3086.030346435413,
+          "grain": 3392.7825380038225,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 3728.5289301640582,
+          "publicOffers": 0,
+          "service": 0.08648204103815857
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.3854999999999,
+          "grain": 5518.944136372422,
+          "publicOffers": 0,
+          "service": 0.09374407699313449
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.88699999999997,
+          "grain": 3873.675511321827,
+          "publicOffers": 0,
+          "service": 0.09120362827569296
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "sell-all",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 7941.815226325731,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546846,
+          "prefectureCash": 15506.344037478644,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561593,
+          "prefectureCash": 13866.395117899498,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 603219,
+          "prefectureCash": 8538.507085364723,
+          "hunger": 144
+        }
+      ],
+      "population": 603219,
+      "prefectureCash": 8538.507085364723,
+      "publicGrain": 12158.262102076995,
+      "totalGrain": 306409.08792039845,
+      "stability": 98.67212407669346,
+      "hunger": 144,
+      "underfunded": 364,
+      "sales": 12981.394377560773,
+      "tax": 91617.57572999813,
+      "earlyRevenue": 8159.340265438873,
+      "administration": 83301.79090295028,
+      "maintenance": 15955.243067539495,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3401.990161501033,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.071000000000005,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.18862015452002737
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.75349999999995,
+          "grain": 280.03566228841066,
+          "publicOffers": 2842.1930455182205,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 4227.337423863691,
+          "grain": 763.9048341570477,
+          "publicOffers": 1303.9535495810162,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 0,
+          "publicOffers": 1991.5668422430235,
+          "service": 0.5021393310315951
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.2894999999999,
+          "grain": 0,
+          "publicOffers": 2869.0279647323864,
+          "service": 0.022936226384703034
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.99899999999997,
+          "grain": 176.1383393910818,
+          "publicOffers": 1931.4418641658078,
+          "service": 0.2584204165704824
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "reserve-four",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 6770.668281556962,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546845,
+          "prefectureCash": 12891.043970636245,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561581,
+          "prefectureCash": 11583.853265045644,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 603229,
+          "prefectureCash": 7402.923525719045,
+          "hunger": 144
+        }
+      ],
+      "population": 603229,
+      "prefectureCash": 7402.923525719045,
+      "publicGrain": 22003.13440278001,
+      "totalGrain": 278012.3523802484,
+      "stability": 98.67278756352856,
+      "hunger": 144,
+      "underfunded": 591,
+      "sales": 0,
+      "tax": 82078.80472055919,
+      "earlyRevenue": 6988.193320670111,
+      "administration": 64379.902527393984,
+      "maintenance": 13557.407587410393,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3407.713679283632,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.06300000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.1888074321114752
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.77749999999992,
+          "grain": 5489.203286917878,
+          "publicOffers": 0,
+          "service": 0.2560639364093466
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3086.030346435413,
+          "grain": 3392.7825380038225,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 3728.5289301640582,
+          "publicOffers": 0,
+          "service": 0.08648204103815857
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.3854999999999,
+          "grain": 5518.944136372422,
+          "publicOffers": 0,
+          "service": 0.09374407699313449
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.88699999999997,
+          "grain": 3873.675511321827,
+          "publicOffers": 0,
+          "service": 0.09120362827569296
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "in-kind-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 3402.646500220342,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546911,
+          "prefectureCash": 1821.3211104998154,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 561881,
+          "prefectureCash": 1263.2706339926124,
+          "hunger": 70
+        },
+        {
+          "month": 240,
+          "population": 600386,
+          "prefectureCash": 1019.8875043361787,
+          "hunger": 149
+        }
+      ],
+      "population": 600386,
+      "prefectureCash": 1019.8875043361787,
+      "publicGrain": 16098.725091433342,
+      "totalGrain": 233785.0659588127,
+      "stability": 94.80279894846835,
+      "hunger": 149,
+      "underfunded": 1257,
+      "sales": 10288.051319030767,
+      "tax": 26396.308858663793,
+      "earlyRevenue": 3048.239368797628,
+      "administration": 32975.04239909253,
+      "maintenance": 6135.432835656102,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 116.44150000000002,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.037475710940306384
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 55.431000000000004,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.14934903984725112
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 222.28949999999995,
+          "grain": 2897.8379614815553,
+          "publicOffers": 12.992349021904593,
+          "service": 0.4301370264737431
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 89.33127438933558,
+          "grain": 1332.3917998306642,
+          "publicOffers": 1277.9518912909011,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2238.006741167485,
+          "publicOffers": 300.5951668673655,
+          "service": 0.1740247181213828
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.8094999999999,
+          "grain": 4297.075881839021,
+          "publicOffers": 0,
+          "service": 0.04837356981146919
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 46.51822994684322,
+          "grain": 1952.813335634118,
+          "publicOffers": 1789.0599643003286,
+          "service": 0
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "cash-tax-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 12730.97149550744,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 545853,
+          "prefectureCash": 34854.123055418786,
+          "hunger": 26
+        },
+        {
+          "month": 120,
+          "population": 561010,
+          "prefectureCash": 43896.19448287413,
+          "hunger": 80
+        },
+        {
+          "month": 240,
+          "population": 603647,
+          "prefectureCash": 55795.89970328646,
+          "hunger": 141
+        }
+      ],
+      "population": 603647,
+      "prefectureCash": 55795.89970328646,
+      "publicGrain": 6351.341319893309,
+      "totalGrain": 334996.51239388285,
+      "stability": 99.07945575976983,
+      "hunger": 141,
+      "underfunded": 0,
+      "sales": 2009.151103554848,
+      "tax": 176578.5240293732,
+      "earlyRevenue": 12846.92069527909,
+      "administration": 108146.56000000008,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 5629.729120279254,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 420.8035766224458,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 12839.39670287792,
+          "grain": 2851.2190096,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 9808.421434501592,
+          "grain": 1330.5550212217597,
+          "publicOffers": 869.2094705020185,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 7240.553491384008,
+          "grain": 1300.3578185695314,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 11936.120293714526,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 7920.875083906705,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "coordinated",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 6770.668281556962,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546846,
+          "prefectureCash": 12236.795235170115,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561597,
+          "prefectureCash": 8335.518168271661,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 603121,
+          "prefectureCash": 1368.163642772608,
+          "hunger": 146
+        }
+      ],
+      "population": 603121,
+      "prefectureCash": 1368.163642772608,
+      "publicGrain": 14075.382651929935,
+      "totalGrain": 340454.0353091062,
+      "stability": 98.52414664033215,
+      "hunger": 146,
+      "underfunded": 197,
+      "sales": 10079.861230747983,
+      "tax": 95938.93119712832,
+      "earlyRevenue": 6988.193320670111,
+      "administration": 96329.91367266829,
+      "maintenance": 17483.313442393377,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 119.5055,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.03744629355982658
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.511,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.2274572374244143
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.75349999999995,
+          "grain": 2885.017226281838,
+          "publicOffers": 243.35286912489028,
+          "service": 0.9321295399828374
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 338.8866427726081,
+          "grain": 1332.539713243698,
+          "publicOffers": 707.3150945859146,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2243.4209652891373,
+          "publicOffers": 14.983189997515911,
+          "service": 0.8376734122679632
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.7934999999999,
+          "grain": 4296.837667561837,
+          "publicOffers": 0,
+          "service": 0.10242259594452892
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.64699999999996,
+          "grain": 1950.449039447011,
+          "publicOffers": 401.46688639809196,
+          "service": 0.34485229065709366
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-open",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 6770.668281556962,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546845,
+          "prefectureCash": 14027.654892446495,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561572,
+          "prefectureCash": 12826.868904745512,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 597625,
+          "prefectureCash": 7995.068114440408,
+          "hunger": 150
+        }
+      ],
+      "population": 597625,
+      "prefectureCash": 7995.068114440408,
+      "publicGrain": 15271.210671301362,
+      "totalGrain": 296849.28013687057,
+      "stability": 97.00460558521195,
+      "hunger": 150,
+      "underfunded": 465,
+      "sales": 7587.338459899253,
+      "tax": 82921.26058935306,
+      "earlyRevenue": 6988.193320670111,
+      "administration": 70964.67313576811,
+      "maintenance": 14659.452073216167,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3141.8886829371877,
+          "grain": 1194.3932,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 53.359,
+          "grain": 601.0195611750191,
+          "publicOffers": 0,
+          "service": 0.13349760486516976
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 226.4439732425215,
+          "grain": 2856.7586268000005,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3940.189458260699,
+          "grain": 1332.2085202362302,
+          "publicOffers": 733.3097425340667,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2243.7233,
+          "publicOffers": 0,
+          "service": 0.6755542919847759
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 324.7774999999999,
+          "grain": 4311.4878456086535,
+          "publicOffers": 0,
+          "service": 0.10824423595297016
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 142.34299999999996,
+          "grain": 1983.7082608977378,
+          "publicOffers": 14.601614049654142,
+          "service": 0.2311571723691247
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-closed",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 3537.9626458911584,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540402,
+          "prefectureCash": 4265.683436163382,
+          "hunger": 49
+        },
+        {
+          "month": 120,
+          "population": 555547,
+          "prefectureCash": 3658.585792527583,
+          "hunger": 101
+        },
+        {
+          "month": 240,
+          "population": 590551,
+          "prefectureCash": 1523.742064076434,
+          "hunger": 176
+        }
+      ],
+      "population": 590551,
+      "prefectureCash": 1523.742064076434,
+      "publicGrain": 10245.567683074652,
+      "totalGrain": 208972.38251324368,
+      "stability": 94.73935864841819,
+      "hunger": 176,
+      "underfunded": 1036,
+      "sales": 2726.0039216259333,
+      "tax": 32308.697159547413,
+      "earlyRevenue": 2871.267610793443,
+      "administration": 34558.46147790083,
+      "maintenance": 4952.497539196026,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 110.55350000000001,
+          "grain": 220.73213699303489,
+          "publicOffers": 0,
+          "service": 0.024001196468026387
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 466.86506407643435,
+          "grain": 507.45856219204956,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 219.64949999999993,
+          "grain": 1718.9480646630159,
+          "publicOffers": 0,
+          "service": 0.05017812761533981
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 100.879,
+          "grain": 1341.6033834500352,
+          "publicOffers": 121.0275467982035,
+          "service": 0.6113626858889306
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2085.7943868076327,
+          "publicOffers": 0,
+          "service": 0.04293832933262692
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 319.2334999999999,
+          "grain": 2415.935142920524,
+          "publicOffers": 0,
+          "service": 0.02930625485730602
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.49499999999998,
+          "grain": 1834.0684592501557,
+          "publicOffers": 0,
+          "service": 0.05223297228022556
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-sell-all",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 7941.815226325731,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546846,
+          "prefectureCash": 15506.344037478644,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561593,
+          "prefectureCash": 13866.395117899498,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 597627,
+          "prefectureCash": 8948.744089074326,
+          "hunger": 150
+        }
+      ],
+      "population": 597627,
+      "prefectureCash": 8948.744089074326,
+      "publicGrain": 11671.920243329581,
+      "totalGrain": 310364.2408140058,
+      "stability": 97.0045217782831,
+      "hunger": 150,
+      "underfunded": 372,
+      "sales": 14243.175752268256,
+      "tax": 88794.27010790994,
+      "earlyRevenue": 8159.340265438873,
+      "administration": 81266.52355060133,
+      "maintenance": 15892.3050275885,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3878.6489930181865,
+          "grain": 0,
+          "publicOffers": 69.37372896105644,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 318.6346758534614,
+          "grain": 0,
+          "publicOffers": 359.2845645252083,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 224.02507899402914,
+          "grain": 0,
+          "publicOffers": 2703.3754249156204,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3894.2243412086464,
+          "grain": 761.5041202021005,
+          "publicOffers": 1304.0141425681963,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 0,
+          "publicOffers": 1863.2689624289292,
+          "service": 0.4622414691532256
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 325.1454999999999,
+          "grain": 0,
+          "publicOffers": 2504.356887921073,
+          "service": 0.01039941470547909
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.99899999999997,
+          "grain": 159.32915819630026,
+          "publicOffers": 1947.413253611097,
+          "service": 0.25183376208674224
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-reserve-four",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 6770.668281556962,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546845,
+          "prefectureCash": 12891.043970636245,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561581,
+          "prefectureCash": 11583.853265045644,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 597632,
+          "prefectureCash": 6676.936646550626,
+          "hunger": 150
+        }
+      ],
+      "population": 597632,
+      "prefectureCash": 6676.936646550626,
+      "publicGrain": 23494.366674487217,
+      "totalGrain": 282830.9845674717,
+      "stability": 97.00380297610364,
+      "hunger": 150,
+      "underfunded": 596,
+      "sales": 0,
+      "tax": 79941.50012531427,
+      "earlyRevenue": 6988.193320670111,
+      "administration": 62845.081641034754,
+      "maintenance": 13553.883861153194,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3141.2182932960823,
+          "grain": 1210.493982682224,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 53.359,
+          "grain": 1091.9477546396943,
+          "publicOffers": 0,
+          "service": 0.13029280849214392
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 222.00149999999994,
+          "grain": 4886.004823772246,
+          "publicOffers": 0,
+          "service": 0.2838842973156318
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 2627.1628532545446,
+          "grain": 3389.526190213361,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 3621.762707643492,
+          "publicOffers": 0,
+          "service": 0.0845437444082186
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 325.55349999999993,
+          "grain": 5425.684925991949,
+          "publicOffers": 0,
+          "service": 0.11059225670749773
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.57499999999996,
+          "grain": 3868.9462895442466,
+          "publicOffers": 0,
+          "service": 0.0760697773086761
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-in-kind-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 3402.646500220342,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546911,
+          "prefectureCash": 1821.3211104998154,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 561881,
+          "prefectureCash": 1263.2706339926124,
+          "hunger": 70
+        },
+        {
+          "month": 240,
+          "population": 574688,
+          "prefectureCash": 975.4369894022702,
+          "hunger": 408
+        }
+      ],
+      "population": 574688,
+      "prefectureCash": 975.4369894022702,
+      "publicGrain": 16523.417083540062,
+      "totalGrain": 222862.4123084202,
+      "stability": 84.92775522781263,
+      "hunger": 408,
+      "underfunded": 1262,
+      "sales": 9692.926893889833,
+      "tax": 25612.91159075152,
+      "earlyRevenue": 3048.239368797628,
+      "administration": 32007.75517164084,
+      "maintenance": 5740.095758379178,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 83.79350000000001,
+          "grain": 319.7665280694037,
+          "publicOffers": 0,
+          "service": 0.18102851920568166
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 36.679,
+          "grain": 101.59557447599789,
+          "publicOffers": 0,
+          "service": 0.9482757234993741
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 223.5374999999999,
+          "grain": 2880.0884684000002,
+          "publicOffers": 0,
+          "service": 0.4312516314120551
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 87.81560212266648,
+          "grain": 1333.3821047196584,
+          "publicOffers": 1248.249164653651,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2238.697436166966,
+          "publicOffers": 262.2299797002128,
+          "service": 0.17078703058876904
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 329.97749999999985,
+          "grain": 4388.740735699425,
+          "publicOffers": 0,
+          "service": 0.048486378168867424
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 47.56738727960407,
+          "grain": 1997.6040487613734,
+          "publicOffers": 1753.063042893374,
+          "service": 0
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-cash-tax-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 12730.97149550744,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 545853,
+          "prefectureCash": 34854.123055418786,
+          "hunger": 26
+        },
+        {
+          "month": 120,
+          "population": 561010,
+          "prefectureCash": 43896.19448287413,
+          "hunger": 80
+        },
+        {
+          "month": 240,
+          "population": 597416,
+          "prefectureCash": 53006.7146212459,
+          "hunger": 152
+        }
+      ],
+      "population": 597416,
+      "prefectureCash": 53006.7146212459,
+      "publicGrain": 6016.222148647901,
+      "totalGrain": 341541.2929900158,
+      "stability": 97.2748385537568,
+      "hunger": 152,
+      "underfunded": 0,
+      "sales": 1733.0541600480178,
+      "tax": 173503.77755395763,
+      "earlyRevenue": 12846.92069527909,
+      "administration": 107484.39200000012,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 6711.362037494555,
+          "grain": 397.21815658666264,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 954.2916568123536,
+          "grain": 607.4471000000001,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 11884.300695216181,
+          "grain": 2858.1008248000003,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 9355.430802367666,
+          "grain": 1331.6474839881457,
+          "publicOffers": 778.2536086938125,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 6988.717521218059,
+          "grain": 43.55497457927945,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 10074.501347430027,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 7038.1105607070585,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-coordinated",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "prefectureCash": 6770.668281556962,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546846,
+          "prefectureCash": 12236.795235170115,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 561597,
+          "prefectureCash": 8335.518168271661,
+          "hunger": 76
+        },
+        {
+          "month": 240,
+          "population": 597617,
+          "prefectureCash": 1404.5337008960157,
+          "hunger": 150
+        }
+      ],
+      "population": 597617,
+      "prefectureCash": 1404.5337008960157,
+      "publicGrain": 15460.11456502011,
+      "totalGrain": 343497.00702292146,
+      "stability": 96.99816736386094,
+      "hunger": 150,
+      "underfunded": 238,
+      "sales": 9512.076153548363,
+      "tax": 92620.39238471966,
+      "earlyRevenue": 6988.193320670111,
+      "administration": 92710.28551291708,
+      "maintenance": 17050.175996075373,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 111.92150000000002,
+          "grain": 1106.3077998436265,
+          "publicOffers": 0,
+          "service": 0.06220595335681339
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 207.63458359339904,
+          "grain": 610.3864,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 236.0095834625508,
+          "grain": 2856.2705548000004,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 215.78103384006585,
+          "grain": 1332.8163293225882,
+          "publicOffers": 685.9012383751945,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.06649999999996,
+          "grain": 2243.7233,
+          "publicOffers": 0,
+          "service": 0.7240034349493103
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 325.6574999999999,
+          "grain": 4324.637273709211,
+          "publicOffers": 0,
+          "service": 0.10479563367093109
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.46299999999997,
+          "grain": 1965.9019903999354,
+          "publicOffers": 334.16967856955694,
+          "service": 0.25868463104388245
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "open",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 6756.251221427034,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546897,
+          "prefectureCash": 14080.32907387347,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561595,
+          "prefectureCash": 12765.287539306159,
+          "hunger": 72
+        },
+        {
+          "month": 240,
+          "population": 603521,
+          "prefectureCash": 8454.695667085676,
+          "hunger": 142
+        }
+      ],
+      "population": 603521,
+      "prefectureCash": 8454.695667085676,
+      "publicGrain": 13475.506393246704,
+      "totalGrain": 294140.72190769966,
+      "stability": 99.21778395675939,
+      "hunger": 142,
+      "underfunded": 457,
+      "sales": 7974.995806834582,
+      "tax": 85712.15209529447,
+      "earlyRevenue": 6974.0242581880375,
+      "administration": 73629.58858486442,
+      "maintenance": 14835.749599351779,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3228.1709812536146,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.367,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.19692868256568818
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 233.40353970929635,
+          "grain": 2855.0503747999996,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 4305.071146122767,
+          "grain": 1330.698971351116,
+          "publicOffers": 751.4031797207223,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 2246.8107999999997,
+          "publicOffers": 0,
+          "service": 0.685475353067021
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 322.76949999999994,
+          "grain": 4281.568132394344,
+          "publicOffers": 0,
+          "service": 0.10370658615077444
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.63899999999995,
+          "grain": 1972.43108031243,
+          "publicOffers": 37.543854668092365,
+          "service": 0.23878231769466984
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "closed",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 3516.435784348549,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540434,
+          "prefectureCash": 4030.94167044353,
+          "hunger": 47
+        },
+        {
+          "month": 120,
+          "population": 555615,
+          "prefectureCash": 3686.0854790868925,
+          "hunger": 98
+        },
+        {
+          "month": 240,
+          "population": 595916,
+          "prefectureCash": 1560.318938188865,
+          "hunger": 174
+        }
+      ],
+      "population": 595916,
+      "prefectureCash": 1560.318938188865,
+      "publicGrain": 9884.90858816987,
+      "totalGrain": 206366.43944928425,
+      "stability": 96.31986430371789,
+      "hunger": 174,
+      "underfunded": 1013,
+      "sales": 2869.592172005302,
+      "tax": 33344.902441772974,
+      "earlyRevenue": 2852.4733099502396,
+      "administration": 35512.22929330963,
+      "maintenance": 5141.946382279636,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 115.6175,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.03478045051744066
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 431.7297735803411,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 219.65749999999997,
+          "grain": 1791.2612907582356,
+          "publicOffers": 0,
+          "service": 0.05026272985261354
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 166.83116460852403,
+          "grain": 1335.8567408934687,
+          "publicOffers": 382.6805304551342,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 2073.522758442742,
+          "publicOffers": 0,
+          "service": 0.04276426196480956
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 319.5374999999999,
+          "grain": 2464.844696840178,
+          "publicOffers": 0,
+          "service": 0.02927246451800472
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.67099999999996,
+          "grain": 1836.742570780112,
+          "publicOffers": 0,
+          "service": 0.055060387760655534
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "no-trade",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 5387.9726161106155,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540634,
+          "prefectureCash": 11288.115078441391,
+          "hunger": 49
+        },
+        {
+          "month": 120,
+          "population": 558130,
+          "prefectureCash": 21852.24870176492,
+          "hunger": 93
+        },
+        {
+          "month": 240,
+          "population": 601685,
+          "prefectureCash": 24542.52300317576,
+          "hunger": 148
+        }
+      ],
+      "population": 601685,
+      "prefectureCash": 24542.52300317576,
+      "publicGrain": 13872.091703613449,
+      "totalGrain": 254490.77512295707,
+      "stability": 99.68392875470757,
+      "hunger": 148,
+      "underfunded": 754,
+      "sales": 5236.653733110238,
+      "tax": 78283.04822735711,
+      "earlyRevenue": 5605.349968853816,
+      "administration": 50429.201430075336,
+      "maintenance": 11862.349874315774,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 14770.889378823109,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 8816.838124352651,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 222.02549999999997,
+          "grain": 2857.2711024000005,
+          "publicOffers": 0,
+          "service": 0.2859113004043086
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 100.73500000000001,
+          "grain": 1339.7255201376197,
+          "publicOffers": 1178.4465851865298,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 2246.8107999999997,
+          "publicOffers": 0,
+          "service": 0.5890825898133246
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 324.24949999999995,
+          "grain": 4303.650595889299,
+          "publicOffers": 0,
+          "service": 0.008999360535924998
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.51099999999997,
+          "grain": 1946.1871,
+          "publicOffers": 0,
+          "service": 0.026597993484445182
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "low-tax",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 532623,
+          "prefectureCash": 3356.178404691348,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 552102,
+          "prefectureCash": 4214.218212678554,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 572141,
+          "prefectureCash": 2287.095432220323,
+          "hunger": 70
+        },
+        {
+          "month": 240,
+          "population": 622818,
+          "prefectureCash": 1186.5806406683023,
+          "hunger": 155
+        }
+      ],
+      "population": 622818,
+      "prefectureCash": 1186.5806406683023,
+      "publicGrain": 11946.003367619976,
+      "totalGrain": 208989.98438607747,
+      "stability": 97.82052406336855,
+      "hunger": 155,
+      "underfunded": 1170,
+      "sales": 754.8081409583733,
+      "tax": 34650.253292990084,
+      "earlyRevenue": 3136.813619711331,
+      "administration": 30885.371981964185,
+      "maintenance": 6943.813545289673,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 144.32214066830255,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 55.543000000000006,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.027025682616054904
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 229.43349999999995,
+          "grain": 3008.4353000000006,
+          "publicOffers": 0,
+          "service": 0.27448711465412157
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 104.03900000000002,
+          "grain": 1392.8083,
+          "publicOffers": 0,
+          "service": 0.25665211831831575
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 171.7385,
+          "grain": 1963.5421691868366,
+          "publicOffers": 0,
+          "service": 0.013573966079087207
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 335.48949999999996,
+          "grain": 3618.2843115815413,
+          "publicOffers": 0,
+          "service": 0.010199937282594726
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 146.015,
+          "grain": 1962.933286851597,
+          "publicOffers": 0,
+          "service": 0.017684473669272654
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "high-tax",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 524994,
+          "prefectureCash": 27802.79527107951,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 509496,
+          "prefectureCash": 73909.28846503518,
+          "hunger": 43
+        },
+        {
+          "month": 120,
+          "population": 493311,
+          "prefectureCash": 96334.08987839786,
+          "hunger": 85
+        },
+        {
+          "month": 240,
+          "population": 472688,
+          "prefectureCash": 115858.7172440017,
+          "hunger": 95
+        }
+      ],
+      "population": 472688,
+      "prefectureCash": 115858.7172440017,
+      "publicGrain": 40778.40913321057,
+      "totalGrain": 341588.3047020077,
+      "stability": 0,
+      "hunger": 95,
+      "underfunded": 0,
+      "sales": 20876.479651273094,
+      "tax": 208554.19749306244,
+      "earlyRevenue": 28158.20265442014,
+      "administration": 95339.86400000007,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 14017.033962217325,
+          "grain": 1391.0665693382164,
+          "publicOffers": 1128.9345128941488,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 6671.297498987196,
+          "grain": 1982.1258822121313,
+          "publicOffers": 520.5657941292593,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 21507.302406528834,
+          "grain": 5580.299470535636,
+          "publicOffers": 2195.1197268427363,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 11851.931490016274,
+          "grain": 4882.648965182965,
+          "publicOffers": 1016.0935169680321,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 16298.182080278826,
+          "grain": 5564.702626068701,
+          "publicOffers": 1708.2077511775017,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 30222.904196356583,
+          "grain": 5126.71574231896,
+          "publicOffers": 3434.1576215241744,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 15290.06560961666,
+          "grain": 4758.467086093134,
+          "publicOffers": 1489.3038679249687,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "hoard",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 6756.251221427034,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546897,
+          "prefectureCash": 12948.068889012127,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561601,
+          "prefectureCash": 11415.858908578533,
+          "hunger": 72
+        },
+        {
+          "month": 240,
+          "population": 603524,
+          "prefectureCash": 7267.008687032781,
+          "hunger": 142
+        }
+      ],
+      "population": 603524,
+      "prefectureCash": 7267.008687032781,
+      "publicGrain": 21875.087840876986,
+      "totalGrain": 277876.8038557332,
+      "stability": 99.21778395675939,
+      "hunger": 142,
+      "underfunded": 587,
+      "sales": 0,
+      "tax": 82449.94787226123,
+      "earlyRevenue": 6974.0242581880375,
+      "administration": 64791.30663501681,
+      "maintenance": 13649.884461017493,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3228.1709812536146,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.367,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.19692868256568818
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.88149999999996,
+          "grain": 5466.712485283669,
+          "publicOffers": 0,
+          "service": 0.2690299258120881
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3128.9062057791666,
+          "grain": 3405.5491946278094,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 3655.2530390978623,
+          "publicOffers": 0,
+          "service": 0.08500128275249744
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.40149999999994,
+          "grain": 5468.777368989497,
+          "publicOffers": 0,
+          "service": 0.10213156436409368
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.00699999999995,
+          "grain": 3878.7957528781485,
+          "publicOffers": 0,
+          "service": 0.08184337382616072
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "sell-all",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 7928.6757173956,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546925,
+          "prefectureCash": 15604.78185201014,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561689,
+          "prefectureCash": 13809.169112300671,
+          "hunger": 73
+        },
+        {
+          "month": 240,
+          "population": 603581,
+          "prefectureCash": 8398.297764756306,
+          "hunger": 144
+        }
+      ],
+      "population": 603581,
+      "prefectureCash": 8398.297764756306,
+      "publicGrain": 12314.060905016278,
+      "totalGrain": 306647.3420189154,
+      "stability": 99.20790818318108,
+      "hunger": 144,
+      "underfunded": 353,
+      "sales": 12890.75651414118,
+      "tax": 91922.3293740729,
+      "earlyRevenue": 8146.4487541566,
+      "administration": 83559.13459247339,
+      "maintenance": 16050.214992032776,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3233.609170156169,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.495000000000005,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.2003211844681106
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.84149999999997,
+          "grain": 297.72638063314463,
+          "publicOffers": 2843.1805237823773,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 4254.653094600136,
+          "grain": 779.813178621548,
+          "publicOffers": 1302.2889724502909,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 0,
+          "publicOffers": 1924.3760838898188,
+          "service": 0.5092135515269373
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.29749999999996,
+          "grain": 0,
+          "publicOffers": 3055.767825181558,
+          "service": 0.010684301058685402
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.12699999999995,
+          "grain": 177.38948076387172,
+          "publicOffers": 1933.5184596936679,
+          "service": 0.26114462204022454
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "reserve-four",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 6756.251221427034,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546897,
+          "prefectureCash": 12948.068889012127,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561601,
+          "prefectureCash": 11415.858908578533,
+          "hunger": 72
+        },
+        {
+          "month": 240,
+          "population": 603524,
+          "prefectureCash": 7267.008687032781,
+          "hunger": 142
+        }
+      ],
+      "population": 603524,
+      "prefectureCash": 7267.008687032781,
+      "publicGrain": 21875.087840876986,
+      "totalGrain": 277876.8038557332,
+      "stability": 99.21778395675939,
+      "hunger": 142,
+      "underfunded": 587,
+      "sales": 0,
+      "tax": 82449.94787226123,
+      "earlyRevenue": 6974.0242581880375,
+      "administration": 64791.30663501681,
+      "maintenance": 13649.884461017493,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3228.1709812536146,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 57.367,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.19692868256568818
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.88149999999996,
+          "grain": 5466.712485283669,
+          "publicOffers": 0,
+          "service": 0.2690299258120881
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3128.9062057791666,
+          "grain": 3405.5491946278094,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 3655.2530390978623,
+          "publicOffers": 0,
+          "service": 0.08500128275249744
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.40149999999994,
+          "grain": 5468.777368989497,
+          "publicOffers": 0,
+          "service": 0.10213156436409368
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.00699999999995,
+          "grain": 3878.7957528781485,
+          "publicOffers": 0,
+          "service": 0.08184337382616072
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "in-kind-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 3399.7106845478957,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547112,
+          "prefectureCash": 1864.7049939915394,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 561705,
+          "prefectureCash": 1258.3286354043473,
+          "hunger": 71
+        },
+        {
+          "month": 240,
+          "population": 600632,
+          "prefectureCash": 1021.5294098334156,
+          "hunger": 151
+        }
+      ],
+      "population": 600632,
+      "prefectureCash": 1021.5294098334156,
+      "publicGrain": 16027.354328188261,
+      "totalGrain": 232691.5352785516,
+      "stability": 95.69179581045556,
+      "hunger": 151,
+      "underfunded": 1260,
+      "sales": 10172.02028257329,
+      "tax": 25618.6418434136,
+      "earlyRevenue": 3040.211578368959,
+      "administration": 32183.354139423052,
+      "maintenance": 6031.8551508583405,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 116.2895,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.03660125284075617
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 55.415000000000006,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.0789834120135636
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 222.42549999999997,
+          "grain": 2900.074514878035,
+          "publicOffers": 15.997690934189913,
+          "service": 0.42327756275337797
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 90.22263099253375,
+          "grain": 1331.6330839758107,
+          "publicOffers": 1294.5538448434013,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.27449999999996,
+          "grain": 2242.6379160946203,
+          "publicOffers": 215.65035885615828,
+          "service": 0.16639217187068187
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.93749999999994,
+          "grain": 4299.053060339649,
+          "publicOffers": 0,
+          "service": 0.04493058633650055
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 46.96477884088192,
+          "grain": 1955.3005290402334,
+          "publicOffers": 1772.4533292261633,
+          "service": 0
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "cash-tax-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 12711.824709513823,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 545619,
+          "prefectureCash": 35315.70742560943,
+          "hunger": 27
+        },
+        {
+          "month": 120,
+          "population": 561040,
+          "prefectureCash": 44482.70251975545,
+          "hunger": 77
+        },
+        {
+          "month": 240,
+          "population": 604144,
+          "prefectureCash": 56519.19692924992,
+          "hunger": 140
+        }
+      ],
+      "population": 604144,
+      "prefectureCash": 56519.19692924992,
+      "publicGrain": 7231.007110694729,
+      "totalGrain": 335410.0206729846,
+      "stability": 99.57832606252437,
+      "hunger": 140,
+      "underfunded": 0,
+      "sales": 2146.7055768020905,
+      "tax": 177173.94981767557,
+      "earlyRevenue": 12828.017907113915,
+      "administration": 108179.81999999998,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 5663.099205032085,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 752.7790290796083,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 13190.645688133422,
+          "grain": 2853.2445084000005,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 9891.185145053501,
+          "grain": 1329.4013567189716,
+          "publicOffers": 858.3329839181562,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 6926.3847658454515,
+          "grain": 2190.0282616576,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 12048.607218965251,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 8046.495877140602,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "coordinated",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 6756.251221427034,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546925,
+          "prefectureCash": 12305.5311519277,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561733,
+          "prefectureCash": 8161.804082323029,
+          "hunger": 73
+        },
+        {
+          "month": 240,
+          "population": 603859,
+          "prefectureCash": 1317.6244900999045,
+          "hunger": 143
+        }
+      ],
+      "population": 603859,
+      "prefectureCash": 1317.6244900999045,
+      "publicGrain": 13873.023772905119,
+      "totalGrain": 340243.6482807277,
+      "stability": 99.57688641915138,
+      "hunger": 143,
+      "underfunded": 180,
+      "sales": 10170.86088642255,
+      "tax": 96447.3744998671,
+      "earlyRevenue": 6974.0242581880375,
+      "administration": 96807.21147769735,
+      "maintenance": 17653.11349467601,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 119.71350000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.04344260591875911
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 58.11900000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.2333221640688991
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.77749999999997,
+          "grain": 2886.3524931578645,
+          "publicOffers": 201.28611108373713,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 287.0994900999046,
+          "grain": 1332.0774900080091,
+          "publicOffers": 644.5834392279994,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 2246.8107999999997,
+          "publicOffers": 0,
+          "service": 0.8566366859851932
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.8015,
+          "grain": 4296.861488989555,
+          "publicOffers": 0,
+          "service": 0.15009348892696905
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.83899999999997,
+          "grain": 1955.0770572221509,
+          "publicOffers": 309.97489321580366,
+          "service": 0.38080329721059203
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-open",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 6756.251221427034,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546897,
+          "prefectureCash": 14080.32907387347,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561595,
+          "prefectureCash": 12765.287539306159,
+          "hunger": 72
+        },
+        {
+          "month": 240,
+          "population": 597391,
+          "prefectureCash": 8403.276393877588,
+          "hunger": 149
+        }
+      ],
+      "population": 597391,
+      "prefectureCash": 8403.276393877588,
+      "publicGrain": 15438.361718607337,
+      "totalGrain": 297495.83947647334,
+      "stability": 96.74434356061914,
+      "hunger": 149,
+      "underfunded": 458,
+      "sales": 7521.398796778013,
+      "tax": 83841.24145008535,
+      "earlyRevenue": 6974.0242581880375,
+      "administration": 71271.8131259438,
+      "maintenance": 14789.20656800653,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 2930.4161369982207,
+          "grain": 1190.7376000000002,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 658.5282908162674,
+          "grain": 596.6767485758857,
+          "publicOffers": 150.5284839852067,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 231.56036616692325,
+          "grain": 2856.319362,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3945.6989446782854,
+          "grain": 1330.729943963628,
+          "publicOffers": 748.9288789927701,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 169.4641552178921,
+          "grain": 2246.8107999999997,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 325.14549999999997,
+          "grain": 4316.800023989856,
+          "publicOffers": 0,
+          "service": 0.05376310518353579
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 142.46299999999997,
+          "grain": 1985.6983086903504,
+          "publicOffers": 15.131568409638266,
+          "service": 0.23122950720489654
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-closed",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 3516.435784348549,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540434,
+          "prefectureCash": 4030.94167044353,
+          "hunger": 47
+        },
+        {
+          "month": 120,
+          "population": 555615,
+          "prefectureCash": 3686.0854790868925,
+          "hunger": 98
+        },
+        {
+          "month": 240,
+          "population": 580212,
+          "prefectureCash": 3721.7748848532315,
+          "hunger": 263
+        }
+      ],
+      "population": 580212,
+      "prefectureCash": 3721.7748848532315,
+      "publicGrain": 10168.154057259024,
+      "totalGrain": 204336.7333017128,
+      "stability": 91.32416346904704,
+      "hunger": 263,
+      "underfunded": 1041,
+      "sales": 2712.7962538417432,
+      "tax": 33812.88404275678,
+      "earlyRevenue": 2852.4733099502396,
+      "administration": 33857.513619205456,
+      "maintenance": 4946.391792539761,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 110.45750000000001,
+          "grain": 276.1421913200791,
+          "publicOffers": 0,
+          "service": 0.03749689566902944
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 2664.377884853232,
+          "grain": 343.2293238235412,
+          "publicOffers": 152.40799728372048,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 219.65749999999997,
+          "grain": 1731.6258701615386,
+          "publicOffers": 0,
+          "service": 0.05026272985261354
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 100.799,
+          "grain": 1340.669335662503,
+          "publicOffers": 102.31308403808777,
+          "service": 0.44876603464793896
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 2013.1612676404907,
+          "publicOffers": 0,
+          "service": 0.042764261713145665
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 319.5374999999999,
+          "grain": 2371.8624165489505,
+          "publicOffers": 0,
+          "service": 0.02927246451800472
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.67099999999996,
+          "grain": 1836.742570780112,
+          "publicOffers": 0,
+          "service": 0.05215559686367584
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-sell-all",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 7928.6757173956,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546925,
+          "prefectureCash": 15604.78185201014,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561689,
+          "prefectureCash": 13809.169112300671,
+          "hunger": 73
+        },
+        {
+          "month": 240,
+          "population": 595780,
+          "prefectureCash": 9846.056478804423,
+          "hunger": 157
+        }
+      ],
+      "population": 595780,
+      "prefectureCash": 9846.056478804423,
+      "publicGrain": 12046.915674909853,
+      "totalGrain": 313030.36169138236,
+      "stability": 96.12167063280917,
+      "hunger": 157,
+      "underfunded": 368,
+      "sales": 14347.215147443005,
+      "tax": 89715.05646132663,
+      "earlyRevenue": 8146.4487541566,
+      "administration": 81329.94800468298,
+      "maintenance": 15944.903795845332,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3771.892797671767,
+          "grain": 0,
+          "publicOffers": 80.12685832806909,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1287.7945136547671,
+          "grain": 259.40093727381714,
+          "publicOffers": 528.586321216596,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 222.45749999999995,
+          "grain": 0,
+          "publicOffers": 2612.2355782659324,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3929.388667477891,
+          "grain": 777.3072165174103,
+          "publicOffers": 1302.351606438988,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 0,
+          "publicOffers": 1908.0835639890247,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 326.08949999999993,
+          "grain": 0,
+          "publicOffers": 2469.149018399246,
+          "service": 0.005116338600627243
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 142.15899999999996,
+          "grain": 159.8402959706834,
+          "publicOffers": 1949.834278510085,
+          "service": 0.25233912757004207
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-reserve-four",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 6756.251221427034,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546897,
+          "prefectureCash": 12948.068889012127,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561601,
+          "prefectureCash": 11415.858908578533,
+          "hunger": 72
+        },
+        {
+          "month": 240,
+          "population": 597399,
+          "prefectureCash": 6880.697219293776,
+          "hunger": 149
+        }
+      ],
+      "population": 597399,
+      "prefectureCash": 6880.697219293776,
+      "publicGrain": 23703.12197069563,
+      "totalGrain": 283465.26199488196,
+      "stability": 96.74457965094571,
+      "hunger": 149,
+      "underfunded": 573,
+      "sales": 0,
+      "tax": 80948.27132574198,
+      "earlyRevenue": 6974.0242581880375,
+      "administration": 63440.419699395155,
+      "maintenance": 13751.600714242108,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 2918.3389536364894,
+          "grain": 1229.8019498133349,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 442.87664447870395,
+          "grain": 1301.5135018151764,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.96149999999997,
+          "grain": 4844.396050292454,
+          "publicOffers": 0,
+          "service": 0.26717073413704073
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 2663.6211211785826,
+          "grain": 3402.165687260098,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 3666.186676213187,
+          "publicOffers": 0,
+          "service": 0.08976147635893753
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 325.63349999999997,
+          "grain": 5378.09411253281,
+          "publicOffers": 0,
+          "service": 0.09344212765152171
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.99099999999999,
+          "grain": 3880.963992768569,
+          "publicOffers": 0,
+          "service": 0.07671321676878615
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-in-kind-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 3399.7106845478957,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547112,
+          "prefectureCash": 1864.7049939915394,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 561705,
+          "prefectureCash": 1258.3286354043473,
+          "hunger": 71
+        },
+        {
+          "month": 240,
+          "population": 571907,
+          "prefectureCash": 972.6342881264798,
+          "hunger": 433
+        }
+      ],
+      "population": 571907,
+      "prefectureCash": 972.6342881264798,
+      "publicGrain": 16818.407979292737,
+      "totalGrain": 221402.3463267867,
+      "stability": 83.73173283292626,
+      "hunger": 433,
+      "underfunded": 1263,
+      "sales": 9732.55931857391,
+      "tax": 24917.880699811914,
+      "earlyRevenue": 3040.211578368959,
+      "administration": 31441.02274210092,
+      "maintenance": 5620.633047938831,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 79.76950000000001,
+          "grain": 452.74957033489744,
+          "publicOffers": 0,
+          "service": 0.02148243680731036
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 36.207,
+          "grain": 252.86098280183268,
+          "publicOffers": 0,
+          "service": 0.3732398303620398
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 223.72149999999996,
+          "grain": 2883.1145147999996,
+          "publicOffers": 0,
+          "service": 0.5489347958928229
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 88.87550928559806,
+          "grain": 1331.4955082715478,
+          "publicOffers": 1279.3517039800854,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 2241.8433942137517,
+          "publicOffers": 258.99039258694876,
+          "service": 0.17007317065724847
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 329.86549999999994,
+          "grain": 4386.977950048263,
+          "publicOffers": 0,
+          "service": 0.05586795753781143
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 47.92077884088193,
+          "grain": 1995.4933317930313,
+          "publicOffers": 1735.5306304623805,
+          "service": 0
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-cash-tax-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 12711.824709513823,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 545619,
+          "prefectureCash": 35315.70742560943,
+          "hunger": 27
+        },
+        {
+          "month": 120,
+          "population": 561040,
+          "prefectureCash": 44482.70251975545,
+          "hunger": 77
+        },
+        {
+          "month": 240,
+          "population": 597524,
+          "prefectureCash": 54444.29051415054,
+          "hunger": 150
+        }
+      ],
+      "population": 597524,
+      "prefectureCash": 54444.29051415054,
+      "publicGrain": 8054.872872303526,
+      "totalGrain": 342678.1174425474,
+      "stability": 97.70458836844132,
+      "hunger": 150,
+      "underfunded": 0,
+      "sales": 1593.387321508109,
+      "tax": 175086.23672074248,
+      "earlyRevenue": 12828.017907113915,
+      "administration": 107508.688,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 6681.417841112862,
+          "grain": 410.32769960341955,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 2500.2998700821745,
+          "grain": 595.320273958987,
+          "publicOffers": 198.03797953335896,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 12079.067376752912,
+          "grain": 2822.5498555487998,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 9440.029202967082,
+          "grain": 1330.7256066180544,
+          "publicOffers": 749.2751632171266,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 6423.702244444391,
+          "grain": 1948.6362938237794,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 10145.333130889858,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 7174.440847901264,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-coordinated",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "prefectureCash": 6756.251221427034,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546925,
+          "prefectureCash": 12305.5311519277,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561733,
+          "prefectureCash": 8161.804082323029,
+          "hunger": 73
+        },
+        {
+          "month": 240,
+          "population": 595857,
+          "prefectureCash": 1284.0002456832672,
+          "hunger": 156
+        }
+      ],
+      "population": 595857,
+      "prefectureCash": 1284.0002456832672,
+      "publicGrain": 15591.132092092508,
+      "totalGrain": 345987.5598331046,
+      "stability": 96.1157055141541,
+      "hunger": 156,
+      "underfunded": 210,
+      "sales": 9528.638946863326,
+      "tax": 94074.81782961548,
+      "earlyRevenue": 6974.0242581880375,
+      "administration": 94170.72945410256,
+      "maintenance": 17166.280861055235,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 111.64150000000001,
+          "grain": 996.2745886175975,
+          "publicOffers": 0,
+          "service": 0.05275510223380504
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 48.999,
+          "grain": 540.060299060189,
+          "publicOffers": 163.83269743643376,
+          "service": 0.3210660223717162
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 245.5888797788498,
+          "grain": 2898.169758339962,
+          "publicOffers": 27.200121719984736,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 242.9998659044175,
+          "grain": 1331.3127336628822,
+          "publicOffers": 703.0195476273485,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 166.2745,
+          "grain": 2246.8107999999997,
+          "publicOffers": 0,
+          "service": 0.7142346208576524
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 326.79349999999994,
+          "grain": 4341.288451684372,
+          "publicOffers": 0,
+          "service": 0.08130530166120042
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.70299999999997,
+          "grain": 1968.3105758982165,
+          "publicOffers": 374.8525180455237,
+          "service": 0.24718499677567987
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "open",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 6713.211597704732,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 14089.71409200919,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560629,
+          "prefectureCash": 13342.235246724093,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 603472,
+          "prefectureCash": 9571.033811951138,
+          "hunger": 139
+        }
+      ],
+      "population": 603472,
+      "prefectureCash": 9571.033811951138,
+      "publicGrain": 13488.056231317712,
+      "totalGrain": 294503.46009583253,
+      "stability": 99.70595549280506,
+      "hunger": 139,
+      "underfunded": 433,
+      "sales": 8011.152302563756,
+      "tax": 87131.04066384611,
+      "earlyRevenue": 6930.936773646677,
+      "administration": 73848.46401105927,
+      "maintenance": 14954.79601401076,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3391.0704920075946,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1062.17587677508,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 226.88114229091042,
+          "grain": 2852.0731355999997,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 4260.311300877552,
+          "grain": 1330.0079583315576,
+          "publicOffers": 749.4918763202514,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999994,
+          "grain": 2241.5003,
+          "publicOffers": 0,
+          "service": 0.6863739657250972
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.13749999999993,
+          "grain": 4287.070882197292,
+          "publicOffers": 0,
+          "service": 0.08756660255402757
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.527,
+          "grain": 1970.2296123704584,
+          "publicOffers": 57.68246649815252,
+          "service": 0.239904915807284
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "closed",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 3500.7284357481685,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540256,
+          "prefectureCash": 4075.178271482816,
+          "hunger": 50
+        },
+        {
+          "month": 120,
+          "population": 554946,
+          "prefectureCash": 3690.218887756924,
+          "hunger": 107
+        },
+        {
+          "month": 240,
+          "population": 595938,
+          "prefectureCash": 1571.8387687011482,
+          "hunger": 180
+        }
+      ],
+      "population": 595938,
+      "prefectureCash": 1571.8387687011482,
+      "publicGrain": 9849.736668772575,
+      "totalGrain": 206381.4129291493,
+      "stability": 96.94081118353051,
+      "hunger": 180,
+      "underfunded": 1019,
+      "sales": 2838.1780570139567,
+      "tax": 33246.84966851028,
+      "earlyRevenue": 2839.8057765777958,
+      "administration": 35429.12525260273,
+      "maintenance": 5084.063704220278,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 116.00150000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.036591640379139284
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 456.65685607884683,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 219.62549999999993,
+          "grain": 1774.42715422876,
+          "publicOffers": 0,
+          "service": 0.05027114752945936
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 153.57591262230122,
+          "grain": 1336.6668849645398,
+          "publicOffers": 288.0201504917134,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 2136.5443306572024,
+          "publicOffers": 0,
+          "service": 0.042871150374935704
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 319.42549999999994,
+          "grain": 2478.1261845373638,
+          "publicOffers": 0,
+          "service": 0.029341954967488038
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.623,
+          "grain": 1835.9519638929944,
+          "publicOffers": 0,
+          "service": 0.05455529183470898
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "no-trade",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 5455.77823298562,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540468,
+          "prefectureCash": 11648.600032515122,
+          "hunger": 51
+        },
+        {
+          "month": 120,
+          "population": 557417,
+          "prefectureCash": 22064.954929397423,
+          "hunger": 98
+        },
+        {
+          "month": 240,
+          "population": 601509,
+          "prefectureCash": 24530.289677784753,
+          "hunger": 154
+        }
+      ],
+      "population": 601509,
+      "prefectureCash": 24530.289677784753,
+      "publicGrain": 13866.916267540444,
+      "totalGrain": 254790.76172888547,
+      "stability": 99.71446152390142,
+      "hunger": 154,
+      "underfunded": 755,
+      "sales": 5262.681418822677,
+      "tax": 78125.94878593899,
+      "earlyRevenue": 5672.96858473794,
+      "administration": 50317.74665956576,
+      "maintenance": 11856.13319098344,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 14742.792287124246,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 8833.605890660505,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 222.00949999999995,
+          "grain": 2857.0026627999996,
+          "publicOffers": 0,
+          "service": 0.25334422811772217
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 100.68700000000001,
+          "grain": 1339.0331760052793,
+          "publicOffers": 1169.1471136212722,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999994,
+          "grain": 2241.5003,
+          "publicOffers": 0,
+          "service": 0.5884108946976992
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.88949999999994,
+          "grain": 4298.29077465266,
+          "publicOffers": 0,
+          "service": 0.009075731654810609
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.37499999999997,
+          "grain": 1961.9422404612324,
+          "publicOffers": 0,
+          "service": 0.026949122353784934
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "low-tax",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 532607,
+          "prefectureCash": 3334.481080114146,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 551699,
+          "prefectureCash": 4167.8320058767695,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 571469,
+          "prefectureCash": 2195.7229512959393,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 622753,
+          "prefectureCash": 1182.5651434682516,
+          "hunger": 152
+        }
+      ],
+      "population": 622753,
+      "prefectureCash": 1182.5651434682516,
+      "publicGrain": 11956.03640893617,
+      "totalGrain": 208866.90712975536,
+      "stability": 98.44983035827299,
+      "hunger": 152,
+      "underfunded": 1178,
+      "sales": 730.2869667153894,
+      "tax": 34270.01063188288,
+      "earlyRevenue": 3121.1135017650763,
+      "administration": 30639.7869779358,
+      "maintenance": 6794.235542524338,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 140.77064346825193,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 55.83100000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.050459209110669784
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 229.24949999999995,
+          "grain": 3005.6936,
+          "publicOffers": 0,
+          "service": 0.25533114474019747
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 103.999,
+          "grain": 1392.092,
+          "publicOffers": 0,
+          "service": 0.23557145157457396
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 171.3705,
+          "grain": 1981.3437763820516,
+          "publicOffers": 0,
+          "service": 0.013823108056170565
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 335.4174999999998,
+          "grain": 3615.1886385161597,
+          "publicOffers": 0,
+          "service": 0.010213158384031768
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 145.92699999999996,
+          "grain": 1961.7183940379584,
+          "publicOffers": 0,
+          "service": 0.017697078039701265
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "high-tax",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 524972,
+          "prefectureCash": 27931.366656103877,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 509211,
+          "prefectureCash": 73764.84711678218,
+          "hunger": 39
+        },
+        {
+          "month": 120,
+          "population": 492515,
+          "prefectureCash": 96076.17590942478,
+          "hunger": 85
+        },
+        {
+          "month": 240,
+          "population": 472821,
+          "prefectureCash": 115411.44435286365,
+          "hunger": 89
+        }
+      ],
+      "population": 472821,
+      "prefectureCash": 115411.44435286365,
+      "publicGrain": 41288.26768202046,
+      "totalGrain": 342093.2331202605,
+      "stability": 0,
+      "hunger": 89,
+      "underfunded": 0,
+      "sales": 20822.378542832455,
+      "tax": 208097.55728808988,
+      "earlyRevenue": 28286.54570120985,
+      "administration": 95276.18000000008,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 13698.554069761558,
+          "grain": 1591.241241225462,
+          "publicOffers": 1129.6185558876507,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 7258.2665152047175,
+          "grain": 1985.8152022870265,
+          "publicOffers": 528.7441524959326,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 21382.053980396748,
+          "grain": 5549.973876509109,
+          "publicOffers": 2194.668248512326,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 11740.941836243064,
+          "grain": 4876.444264344357,
+          "publicOffers": 1015.7192540467115,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 16310.963451772257,
+          "grain": 5748.854731524179,
+          "publicOffers": 1703.1892870407387,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 29848.737162099675,
+          "grain": 5173.905657144995,
+          "publicOffers": 3430.9691260824566,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 15171.927337385621,
+          "grain": 4870.959064107919,
+          "publicOffers": 1488.1650208115893,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "hoard",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 6713.211597704732,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 12969.968842272512,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560634,
+          "prefectureCash": 12025.073982936507,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 603456,
+          "prefectureCash": 8342.314921209789,
+          "hunger": 139
+        }
+      ],
+      "population": 603456,
+      "prefectureCash": 8342.314921209789,
+      "publicGrain": 21930.850782296253,
+      "totalGrain": 278056.0307574003,
+      "stability": 99.70595549280506,
+      "hunger": 139,
+      "underfunded": 567,
+      "sales": 0,
+      "tax": 83627.97027130022,
+      "earlyRevenue": 6930.936773646677,
+      "administration": 64802.25993765381,
+      "maintenance": 13741.664016913339,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3391.0704920075946,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1062.17587677508,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.67349999999993,
+          "grain": 5487.281549488229,
+          "publicOffers": 0,
+          "service": 0.203931080752921
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3036.8160524271148,
+          "grain": 3402.0612384426163,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 3657.634498502215,
+          "publicOffers": 0,
+          "service": 0.07977111571368282
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.4334999999999,
+          "grain": 5484.068864436676,
+          "publicOffers": 0,
+          "service": 0.0957769351697301
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.21499999999997,
+          "grain": 3899.804631426517,
+          "publicOffers": 0,
+          "service": 0.08165019515382682
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "sell-all",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 7883.301855304627,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 15565.461436815742,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560638,
+          "prefectureCash": 14303.452733879934,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 603439,
+          "prefectureCash": 9492.234743867384,
+          "hunger": 139
+        }
+      ],
+      "population": 603439,
+      "prefectureCash": 9492.234743867384,
+      "publicGrain": 12357.370423745873,
+      "totalGrain": 306206.5836476619,
+      "stability": 99.70595549280506,
+      "hunger": 139,
+      "underfunded": 329,
+      "sales": 12867.265126107715,
+      "tax": 93243.82918275749,
+      "earlyRevenue": 8101.027031246566,
+      "administration": 83683.72391534584,
+      "maintenance": 16129.488387351068,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3391.003671745033,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1079.2777435188946,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.64949999999993,
+          "grain": 264.5898268583155,
+          "publicOffers": 2841.3215486415675,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 4169.924828603456,
+          "grain": 777.8678465255801,
+          "publicOffers": 1301.6319881262289,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 0,
+          "publicOffers": 1991.0563452105603,
+          "service": 0.35943975077806123
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.4094999999999,
+          "grain": 0,
+          "publicOffers": 3048.4288998591105,
+          "service": 0
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.039,
+          "grain": 201.2465173063115,
+          "publicOffers": 1931.2274512181978,
+          "service": 0.26147209396794735
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "reserve-four",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 6713.211597704732,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 12969.968842272512,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560634,
+          "prefectureCash": 12025.073982936507,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 603456,
+          "prefectureCash": 8342.314921209789,
+          "hunger": 139
+        }
+      ],
+      "population": 603456,
+      "prefectureCash": 8342.314921209789,
+      "publicGrain": 21930.850782296253,
+      "totalGrain": 278056.0307574003,
+      "stability": 99.70595549280506,
+      "hunger": 139,
+      "underfunded": 567,
+      "sales": 0,
+      "tax": 83627.97027130022,
+      "earlyRevenue": 6930.936773646677,
+      "administration": 64802.25993765381,
+      "maintenance": 13741.664016913339,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 3391.0704920075946,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1062.17587677508,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.67349999999993,
+          "grain": 5487.281549488229,
+          "publicOffers": 0,
+          "service": 0.203931080752921
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3036.8160524271148,
+          "grain": 3402.0612384426163,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 3657.634498502215,
+          "publicOffers": 0,
+          "service": 0.07977111571368282
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 323.4334999999999,
+          "grain": 5484.068864436676,
+          "publicOffers": 0,
+          "service": 0.0957769351697301
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 141.21499999999997,
+          "grain": 3899.804631426517,
+          "publicOffers": 0,
+          "service": 0.08165019515382682
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "in-kind-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 3394.985726038367,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546697,
+          "prefectureCash": 1836.698984080264,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561379,
+          "prefectureCash": 1228.1241020641212,
+          "hunger": 69
+        },
+        {
+          "month": 240,
+          "population": 600940,
+          "prefectureCash": 1020.0718588777075,
+          "hunger": 143
+        }
+      ],
+      "population": 600940,
+      "prefectureCash": 1020.0718588777075,
+      "publicGrain": 16070.013495365667,
+      "totalGrain": 233055.4416301444,
+      "stability": 96.03706561035544,
+      "hunger": 143,
+      "underfunded": 1261,
+      "sales": 10234.388844996689,
+      "tax": 25840.44430793444,
+      "earlyRevenue": 3038.0852670529166,
+      "administration": 32420.765284908677,
+      "maintenance": 6080.118698598862,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 116.75349999999999,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.03891183948854797
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 55.767,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.08320672370973267
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 222.13749999999993,
+          "grain": 2895.7539,
+          "publicOffers": 0,
+          "service": 0.42738256330241176
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 88.13608003682576,
+          "grain": 1330.6232879919983,
+          "publicOffers": 1292.832066906945,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 2236.4414953197333,
+          "publicOffers": 264.0610319874398,
+          "service": 0.170785746584826
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 324.05749999999995,
+          "grain": 4300.672917424499,
+          "publicOffers": 0,
+          "service": 0.07908397573675913
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 47.28977884088192,
+          "grain": 1958.3773895013169,
+          "publicOffers": 1791.251406233735,
+          "service": 0
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "cash-tax-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 12602.392680951236,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 545733,
+          "prefectureCash": 34704.241703015265,
+          "hunger": 26
+        },
+        {
+          "month": 120,
+          "population": 560325,
+          "prefectureCash": 43749.406971837896,
+          "hunger": 82
+        },
+        {
+          "month": 240,
+          "population": 603840,
+          "prefectureCash": 56094.3124257992,
+          "hunger": 143
+        }
+      ],
+      "population": 603840,
+      "prefectureCash": 56094.3124257992,
+      "publicGrain": 5997.415199035572,
+      "totalGrain": 334611.2494680423,
+      "stability": 99.71393086266822,
+      "hunger": 143,
+      "underfunded": 0,
+      "sales": 1998.8577421799243,
+      "tax": 176833.20899222125,
+      "earlyRevenue": 12718.543601883846,
+      "administration": 108092.944,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 5310.170003024884,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 792.3828420138877,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 12848.698926501354,
+          "grain": 2858.4175389925317,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 9763.562016845215,
+          "grain": 1328.7460896702878,
+          "publicOffers": 853.297736526446,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 7439.0432506533625,
+          "grain": 956.9538338463065,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 11947.119977219558,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 7993.335409540946,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "coordinated",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 6713.211597704732,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 12232.003209854904,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560646,
+          "prefectureCash": 8915.541633079656,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 603418,
+          "prefectureCash": 1451.3807893532062,
+          "hunger": 140
+        }
+      ],
+      "population": 603418,
+      "prefectureCash": 1451.3807893532062,
+      "publicGrain": 14247.342991895868,
+      "totalGrain": 343113.0404834721,
+      "stability": 99.7059050276356,
+      "hunger": 140,
+      "underfunded": 152,
+      "sales": 10325.076081703925,
+      "tax": 98919.84306981668,
+      "earlyRevenue": 6930.936773646677,
+      "administration": 98966.18570227614,
+      "maintenance": 17976.86726841082,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 120.19350000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.08167774898416107
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 211.8415914249941,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.62549999999993,
+          "grain": 2880.9639549049816,
+          "publicOffers": 361.9634240108089,
+          "service": 0.7800824187302391
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 267.1091979282122,
+          "grain": 1330.0079583315576,
+          "publicOffers": 749.4918763202514,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 2240.242440551041,
+          "publicOffers": 62.97629250126699,
+          "service": 0.663711922129809
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 324.00149999999996,
+          "grain": 4299.934453165229,
+          "publicOffers": 0,
+          "service": 0.08467215909254276
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.67899999999997,
+          "grain": 1951.418882261156,
+          "publicOffers": 370.3437098495752,
+          "service": 0.3932923507678734
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-open",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 6713.211597704732,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 14089.71409200919,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560629,
+          "prefectureCash": 13342.235246724093,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 591801,
+          "prefectureCash": 10895.742461470541,
+          "hunger": 201
+        }
+      ],
+      "population": 591801,
+      "prefectureCash": 10895.742461470541,
+      "publicGrain": 14988.09805073164,
+      "totalGrain": 298550.79506069684,
+      "stability": 93.49867715520598,
+      "hunger": 201,
+      "underfunded": 457,
+      "sales": 7673.172454416241,
+      "tax": 85509.22373445905,
+      "earlyRevenue": 6930.936773646677,
+      "administration": 70670.20580242535,
+      "maintenance": 14733.837647606382,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 4943.133470055528,
+          "grain": 558.1984120463302,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1191.6483618637635,
+          "grain": 584.515232028487,
+          "publicOffers": 325.29455820972083,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.92949999999996,
+          "grain": 2855.6604647999998,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3904.5641295512487,
+          "grain": 1330.0380508382618,
+          "publicOffers": 747.0899258522187,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999994,
+          "grain": 2241.5003,
+          "publicOffers": 0,
+          "service": 0.6803751594147581
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 325.56949999999995,
+          "grain": 4323.207988046106,
+          "publicOffers": 0,
+          "service": 0.05364060732967776
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 142.96699999999998,
+          "grain": 1993.016617895694,
+          "publicOffers": 29.5765010148216,
+          "service": 0.23200454953768423
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-closed",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 3500.7284357481685,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 540256,
+          "prefectureCash": 4075.178271482816,
+          "hunger": 50
+        },
+        {
+          "month": 120,
+          "population": 554946,
+          "prefectureCash": 3690.218887756924,
+          "hunger": 107
+        },
+        {
+          "month": 240,
+          "population": 574452,
+          "prefectureCash": 1668.9627779050622,
+          "hunger": 368
+        }
+      ],
+      "population": 574452,
+      "prefectureCash": 1668.9627779050622,
+      "publicGrain": 10014.682574869285,
+      "totalGrain": 203940.0235733252,
+      "stability": 87.9356976041057,
+      "hunger": 368,
+      "underfunded": 1048,
+      "sales": 2753.4943119066693,
+      "tax": 31855.858153458998,
+      "earlyRevenue": 2839.8057765777958,
+      "administration": 34054.80484294379,
+      "maintenance": 4885.584844516777,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 85.12950000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.05035745538450468
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 637.4857779050625,
+          "grain": 588.4471304607999,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 219.62549999999993,
+          "grain": 1720.201636660571,
+          "publicOffers": 0,
+          "service": 0.05027114752945936
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 100.74300000000001,
+          "grain": 1340.5145522861844,
+          "publicOffers": 72.80959514874311,
+          "service": 0.4684976340784343
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999994,
+          "grain": 2074.131630048382,
+          "publicOffers": 0,
+          "service": 0.04287115000513561
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 319.4254999999999,
+          "grain": 2382.6260663716102,
+          "publicOffers": 0,
+          "service": 0.02934195496748764
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 140.623,
+          "grain": 1835.9519638929944,
+          "publicOffers": 0,
+          "service": 0.05217898765238523
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-sell-all",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 7883.301855304627,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 15565.461436815742,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560638,
+          "prefectureCash": 14303.452733879934,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 591786,
+          "prefectureCash": 11563.222403588103,
+          "hunger": 201
+        }
+      ],
+      "population": 591786,
+      "prefectureCash": 11563.222403588103,
+      "publicGrain": 11972.822077245346,
+      "totalGrain": 311628.7767246781,
+      "stability": 93.50149023664959,
+      "hunger": 201,
+      "underfunded": 368,
+      "sales": 14334.653375393556,
+      "tax": 90983.09944639061,
+      "earlyRevenue": 8101.027031246566,
+      "administration": 80913.304706251,
+      "maintenance": 15917.575281499121,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 5118.101816357938,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1765.3906490916304,
+          "grain": 342.9218552407129,
+          "publicOffers": 572.4294013128937,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.89749999999998,
+          "grain": 0,
+          "publicOffers": 2686.3346021906323,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 3823.3734381385343,
+          "grain": 775.4351317516324,
+          "publicOffers": 1301.6928449388474,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 0,
+          "publicOffers": 1864.5707481980987,
+          "service": 0.31592301284955887
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 326.04949999999997,
+          "grain": 0,
+          "publicOffers": 2295.0206557766505,
+          "service": 0.004534762252118383
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 142.47899999999998,
+          "grain": 180.5939025500304,
+          "publicOffers": 1953.8229352858461,
+          "service": 0.253223042010676
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-reserve-four",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 6713.211597704732,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 12969.968842272512,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560634,
+          "prefectureCash": 12025.073982936507,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 591786,
+          "prefectureCash": 9152.035190239369,
+          "hunger": 201
+        }
+      ],
+      "population": 591786,
+      "prefectureCash": 9152.035190239369,
+      "publicGrain": 23307.499372774968,
+      "totalGrain": 284301.6603836624,
+      "stability": 93.49909735513442,
+      "hunger": 201,
+      "underfunded": 577,
+      "sales": 0,
+      "tax": 82405.63550191886,
+      "earlyRevenue": 6930.936773646677,
+      "administration": 62687.759528339564,
+      "maintenance": 13705.848093427241,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 4831.265652106381,
+          "grain": 558.198415090476,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 855.8833322795119,
+          "grain": 1525.5527639477848,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 221.9134999999999,
+          "grain": 4924.8958037162865,
+          "publicOffers": 0,
+          "service": 0.19526496188184414
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 2608.521705853476,
+          "grain": 3398.725406081552,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 3603.776409000875,
+          "publicOffers": 0,
+          "service": 0.07800116312894473
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 326.2414999999999,
+          "grain": 5393.50963074942,
+          "publicOffers": 0,
+          "service": 0.10785625446338987
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 142.279,
+          "grain": 3902.840944188575,
+          "publicOffers": 0,
+          "service": 0.07680128545388556
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-in-kind-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 3394.985726038367,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546697,
+          "prefectureCash": 1836.698984080264,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 561379,
+          "prefectureCash": 1228.1241020641212,
+          "hunger": 69
+        },
+        {
+          "month": 240,
+          "population": 567691,
+          "prefectureCash": 966.6825829277147,
+          "hunger": 517
+        }
+      ],
+      "population": 567691,
+      "prefectureCash": 966.6825829277147,
+      "publicGrain": 16303.64198674083,
+      "totalGrain": 218043.28874779624,
+      "stability": 77.96761898952792,
+      "hunger": 517,
+      "underfunded": 1275,
+      "sales": 9617.170873411927,
+      "tax": 24955.808362505304,
+      "earlyRevenue": 3038.0852670529166,
+      "administration": 31339.405677695737,
+      "maintenance": 5708.22203494479,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 71.28150000000001,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 0.047010207321410424
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 36.36375451023304,
+          "grain": 125.21919683391842,
+          "publicOffers": 0,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 223.80149999999992,
+          "grain": 2884.3590984,
+          "publicOffers": 0,
+          "service": 0.42582377753778067
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 90.70459847063889,
+          "grain": 1330.9484736946374,
+          "publicOffers": 1249.0335345354915,
+          "service": 0
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 2236.5148601584615,
+          "publicOffers": 260.01743093281937,
+          "service": 0.17046596527072427
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 331.0654999999999,
+          "grain": 4404.343770854976,
+          "publicOffers": 0,
+          "service": 0.05916666854476308
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 47.53522994684322,
+          "grain": 2005.4398951160108,
+          "publicOffers": 1807.7657262145144,
+          "service": 0
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-cash-tax-only",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 12602.392680951236,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 545733,
+          "prefectureCash": 34704.241703015265,
+          "hunger": 26
+        },
+        {
+          "month": 120,
+          "population": 560325,
+          "prefectureCash": 43749.406971837896,
+          "hunger": 82
+        },
+        {
+          "month": 240,
+          "population": 591881,
+          "prefectureCash": 55420.931327439044,
+          "hunger": 207
+        }
+      ],
+      "population": 591881,
+      "prefectureCash": 55420.931327439044,
+      "publicGrain": 6016.424449995055,
+      "totalGrain": 341604.24807344977,
+      "stability": 94.6047530670324,
+      "hunger": 207,
+      "underfunded": 0,
+      "sales": 1682.772992053447,
+      "tax": 175541.1104651408,
+      "earlyRevenue": 12718.543601883846,
+      "administration": 107092.10800000002,
+      "maintenance": 19893.59999999977,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 8615.003589569718,
+          "grain": 276.3999405830321,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 1363.8345930696505,
+          "grain": 598.5117499305351,
+          "publicOffers": 236.18858494178266,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 11953.945246730775,
+          "grain": 2855.6360612,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 9312.978309888294,
+          "grain": 1330.38928084026,
+          "publicOffers": 719.2988324994452,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 6980.472343721377,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 10094.112929704244,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 7100.5843147549795,
+          "grain": 0,
+          "publicOffers": 0,
+          "service": 1
+        }
+      }
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-coordinated",
+      "before": {
+        "population": 527250,
+        "publicCash": 12000
+      },
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "prefectureCash": 6713.211597704732,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546702,
+          "prefectureCash": 12232.003209854904,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 560646,
+          "prefectureCash": 8915.541633079656,
+          "hunger": 75
+        },
+        {
+          "month": 240,
+          "population": 591820,
+          "prefectureCash": 1355.2294689974606,
+          "hunger": 202
+        }
+      ],
+      "population": 591820,
+      "prefectureCash": 1355.2294689974606,
+      "publicGrain": 15023.25436634728,
+      "totalGrain": 347629.62856854877,
+      "stability": 93.47155515919462,
+      "hunger": 202,
+      "underfunded": 191,
+      "sales": 9740.888923152152,
+      "tax": 95651.1269302059,
+      "earlyRevenue": 6930.936773646677,
+      "administration": 95421.29358665919,
+      "maintenance": 17648.93679195513,
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "cash": 102.96950000000001,
+          "grain": 459.49869079445403,
+          "publicOffers": 0,
+          "service": 0.06533004181572358
+        },
+        "zhou-tay-linh-fu-2": {
+          "cash": 52.01500000000001,
+          "grain": 585.6588329071928,
+          "publicOffers": 239.54654812403834,
+          "service": 0.5780301177175514
+        },
+        "zhou-trung-ninh-fu-1": {
+          "cash": 238.65718515982235,
+          "grain": 2855.1967964,
+          "publicOffers": 0,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-2": {
+          "cash": 327.13678383763846,
+          "grain": 1330.4030705888679,
+          "publicOffers": 718.2167920367684,
+          "service": 1
+        },
+        "zhou-trung-ninh-fu-3": {
+          "cash": 165.93049999999997,
+          "grain": 2241.5003,
+          "publicOffers": 0,
+          "service": 0.7165660443084947
+        },
+        "zhou-dong-giang-fu-1": {
+          "cash": 326.40149999999994,
+          "grain": 4335.476023321082,
+          "publicOffers": 0,
+          "service": 0.09706066226645259
+        },
+        "zhou-dong-giang-fu-2": {
+          "cash": 142.11899999999997,
+          "grain": 1975.14193784413,
+          "publicOffers": 282.61537433074744,
+          "service": 0.3496066278141369
+        }
+      }
+    }
+  ]
+}

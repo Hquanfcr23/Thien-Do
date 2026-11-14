@@ -1,0 +1,3611 @@
+{
+  "schemaVersion": 5,
+  "campaignVersion": "0.2.0",
+  "timestamp": "2026-11-14T03:43:32.379Z",
+  "state": {
+    "campaignId": "foundation-sandbox",
+    "campaignVersion": "0.2.0",
+    "seed": 42,
+    "calendar": {
+      "year": 1,
+      "month": 1
+    },
+    "country": {
+      "id": "dai-ninh",
+      "name": "Đại Ninh",
+      "treasury": 6000,
+      "grainReserve": 6000,
+      "administrativeCapacity": 60
+    },
+    "dynasty": {
+      "id": "ninh",
+      "name": "Ninh triều",
+      "emperorId": "emperor",
+      "heirId": null,
+      "legitimacy": 70,
+      "successionRule": "designated"
+    },
+    "administrativeProfile": {
+      "id": "fictional-default",
+      "levels": [
+        {
+          "id": "central",
+          "name": "Trung ương",
+          "officeTitle": "Hoàng đế"
+        },
+        {
+          "id": "zhou",
+          "name": "Châu",
+          "officeTitle": "Châu mục"
+        },
+        {
+          "id": "fu",
+          "name": "Phủ",
+          "officeTitle": "Tri phủ"
+        },
+        {
+          "id": "xian",
+          "name": "Huyện",
+          "officeTitle": "Huyện lệnh"
+        }
+      ]
+    },
+    "administrativeUnits": [
+      {
+        "id": "capital",
+        "name": "Ninh Kinh",
+        "levelId": "central",
+        "parentId": null,
+        "governorId": "emperor",
+        "locationId": "capital-location",
+        "stability": 70,
+        "development": 50,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 100,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": null
+      },
+      {
+        "id": "zhou-tay-linh",
+        "name": "Tây Lĩnh Châu",
+        "levelId": "zhou",
+        "parentId": "capital",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0.3,
+          "h": 1
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1",
+        "name": "Lâm An Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-tay-linh",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0.3,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-1-xian-1",
+        "name": "Lâm An Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-1-xian-1",
+        "stability": 62,
+        "development": 37,
+        "population": 10500,
+        "resources": {
+          "wood": 272,
+          "iron": 68,
+          "grain": 2376,
+          "stone": 128,
+          "ore": 0,
+          "tools": 24,
+          "fiber": 24,
+          "cloth": 40,
+          "equipment": 9.6
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 77,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0.3,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-1-xian-2",
+        "name": "Lâm An Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-1-xian-2",
+        "stability": 63,
+        "development": 38,
+        "population": 11250,
+        "resources": {
+          "wood": 340,
+          "iron": 85,
+          "grain": 3165,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 78,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.1,
+          "w": 0.3,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-1-xian-3",
+        "name": "Lâm An Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-1-xian-3",
+        "stability": 64,
+        "development": 39,
+        "population": 12000,
+        "resources": {
+          "wood": 340,
+          "iron": 85,
+          "grain": 3360,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 79,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.2,
+          "w": 0.3,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-2-xian-1",
+        "name": "Lâm An Nam An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-2-xian-1",
+        "stability": 65,
+        "development": 40,
+        "population": 12750,
+        "resources": {
+          "wood": 340,
+          "iron": 85,
+          "grain": 3555,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 80,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.3,
+          "w": 0.3,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-2-xian-2",
+        "name": "Lâm An Nam Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-2-xian-2",
+        "stability": 66,
+        "development": 41,
+        "population": 13500,
+        "resources": {
+          "wood": 340,
+          "iron": 85,
+          "grain": 3750,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 81,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.4,
+          "w": 0.3,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-2",
+        "name": "Sơn Bình Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-tay-linh",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-2",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.3,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-2-jun-1-xian-1",
+        "name": "Sơn Bình Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-2-jun-1-xian-1",
+        "stability": 68,
+        "development": 43,
+        "population": 15000,
+        "resources": {
+          "wood": 272,
+          "iron": 68,
+          "grain": 3312,
+          "stone": 128,
+          "ore": 0,
+          "tools": 24,
+          "fiber": 24,
+          "cloth": 40,
+          "equipment": 9.6
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 83,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.3,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-2-jun-1-xian-2",
+        "name": "Sơn Bình Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-2-jun-1-xian-2",
+        "stability": 69,
+        "development": 44,
+        "population": 15750,
+        "resources": {
+          "wood": 340,
+          "iron": 85,
+          "grain": 4335,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 84,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.75,
+          "w": 0.3,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-trung-ninh",
+        "name": "Trung Ninh Châu",
+        "levelId": "zhou",
+        "parentId": "capital",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0,
+          "w": 0.38,
+          "h": 1
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1",
+        "name": "Ninh Kinh Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-trung-ninh",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+        "name": "Ninh Kinh Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-1-xian-1",
+        "stability": 72,
+        "development": 47,
+        "population": 18000,
+        "resources": {
+          "wood": 176,
+          "iron": 9.6,
+          "grain": 4064,
+          "stone": 128,
+          "ore": 0,
+          "tools": 24,
+          "fiber": 24,
+          "cloth": 40,
+          "equipment": 9.6
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 87,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0,
+          "w": 0.38,
+          "h": 0.06666666666666667
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+        "name": "Ninh Kinh Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-1-xian-2",
+        "stability": 73,
+        "development": 48,
+        "population": 18750,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 5275,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 88,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.06666666666666667,
+          "w": 0.38,
+          "h": 0.06666666666666667
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+        "name": "Ninh Kinh Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-1-xian-3",
+        "stability": 74,
+        "development": 49,
+        "population": 19500,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 5470,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 89,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.13333333333333333,
+          "w": 0.38,
+          "h": 0.06666666666666667
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+        "name": "Ninh Kinh Nam An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-2-xian-1",
+        "stability": 75,
+        "development": 50,
+        "population": 20250,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 5665,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 90,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.2,
+          "w": 0.38,
+          "h": 0.06666666666666667
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+        "name": "Ninh Kinh Nam Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-2-xian-2",
+        "stability": 76,
+        "development": 51,
+        "population": 21000,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 5860,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 91,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.26666666666666666,
+          "w": 0.38,
+          "h": 0.06666666666666667
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-2",
+        "name": "Hà Dương Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-trung-ninh",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-2",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.3333333333333333,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+        "name": "Hà Dương Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-2-jun-1-xian-1",
+        "stability": 78,
+        "development": 53,
+        "population": 22500,
+        "resources": {
+          "wood": 176,
+          "iron": 9.6,
+          "grain": 5000,
+          "stone": 128,
+          "ore": 0,
+          "tools": 24,
+          "fiber": 24,
+          "cloth": 40,
+          "equipment": 9.6
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 93,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.3333333333333333,
+          "w": 0.38,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+        "name": "Hà Dương Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-2-jun-1-xian-2",
+        "stability": 79,
+        "development": 54,
+        "population": 23250,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 6445,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 94,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.5,
+          "w": 0.38,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3",
+        "name": "Bình Nguyên Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-trung-ninh",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.6666666666666666,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+        "name": "Bình Nguyên Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-3",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3-jun-1-xian-1",
+        "stability": 81,
+        "development": 56,
+        "population": 24750,
+        "resources": {
+          "wood": 176,
+          "iron": 9.6,
+          "grain": 5468,
+          "stone": 128,
+          "ore": 0,
+          "tools": 24,
+          "fiber": 24,
+          "cloth": 40,
+          "equipment": 9.6
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 76,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.6666666666666666,
+          "w": 0.38,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+        "name": "Bình Nguyên Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-3",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3-jun-1-xian-2",
+        "stability": 82,
+        "development": 57,
+        "population": 25500,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 7030,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 77,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.7777777777777777,
+          "w": 0.38,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+        "name": "Bình Nguyên Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-3",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3-jun-1-xian-3",
+        "stability": 83,
+        "development": 58,
+        "population": 26250,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 7225,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 78,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.8888888888888888,
+          "w": 0.38,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-dong-giang",
+        "name": "Đông Giang Châu",
+        "levelId": "zhou",
+        "parentId": "capital",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0,
+          "w": 0.32,
+          "h": 1
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1",
+        "name": "Giang Khẩu Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-dong-giang",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0,
+          "w": 0.32,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-1-xian-1",
+        "name": "Giang Khẩu Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-1-xian-1",
+        "stability": 61,
+        "development": 61,
+        "population": 28500,
+        "resources": {
+          "wood": 176,
+          "iron": 9.6,
+          "grain": 6120,
+          "stone": 128,
+          "ore": 0,
+          "tools": 24,
+          "fiber": 24,
+          "cloth": 40,
+          "equipment": 9.6
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 81,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0,
+          "w": 0.32,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-1-xian-2",
+        "name": "Giang Khẩu Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-1-xian-2",
+        "stability": 62,
+        "development": 62,
+        "population": 29250,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 7845,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 82,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.1,
+          "w": 0.32,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-1-xian-3",
+        "name": "Giang Khẩu Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-1-xian-3",
+        "stability": 63,
+        "development": 63,
+        "population": 30000,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 8040,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 83,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.2,
+          "w": 0.32,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-2-xian-1",
+        "name": "Giang Khẩu Nam An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-2-xian-1",
+        "stability": 64,
+        "development": 64,
+        "population": 30750,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 8235,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 84,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.3,
+          "w": 0.32,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-2-xian-2",
+        "name": "Giang Khẩu Nam Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-2-xian-2",
+        "stability": 65,
+        "development": 35,
+        "population": 31500,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 8430,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 85,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.4,
+          "w": 0.32,
+          "h": 0.1
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-2",
+        "name": "Đông Hải Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-dong-giang",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-2",
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.5,
+          "w": 0.32,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-2-jun-1-xian-1",
+        "name": "Đông Hải Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-2-jun-1-xian-1",
+        "stability": 67,
+        "development": 37,
+        "population": 33000,
+        "resources": {
+          "wood": 176,
+          "iron": 9.6,
+          "grain": 7056,
+          "stone": 128,
+          "ore": 0,
+          "tools": 24,
+          "fiber": 24,
+          "cloth": 40,
+          "equipment": 9.6
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 87,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.5,
+          "w": 0.32,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-2-jun-1-xian-2",
+        "name": "Đông Hải Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-2-jun-1-xian-2",
+        "stability": 68,
+        "development": 38,
+        "population": 33750,
+        "resources": {
+          "wood": 220,
+          "iron": 12,
+          "grain": 9015,
+          "stone": 160,
+          "ore": 0,
+          "tools": 30,
+          "fiber": 30,
+          "cloth": 50,
+          "equipment": 12
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 88,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.75,
+          "w": 0.32,
+          "h": 0.25
+        }
+      }
+    ],
+    "characters": [
+      {
+        "id": "emperor",
+        "name": "Ninh Thế An",
+        "age": 32,
+        "health": 85,
+        "ability": 65,
+        "loyalty": 100,
+        "ambition": 55,
+        "corruption": 0,
+        "prestige": 60,
+        "factionId": null,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Nhân vật sáng tạo cho dữ liệu kiểm thử Foundation."
+        }
+      }
+    ],
+    "militaryUnits": [],
+    "flags": {},
+    "history": [
+      {
+        "date": {
+          "year": 1,
+          "month": 1
+        },
+        "message": "Khởi lập hồ sơ Ninh triều. Dữ liệu giả tưởng phục vụ Foundation; chưa mô phỏng gameplay."
+      }
+    ],
+    "simulation": {
+      "revision": 2,
+      "rng": 42,
+      "tick": 0,
+      "nextId": 1,
+      "policy": {
+        "landTax": 0.12,
+        "tradeTax": 0.04,
+        "farmShare": 0.64,
+        "industryShare": 0.24,
+        "reserveShare": 0,
+        "tradeOpen": true
+      },
+      "zhouPolicies": {},
+      "prefectures": {
+        "zhou-tay-linh-fu-1": {
+          "seatCountyId": "zhou-tay-linh-fu-1-jun-1-xian-1",
+          "treasury": 857.1428571428571,
+          "grainReserve": 0,
+          "market": {
+            "inventory": {
+              "grain": 594,
+              "wood": 68,
+              "stone": 32,
+              "ore": 0,
+              "iron": 17,
+              "tools": 6,
+              "fiber": 6,
+              "cloth": 10,
+              "equipment": 2.4000000000000004
+            },
+            "publicListings": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "prices": {
+              "grain": 1,
+              "wood": 2,
+              "stone": 1.5,
+              "ore": 3,
+              "iron": 6,
+              "tools": 12,
+              "fiber": 2,
+              "cloth": 4,
+              "equipment": 20
+            },
+            "demand": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "merchantMoney": 1800
+          },
+          "buildings": {},
+          "projects": []
+        },
+        "zhou-tay-linh-fu-2": {
+          "seatCountyId": "zhou-tay-linh-fu-2-jun-1-xian-1",
+          "treasury": 857.1428571428571,
+          "grainReserve": 0,
+          "market": {
+            "inventory": {
+              "grain": 828,
+              "wood": 68,
+              "stone": 32,
+              "ore": 0,
+              "iron": 17,
+              "tools": 6,
+              "fiber": 6,
+              "cloth": 10,
+              "equipment": 2.4000000000000004
+            },
+            "publicListings": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "prices": {
+              "grain": 1,
+              "wood": 2,
+              "stone": 1.5,
+              "ore": 3,
+              "iron": 6,
+              "tools": 12,
+              "fiber": 2,
+              "cloth": 4,
+              "equipment": 20
+            },
+            "demand": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "merchantMoney": 922.5
+          },
+          "buildings": {},
+          "projects": []
+        },
+        "zhou-trung-ninh-fu-1": {
+          "seatCountyId": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "treasury": 857.1428571428571,
+          "grainReserve": 0,
+          "market": {
+            "inventory": {
+              "grain": 1016,
+              "wood": 44,
+              "stone": 32,
+              "ore": 0,
+              "iron": 2.4000000000000004,
+              "tools": 6,
+              "fiber": 6,
+              "cloth": 10,
+              "equipment": 2.4000000000000004
+            },
+            "publicListings": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "prices": {
+              "grain": 1,
+              "wood": 2,
+              "stone": 1.5,
+              "ore": 3,
+              "iron": 6,
+              "tools": 12,
+              "fiber": 2,
+              "cloth": 4,
+              "equipment": 20
+            },
+            "demand": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "merchantMoney": 2925
+          },
+          "buildings": {},
+          "projects": []
+        },
+        "zhou-trung-ninh-fu-2": {
+          "seatCountyId": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "treasury": 857.1428571428571,
+          "grainReserve": 0,
+          "market": {
+            "inventory": {
+              "grain": 1250,
+              "wood": 44,
+              "stone": 32,
+              "ore": 0,
+              "iron": 2.4000000000000004,
+              "tools": 6,
+              "fiber": 6,
+              "cloth": 10,
+              "equipment": 2.4000000000000004
+            },
+            "publicListings": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "prices": {
+              "grain": 1,
+              "wood": 2,
+              "stone": 1.5,
+              "ore": 3,
+              "iron": 6,
+              "tools": 12,
+              "fiber": 2,
+              "cloth": 4,
+              "equipment": 20
+            },
+            "demand": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "merchantMoney": 1372.5
+          },
+          "buildings": {},
+          "projects": []
+        },
+        "zhou-trung-ninh-fu-3": {
+          "seatCountyId": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "treasury": 857.1428571428571,
+          "grainReserve": 0,
+          "market": {
+            "inventory": {
+              "grain": 1367,
+              "wood": 44,
+              "stone": 32,
+              "ore": 0,
+              "iron": 2.4000000000000004,
+              "tools": 6,
+              "fiber": 6,
+              "cloth": 10,
+              "equipment": 2.4000000000000004
+            },
+            "publicListings": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "prices": {
+              "grain": 1,
+              "wood": 2,
+              "stone": 1.5,
+              "ore": 3,
+              "iron": 6,
+              "tools": 12,
+              "fiber": 2,
+              "cloth": 4,
+              "equipment": 20
+            },
+            "demand": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "merchantMoney": 2295
+          },
+          "buildings": {},
+          "projects": []
+        },
+        "zhou-dong-giang-fu-1": {
+          "seatCountyId": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "treasury": 857.1428571428571,
+          "grainReserve": 0,
+          "market": {
+            "inventory": {
+              "grain": 1530,
+              "wood": 44,
+              "stone": 32,
+              "ore": 0,
+              "iron": 2.4000000000000004,
+              "tools": 6,
+              "fiber": 6,
+              "cloth": 10,
+              "equipment": 2.4000000000000004
+            },
+            "publicListings": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "prices": {
+              "grain": 1,
+              "wood": 2,
+              "stone": 1.5,
+              "ore": 3,
+              "iron": 6,
+              "tools": 12,
+              "fiber": 2,
+              "cloth": 4,
+              "equipment": 20
+            },
+            "demand": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "merchantMoney": 4500
+          },
+          "buildings": {},
+          "projects": []
+        },
+        "zhou-dong-giang-fu-2": {
+          "seatCountyId": "zhou-dong-giang-fu-2-jun-1-xian-1",
+          "treasury": 857.1428571428571,
+          "grainReserve": 0,
+          "market": {
+            "inventory": {
+              "grain": 1764,
+              "wood": 44,
+              "stone": 32,
+              "ore": 0,
+              "iron": 2.4000000000000004,
+              "tools": 6,
+              "fiber": 6,
+              "cloth": 10,
+              "equipment": 2.4000000000000004
+            },
+            "publicListings": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "prices": {
+              "grain": 1,
+              "wood": 2,
+              "stone": 1.5,
+              "ore": 3,
+              "iron": 6,
+              "tools": 12,
+              "fiber": 2,
+              "cloth": 4,
+              "equipment": 20
+            },
+            "demand": {
+              "grain": 0,
+              "wood": 0,
+              "stone": 0,
+              "ore": 0,
+              "iron": 0,
+              "tools": 0,
+              "fiber": 0,
+              "cloth": 0,
+              "equipment": 0
+            },
+            "merchantMoney": 2002.5
+          },
+          "buildings": {},
+          "projects": []
+        }
+      },
+      "counties": {
+        "zhou-tay-linh-fu-1-jun-1-xian-1": {
+          "households": 2100,
+          "workingAge": 5775,
+          "farmers": 7980,
+          "landowners": 630,
+          "artisans": 1890,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 2835,
+          "land": 672,
+          "soil": 0.65,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 31500,
+            "stone": 84000,
+            "ore": 21000
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-tay-linh-fu-1-jun-1-xian-2": {
+          "households": 2250,
+          "workingAge": 6187,
+          "farmers": 8550,
+          "landowners": 675,
+          "artisans": 2025,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 3037.5,
+          "land": 720,
+          "soil": 0.65,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 33750,
+            "stone": 90000,
+            "ore": 7874.999999999999
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-tay-linh-fu-1-jun-1-xian-3": {
+          "households": 2400,
+          "workingAge": 6600,
+          "farmers": 9120,
+          "landowners": 720,
+          "artisans": 2160,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 3240,
+          "land": 768,
+          "soil": 0.65,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 36000,
+            "stone": 96000,
+            "ore": 8400
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-tay-linh-fu-1-jun-2-xian-1": {
+          "households": 2550,
+          "workingAge": 7012,
+          "farmers": 9690,
+          "landowners": 765,
+          "artisans": 2295,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 3442.5,
+          "land": 816,
+          "soil": 0.65,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 38250,
+            "stone": 102000,
+            "ore": 25500
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-tay-linh-fu-1-jun-2-xian-2": {
+          "households": 2700,
+          "workingAge": 7425,
+          "farmers": 10260,
+          "landowners": 810,
+          "artisans": 2430,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 3645,
+          "land": 864,
+          "soil": 0.65,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 40500,
+            "stone": 108000,
+            "ore": 9450
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-tay-linh-fu-2-jun-1-xian-1": {
+          "households": 3000,
+          "workingAge": 8250,
+          "farmers": 11400,
+          "landowners": 900,
+          "artisans": 2700,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 4050,
+          "land": 960,
+          "soil": 0.65,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 45000,
+            "stone": 120000,
+            "ore": 10500
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-tay-linh-fu-2-jun-1-xian-2": {
+          "households": 3150,
+          "workingAge": 8662,
+          "farmers": 11970,
+          "landowners": 945,
+          "artisans": 2835,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 4252.5,
+          "land": 1008,
+          "soil": 0.65,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 47250,
+            "stone": 126000,
+            "ore": 31500
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-1-jun-1-xian-1": {
+          "households": 3600,
+          "workingAge": 9900,
+          "farmers": 13680,
+          "landowners": 1080,
+          "artisans": 3240,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 4860,
+          "land": 1655.9999999999998,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 54000,
+            "stone": 144000,
+            "ore": 12600
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-1-jun-1-xian-2": {
+          "households": 3750,
+          "workingAge": 10312,
+          "farmers": 14250,
+          "landowners": 1125,
+          "artisans": 3375,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 5062.5,
+          "land": 1724.9999999999998,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 56250,
+            "stone": 150000,
+            "ore": 13125
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-1-jun-1-xian-3": {
+          "households": 3900,
+          "workingAge": 10725,
+          "farmers": 14820,
+          "landowners": 1170,
+          "artisans": 3510,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 5265,
+          "land": 1793.9999999999998,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 58500,
+            "stone": 156000,
+            "ore": 39000
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-1-jun-2-xian-1": {
+          "households": 4050,
+          "workingAge": 11137,
+          "farmers": 15390,
+          "landowners": 1215,
+          "artisans": 3645,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 5467.5,
+          "land": 1862.9999999999998,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 60750,
+            "stone": 162000,
+            "ore": 14175
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-1-jun-2-xian-2": {
+          "households": 4200,
+          "workingAge": 11550,
+          "farmers": 15960,
+          "landowners": 1260,
+          "artisans": 3780,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 5670,
+          "land": 1931.9999999999998,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 63000,
+            "stone": 168000,
+            "ore": 14699.999999999998
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-2-jun-1-xian-1": {
+          "households": 4500,
+          "workingAge": 12375,
+          "farmers": 17100,
+          "landowners": 1350,
+          "artisans": 4050,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 6075,
+          "land": 2070,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 67500,
+            "stone": 180000,
+            "ore": 45000
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-2-jun-1-xian-2": {
+          "households": 4650,
+          "workingAge": 12787,
+          "farmers": 17670,
+          "landowners": 1395,
+          "artisans": 4185,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 6277.5,
+          "land": 2139,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 69750,
+            "stone": 186000,
+            "ore": 16274.999999999998
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-3-jun-1-xian-1": {
+          "households": 4950,
+          "workingAge": 13612,
+          "farmers": 18810,
+          "landowners": 1485,
+          "artisans": 4455,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 6682.5,
+          "land": 2277,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 74250,
+            "stone": 198000,
+            "ore": 17325
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-3-jun-1-xian-2": {
+          "households": 5100,
+          "workingAge": 14025,
+          "farmers": 19380,
+          "landowners": 1530,
+          "artisans": 4590,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 6885,
+          "land": 2346,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 76500,
+            "stone": 204000,
+            "ore": 51000
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-trung-ninh-fu-3-jun-1-xian-3": {
+          "households": 5250,
+          "workingAge": 14437,
+          "farmers": 19950,
+          "landowners": 1575,
+          "artisans": 4725,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 7087.5,
+          "land": 2415,
+          "soil": 0.8,
+          "water": 0.6,
+          "crop": "millet",
+          "sown": 0,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 78750,
+            "stone": 210000,
+            "ore": 18375
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-dong-giang-fu-1-jun-1-xian-1": {
+          "households": 5700,
+          "workingAge": 15675,
+          "farmers": 21660,
+          "landowners": 1710,
+          "artisans": 5130,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 7695,
+          "land": 2052,
+          "soil": 0.8,
+          "water": 0.85,
+          "crop": "wheat",
+          "sown": 2052,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 85500,
+            "stone": 228000,
+            "ore": 19950
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-dong-giang-fu-1-jun-1-xian-2": {
+          "households": 5850,
+          "workingAge": 16087,
+          "farmers": 22230,
+          "landowners": 1755,
+          "artisans": 5265,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 7897.5,
+          "land": 2106,
+          "soil": 0.8,
+          "water": 0.85,
+          "crop": "wheat",
+          "sown": 2106,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 87750,
+            "stone": 234000,
+            "ore": 58500
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-dong-giang-fu-1-jun-1-xian-3": {
+          "households": 6000,
+          "workingAge": 16500,
+          "farmers": 22800,
+          "landowners": 1800,
+          "artisans": 5400,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 8100,
+          "land": 2160,
+          "soil": 0.8,
+          "water": 0.85,
+          "crop": "wheat",
+          "sown": 2160,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 90000,
+            "stone": 240000,
+            "ore": 21000
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-dong-giang-fu-1-jun-2-xian-1": {
+          "households": 6150,
+          "workingAge": 16912,
+          "farmers": 23370,
+          "landowners": 1845,
+          "artisans": 5535,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 8302.5,
+          "land": 2214,
+          "soil": 0.8,
+          "water": 0.85,
+          "crop": "wheat",
+          "sown": 2214,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 92250,
+            "stone": 246000,
+            "ore": 21525
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-dong-giang-fu-1-jun-2-xian-2": {
+          "households": 6300,
+          "workingAge": 17325,
+          "farmers": 23940,
+          "landowners": 1890,
+          "artisans": 5670,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 8505,
+          "land": 2268,
+          "soil": 0.8,
+          "water": 0.85,
+          "crop": "wheat",
+          "sown": 2268,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 94500,
+            "stone": 252000,
+            "ore": 63000
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-dong-giang-fu-2-jun-1-xian-1": {
+          "households": 6600,
+          "workingAge": 18150,
+          "farmers": 25080,
+          "landowners": 1980,
+          "artisans": 5940,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 8910,
+          "land": 2376,
+          "soil": 0.8,
+          "water": 0.85,
+          "crop": "wheat",
+          "sown": 2376,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 99000,
+            "stone": 264000,
+            "ore": 23100
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        },
+        "zhou-dong-giang-fu-2-jun-1-xian-2": {
+          "households": 6750,
+          "workingAge": 18562,
+          "farmers": 25650,
+          "landowners": 2025,
+          "artisans": 6075,
+          "unemployment": 0,
+          "livingStandard": 0.7,
+          "privateMoney": 9112.5,
+          "land": 2430,
+          "soil": 0.8,
+          "water": 0.85,
+          "crop": "wheat",
+          "sown": 2430,
+          "cropHealth": 1,
+          "deposits": {
+            "wood": 101250,
+            "stone": 270000,
+            "ore": 23625
+          },
+          "buildings": {
+            "granary": {
+              "level": 1,
+              "condition": 1
+            },
+            "workshop": {
+              "level": 1,
+              "condition": 1
+            },
+            "mine": {
+              "level": 1,
+              "condition": 1
+            }
+          },
+          "projects": [],
+          "lastTaxNominal": 0,
+          "lastTaxPaid": 0,
+          "shortage": 0,
+          "lastHarvest": 0,
+          "lastBirths": 0,
+          "lastDeaths": 0,
+          "lastMigration": 0,
+          "lastWorkers": 0,
+          "lastConstruction": 0,
+          "lastMilitary": 0
+        }
+      },
+      "routes": [
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-1|zhou-dong-giang-fu-1-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "to": "zhou-dong-giang-fu-1-jun-1-xian-2",
+          "mode": "road",
+          "km": 69.02361904888208,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-1|zhou-dong-giang-fu-1-jun-1-xian-3",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "to": "zhou-dong-giang-fu-1-jun-1-xian-3",
+          "mode": "road",
+          "km": 81.54528562304024,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-1|zhou-dong-giang-fu-1-jun-2-xian-1",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "to": "zhou-dong-giang-fu-1-jun-2-xian-1",
+          "mode": "road",
+          "km": 123.22540283772415,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-1|zhou-tay-linh-fu-1-jun-2-xian-1",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-1",
+          "mode": "road",
+          "km": 131.96305330148468,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-1|zhou-tay-linh-fu-2-jun-1-xian-1",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-2-jun-1-xian-1",
+          "mode": "road",
+          "km": 139.62171311360976,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-1|zhou-tay-linh-fu-2-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "mode": "road",
+          "km": 118.12351682958517,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "mode": "road",
+          "km": 128.8691733949289,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-1-jun-1-xian-3",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-2",
+          "to": "zhou-dong-giang-fu-1-jun-1-xian-3",
+          "mode": "road",
+          "km": 64.93212684908869,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-2-jun-1-xian-1",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-2",
+          "to": "zhou-dong-giang-fu-2-jun-1-xian-1",
+          "mode": "road",
+          "km": 139.8553433136836,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-tay-linh-fu-1-jun-2-xian-1",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-2",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-1",
+          "mode": "road",
+          "km": 69.66432506895447,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-tay-linh-fu-1-jun-2-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-2",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-2",
+          "mode": "road",
+          "km": 142.70322425634555,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-3|zhou-dong-giang-fu-1-jun-2-xian-1",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-3",
+          "to": "zhou-dong-giang-fu-1-jun-2-xian-1",
+          "mode": "road",
+          "km": 87.36087130607704,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-3|zhou-dong-giang-fu-2-jun-1-xian-1",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-3",
+          "to": "zhou-dong-giang-fu-2-jun-1-xian-1",
+          "mode": "road",
+          "km": 117.64832100813804,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-1-xian-3|zhou-dong-giang-fu-2-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-1-xian-3",
+          "to": "zhou-dong-giang-fu-2-jun-1-xian-2",
+          "mode": "road",
+          "km": 84.93503443110099,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-2-xian-1|zhou-dong-giang-fu-1-jun-2-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-2-xian-1",
+          "to": "zhou-dong-giang-fu-1-jun-2-xian-2",
+          "mode": "road",
+          "km": 82.21802118739141,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-2-xian-1|zhou-dong-giang-fu-2-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-2-xian-1",
+          "to": "zhou-dong-giang-fu-2-jun-1-xian-2",
+          "mode": "road",
+          "km": 76.60921013934285,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-2-xian-1|zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-2-xian-1",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "mode": "road",
+          "km": 170.10798557450303,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-2-xian-2|zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-2-xian-2",
+          "to": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "mode": "road",
+          "km": 114.60711216516147,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-dong-giang-fu-1-jun-2-xian-2|zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-2-xian-2",
+          "to": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "mode": "river",
+          "km": 137.52853459819374,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-2-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-1-jun-2-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "mode": "road",
+          "km": 135.80557349477542,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-1-jun-2-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-3",
+          "from": "zhou-dong-giang-fu-1-jun-2-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+          "mode": "road",
+          "km": 72.863656269867,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-2-jun-1-xian-1|zhou-dong-giang-fu-2-jun-1-xian-2",
+          "from": "zhou-dong-giang-fu-2-jun-1-xian-1",
+          "to": "zhou-dong-giang-fu-2-jun-1-xian-2",
+          "mode": "road",
+          "km": 109.63350941175679,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-dong-giang-fu-2-jun-1-xian-1|zhou-tay-linh-fu-1-jun-2-xian-2",
+          "from": "zhou-dong-giang-fu-2-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-2",
+          "mode": "road",
+          "km": 92.06245268226056,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-1-xian-1|zhou-tay-linh-fu-1-jun-1-xian-2",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-1-jun-1-xian-2",
+          "mode": "road",
+          "km": 111.86343638846563,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-1-jun-1-xian-1|zhou-tay-linh-fu-1-jun-1-xian-2",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-1-jun-1-xian-2",
+          "mode": "river",
+          "km": 134.23612366615876,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-1-xian-1|zhou-tay-linh-fu-1-jun-1-xian-3",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-1-jun-1-xian-3",
+          "mode": "road",
+          "km": 89.13258117676905,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-1-jun-1-xian-1|zhou-tay-linh-fu-1-jun-1-xian-3",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-1-jun-1-xian-3",
+          "mode": "river",
+          "km": 106.95909741212286,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-1-xian-2|zhou-tay-linh-fu-1-jun-1-xian-3",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-2",
+          "to": "zhou-tay-linh-fu-1-jun-1-xian-3",
+          "mode": "road",
+          "km": 85.24352863134324,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-1-jun-1-xian-2|zhou-tay-linh-fu-1-jun-1-xian-3",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-2",
+          "to": "zhou-tay-linh-fu-1-jun-1-xian-3",
+          "mode": "river",
+          "km": 102.29223435761189,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-1-xian-2|zhou-tay-linh-fu-1-jun-2-xian-1",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-2",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-1",
+          "mode": "road",
+          "km": 119.30495821371677,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-1-jun-1-xian-2|zhou-tay-linh-fu-1-jun-2-xian-1",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-2",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-1",
+          "mode": "river",
+          "km": 143.16594985646012,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-1-xian-2|zhou-tay-linh-fu-1-jun-2-xian-2",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-2",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-2",
+          "mode": "road",
+          "km": 91.40869479715406,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-1-xian-3|zhou-tay-linh-fu-1-jun-2-xian-2",
+          "from": "zhou-tay-linh-fu-1-jun-1-xian-3",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-2",
+          "mode": "road",
+          "km": 116.93133895143636,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-2-xian-1|zhou-tay-linh-fu-1-jun-2-xian-2",
+          "from": "zhou-tay-linh-fu-1-jun-2-xian-1",
+          "to": "zhou-tay-linh-fu-1-jun-2-xian-2",
+          "mode": "road",
+          "km": 106.8474176199681,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-1-jun-2-xian-1|zhou-tay-linh-fu-2-jun-1-xian-1",
+          "from": "zhou-tay-linh-fu-1-jun-2-xian-1",
+          "to": "zhou-tay-linh-fu-2-jun-1-xian-1",
+          "mode": "road",
+          "km": 87.44581699666593,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-1-jun-2-xian-1|zhou-tay-linh-fu-2-jun-1-xian-1",
+          "from": "zhou-tay-linh-fu-1-jun-2-xian-1",
+          "to": "zhou-tay-linh-fu-2-jun-1-xian-1",
+          "mode": "river",
+          "km": 104.9349803959991,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-2-jun-1-xian-1|zhou-tay-linh-fu-2-jun-1-xian-2",
+          "from": "zhou-tay-linh-fu-2-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "mode": "road",
+          "km": 136.32961671756001,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-2-jun-1-xian-1|zhou-tay-linh-fu-2-jun-1-xian-2",
+          "from": "zhou-tay-linh-fu-2-jun-1-xian-1",
+          "to": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "mode": "river",
+          "km": 163.595540061072,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "from": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "mode": "road",
+          "km": 119.09654079211278,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "from": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "mode": "river",
+          "km": 142.91584895053532,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "from": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "mode": "road",
+          "km": 158.34372294229263,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-tay-linh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "from": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "mode": "river",
+          "km": 190.01246753075114,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-tay-linh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "from": "zhou-tay-linh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "mode": "road",
+          "km": 126.06936677659418,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "mode": "road",
+          "km": 103.52329378133655,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "mode": "river",
+          "km": 124.22795253760385,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "mode": "road",
+          "km": 109.37911085988594,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "mode": "river",
+          "km": 131.25493303186312,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "mode": "road",
+          "km": 166.37874614331784,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "mode": "river",
+          "km": 199.6544953719814,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "mode": "road",
+          "km": 176.98253219586607,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-1-xian-1|zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "mode": "road",
+          "km": 174.96758581592994,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-1-xian-2|zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "mode": "road",
+          "km": 189.30504777276641,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-1-jun-1-xian-2|zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "mode": "river",
+          "km": 227.1660573273197,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-1-xian-3|zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "to": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "mode": "road",
+          "km": 116.35421932615719,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-1-jun-1-xian-3|zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+          "to": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "mode": "river",
+          "km": 139.62506319138862,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-2-xian-1|zhou-trung-ninh-fu-1-jun-2-xian-2",
+          "from": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+          "mode": "road",
+          "km": 92.08535255566801,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-1-jun-2-xian-1|zhou-trung-ninh-fu-1-jun-2-xian-2",
+          "from": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "to": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+          "mode": "river",
+          "km": 110.50242306680161,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-2-xian-1|zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "mode": "road",
+          "km": 76.18616475506285,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-2-xian-2|zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+          "to": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "mode": "road",
+          "km": 84.18601660992348,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-1-jun-2-xian-2|zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+          "to": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "mode": "river",
+          "km": 101.02321993190817,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-1-jun-2-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "from": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "mode": "road",
+          "km": 116.8025357215347,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-2-jun-1-xian-1|zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "from": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "mode": "road",
+          "km": 111.89239319709846,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "river:zhou-trung-ninh-fu-2-jun-1-xian-1|zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "from": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "mode": "river",
+          "km": 134.27087183651815,
+          "capacity": 1600,
+          "quality": 0.7,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-2-jun-1-xian-1|zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "from": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "mode": "road",
+          "km": 118.0420563076801,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "from": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "mode": "road",
+          "km": 170.27984912259248,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "from": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "mode": "road",
+          "km": 178.73101205240965,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-2-jun-1-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-3",
+          "from": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+          "mode": "road",
+          "km": 111.7357540989681,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-3-jun-1-xian-1|zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "from": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "mode": "road",
+          "km": 86.40001104458376,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        },
+        {
+          "id": "road:zhou-trung-ninh-fu-3-jun-1-xian-2|zhou-trung-ninh-fu-3-jun-1-xian-3",
+          "from": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+          "to": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+          "mode": "road",
+          "km": 73.13611014658055,
+          "capacity": 500,
+          "quality": 0.6,
+          "blocked": false,
+          "used": 0,
+          "lastCapacity": 0
+        }
+      ],
+      "shipments": [],
+      "orders": [],
+      "reports": [],
+      "annual": [],
+      "weatherMode": "normal",
+      "lastMessages": []
+    },
+    "currency": "silver-tael",
+    "mapView": {
+      "level": "zhou",
+      "selectedId": null,
+      "zoom": 1,
+      "x": 0,
+      "y": 0
+    },
+    "geography": {
+      "cities": [
+        {
+          "id": "city-zhou-tay-linh-fu-1",
+          "name": "Thành Lâm An",
+          "unitId": "zhou-tay-linh-fu-1-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-tay-linh-fu-2",
+          "name": "Thành Sơn Bình",
+          "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-trung-ninh-fu-1",
+          "name": "Thành Ninh Kinh",
+          "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-trung-ninh-fu-2",
+          "name": "Thành Hà Dương",
+          "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-trung-ninh-fu-3",
+          "name": "Thành Bình Nguyên",
+          "unitId": "zhou-trung-ninh-fu-3-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-dong-giang-fu-1",
+          "name": "Thành Giang Khẩu",
+          "unitId": "zhou-dong-giang-fu-1-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-dong-giang-fu-2",
+          "name": "Thành Đông Hải",
+          "unitId": "zhou-dong-giang-fu-2-jun-1-xian-1"
+        }
+      ],
+      "roads": [
+        {
+          "id": "road-1",
+          "from": "city-zhou-tay-linh-fu-1",
+          "to": "city-zhou-tay-linh-fu-2"
+        },
+        {
+          "id": "road-2",
+          "from": "city-zhou-tay-linh-fu-2",
+          "to": "city-zhou-trung-ninh-fu-1"
+        },
+        {
+          "id": "road-3",
+          "from": "city-zhou-trung-ninh-fu-1",
+          "to": "city-zhou-trung-ninh-fu-2"
+        },
+        {
+          "id": "road-4",
+          "from": "city-zhou-trung-ninh-fu-2",
+          "to": "city-zhou-trung-ninh-fu-3"
+        },
+        {
+          "id": "road-5",
+          "from": "city-zhou-trung-ninh-fu-3",
+          "to": "city-zhou-dong-giang-fu-1"
+        },
+        {
+          "id": "road-6",
+          "from": "city-zhou-dong-giang-fu-1",
+          "to": "city-zhou-dong-giang-fu-2"
+        }
+      ]
+    }
+  }
+}

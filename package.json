@@ -12,7 +12,10 @@
     "test": "vitest run",
     "check": "npm run typecheck && npm run lint && npm test && npm run build",
     "test:map-quality": "node scripts/map-quality.e2e.mjs",
-    "test:real-gis": "node scripts/real-gis.e2e.mjs"
+    "test:real-gis": "node scripts/real-gis.e2e.mjs",
+    "test:economy-ui": "node scripts/economy.e2e.mjs",
+    "test:balance-ui": "node scripts/balance.e2e.mjs",
+    "test:full-qa-ui": "node scripts/full-qa.e2e.mjs"
   },
   "dependencies": {
     "@fontsource/noto-sans": "^5.3.0",
@@ -33,6 +36,7 @@
     "@types/d3-delaunay": "^6.0.4",
     "@types/d3-geo": "^3.1.1",
     "@types/geojson": "^7946.0.16",
+    "@types/node": "^26.6.6",
     "@types/polylabel": "^2.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

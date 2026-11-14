@@ -18,6 +18,7 @@ async function labelsAt(name){
   return{labels:labels.map(e=>({text:e.text,kind:e.kind})),overlaps};
  });
  expect(result.overlaps,`${name}: label overlap`).toEqual([]);expect(result.labels.length).toBeGreaterThan(0);report.zooms.push({name,...result});await shot(name);
+ expect(result.labels.map(label=>label.text).join(' ')).not.toMatch(/Beijing|Chengdu|Zhengzhou|Nanjing|Shanghai|Guangzhou|Luoyang|Wuhan|Xi.?an/i);
 }
 try{
  await page.goto(process.env.MAP_TEST_URL||'http://127.0.0.1:5173/');
@@ -25,7 +26,7 @@ try{
  await expect(page.getByRole('heading',{name:'Sơn hà đồ',exact:true})).toBeVisible();
  await expect(page.getByTestId('map-camera')).not.toHaveAttribute('transform','translate(0 0) translate(700 425) scale(1) translate(-700 -425)');
  await labelsAt('far'); await page.getByRole('button',{name:'Toàn cảnh Trung Hoa'}).click(); await shot('china'); await page.getByRole('button',{name:'Reset View'}).click();
- const targets=[['zhou','zhou-trung-ninh',3],['fu','zhou-trung-ninh-fu-1',7],['jun','zhou-trung-ninh-fu-1-jun-1',10],['xian','zhou-trung-ninh-fu-1-jun-1-xian-2',24]];
+ const targets=[['zhou','zhou-trung-ninh',3],['fu','zhou-trung-ninh-fu-1',7],['xian','zhou-trung-ninh-fu-1-jun-1-xian-2',24]];
  for(const[level,id,count]of targets){
   const close=page.getByRole('button',{name:'Đóng bảng quản lý',exact:true});if(await close.count()){await close.click();await page.waitForTimeout(250);}
   await page.getByRole('combobox',{name:'Cấp bản đồ'}).selectOption(level);

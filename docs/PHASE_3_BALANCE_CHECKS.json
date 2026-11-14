@@ -1,0 +1,43 @@
+{
+  "typecheck": "passed",
+  "lint": "passed",
+  "tests": {
+    "passed": 101,
+    "files": 13
+  },
+  "combinedCheck": {
+    "sandboxExit": "failed at build: Node allocation OOM",
+    "typecheckLintTests": "passed"
+  },
+  "productionBuild": {
+    "result": "passed",
+    "execution": "npm run build outside sandbox"
+  },
+  "browserLegacy": "passed",
+  "browserBudgetReserves": "passed",
+  "matrix": {
+    "seeds": [
+      1,
+      42,
+      1701
+    ],
+    "strategies": 18,
+    "runs": 54,
+    "monthsEach": 240,
+    "ticks": 12960,
+    "maxError": 2.3283064365386963e-10
+  },
+  "benchmark": {
+    "counties": 100,
+    "prefectures": 10,
+    "routes": 294,
+    "months": 240,
+    "shipments": 381,
+    "elapsedMs": 2398.0496000000003,
+    "msPerMonth": 9.991873333333334,
+    "baselineMsPerMonth": 10.876827916666667,
+    "speedup": 1.0885674341348068,
+    "maximumError": 5.820766091346741e-10,
+    "fixture": "Same saved synthetic graph and endowments used by county-market baseline; GIS unchanged in game"
+  }
+}

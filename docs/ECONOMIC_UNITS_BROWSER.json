@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "errors": [],
+  "checks": [
+    "HUD conversion",
+    "market price and supply",
+    "farm land +10% detail",
+    "mine +12 wood/stone and +6 ore detail",
+    "administration +3 percentage-point detail",
+    "building wages",
+    "policy input",
+    "silver transfer input",
+    "grain order input",
+    "monthly tick",
+    "autosave reload"
+  ],
+  "opening": {
+    "silver": 48000,
+    "grain": 96000
+  }
+}

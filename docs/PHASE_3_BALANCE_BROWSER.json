@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "schemaVersion": 6,
+  "checks": [
+    "v5 import migration",
+    "public reserve policy",
+    "public grain sale receives real cash",
+    "buy private grain for public stock",
+    "inter-Phủ budget transfer",
+    "physical public-store shipment and arrival",
+    "money conservation",
+    "JSON export/import",
+    "reload and resume"
+  ],
+  "errors": []
+}

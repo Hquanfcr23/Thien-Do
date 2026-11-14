@@ -13,7 +13,7 @@ describe('fixed real county extent',()=>{
  });
  it('keeps same-level area disparities bounded and every county below the smallest prefecture',()=>{
   const regions=state.administrativeUnits.map(u=>{const descendants=(id:string):string[]=>{const children=state.administrativeUnits.filter(x=>x.parentId===id);return children.length?children.flatMap(x=>descendants(x.id)):[id];};const ids=new Set(descendants(u.id));const total=counties.features.filter(f=>ids.has(f.properties.unitId!)).reduce((sum,f)=>{const g=structuredClone(f.geometry) as Polygon|MultiPolygon;for(const p of g.type==='Polygon'?[g.coordinates]:g.coordinates)for(const r of p)r.reverse();return sum+geoArea(g)*6371.0088**2;},0);return{level:u.levelId,total};});
-  for(const [level,maxRatio] of [['zhou',2],['fu',3],['jun',2.5],['xian',4]] as const){const values=regions.filter(r=>r.level===level).map(r=>r.total);expect(Math.max(...values)/Math.min(...values),level).toBeLessThan(maxRatio);}
+  for(const [level,maxRatio] of [['zhou',2],['fu',3],['xian',4]] as const){const values=regions.filter(r=>r.level===level).map(r=>r.total);expect(Math.max(...values)/Math.min(...values),level).toBeLessThan(maxRatio);}
   expect(Math.max(...regions.filter(r=>r.level==='xian').map(r=>r.total))).toBeLessThan(Math.min(...regions.filter(r=>r.level==='fu').map(r=>r.total)));
  });
  it('has no gaps enclosed by the playable region',()=>{

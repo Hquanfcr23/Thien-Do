@@ -1,0 +1,8 @@
+{
+  "counties": 100,
+  "prefectures": 10,
+  "routes": 294,
+  "months": 240,
+  "elapsedMs": 2610.4325000000003,
+  "msPerMonth": 10.876827916666667
+}

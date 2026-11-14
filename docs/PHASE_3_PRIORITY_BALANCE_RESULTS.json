@@ -1,0 +1,1184 @@
+{
+  "seeds": [
+    1,
+    42,
+    1701
+  ],
+  "months": 240,
+  "cases": [
+    "open",
+    "low-tax",
+    "high-tax",
+    "sell-all",
+    "reserve-four",
+    "targeted-build",
+    "overbuild",
+    "route-upgrade",
+    "drought-open"
+  ],
+  "weather": "Drought only in months 121–144",
+  "maxError": 2.9103830456733704e-10,
+  "results": [
+    {
+      "seed": 1,
+      "scenario": "open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "publicCash": 10391.77147094713,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546917,
+          "publicCash": 7002.229294570847,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564816,
+          "publicCash": 3200.8397213312724,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 602160,
+          "publicCash": 2140.413066258967,
+          "hunger": 144
+        }
+      ],
+      "population": 602160,
+      "publicCash": 2140.413066258967,
+      "prefectureCash": 1142.9970698844813,
+      "publicGrain": 13908.633960339594,
+      "stability": 96.42966798452808,
+      "hunger": 144,
+      "earlyRevenue": 4641.847952362015,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "low-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 532588,
+          "publicCash": 8077.760791807346,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 551841,
+          "publicCash": 2043.8005416559254,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 574621,
+          "publicCash": 2035.204705254463,
+          "hunger": 60
+        },
+        {
+          "month": 240,
+          "population": 621380,
+          "publicCash": 1993.507798377002,
+          "hunger": 153
+        }
+      ],
+      "population": 621380,
+      "publicCash": 1993.507798377002,
+      "prefectureCash": 1159.1879999999999,
+      "publicGrain": 12007.612664738761,
+      "stability": 91.77492610607324,
+      "hunger": 153,
+      "earlyRevenue": 2075.4842750768053,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "high-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 524956,
+          "publicCash": 25939.469384926604,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 512089,
+          "publicCash": 56295.335073331255,
+          "hunger": 27
+        },
+        {
+          "month": 120,
+          "population": 496562,
+          "publicCash": 72140.62680623028,
+          "hunger": 66
+        },
+        {
+          "month": 240,
+          "population": 475086,
+          "publicCash": 95850.29791742885,
+          "hunger": 89
+        }
+      ],
+      "population": 475086,
+      "publicCash": 95850.29791742885,
+      "prefectureCash": 70096.65690487533,
+      "publicGrain": 42720.138650476896,
+      "stability": 0,
+      "hunger": 89,
+      "earlyRevenue": 20377.34609542893,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "sell-all",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "publicCash": 11309.039611680517,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546917,
+          "publicCash": 7854.443978631548,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564870,
+          "publicCash": 3222.06653380609,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 602185,
+          "publicCash": 2138.5549539197646,
+          "hunger": 144
+        }
+      ],
+      "population": 602185,
+      "publicCash": 2138.5549539197646,
+      "prefectureCash": 1143.041442689768,
+      "publicGrain": 8961.479111698904,
+      "stability": 96.48227189766881,
+      "hunger": 144,
+      "earlyRevenue": 5602.761088151356,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "reserve-four",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "publicCash": 10391.77147094713,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546917,
+          "publicCash": 6652.185081471716,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564816,
+          "publicCash": 3201.4736915477215,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 602159,
+          "publicCash": 2141.570645094171,
+          "hunger": 144
+        }
+      ],
+      "population": 602159,
+      "publicCash": 2141.570645094171,
+      "prefectureCash": 1142.9989005616674,
+      "publicGrain": 20619.368064988612,
+      "stability": 96.41335285408825,
+      "hunger": 144,
+      "earlyRevenue": 4641.847952362015,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "targeted-build",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "publicCash": 9627.937158655137,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547119,
+          "publicCash": 5362.394715492126,
+          "hunger": 19
+        },
+        {
+          "month": 120,
+          "population": 566135,
+          "publicCash": 2411.4021413704413,
+          "hunger": 48
+        },
+        {
+          "month": 240,
+          "population": 603214,
+          "publicCash": 2137.152410520431,
+          "hunger": 134
+        }
+      ],
+      "population": 603214,
+      "publicCash": 2137.152410520431,
+      "prefectureCash": 1140.7251858250875,
+      "publicGrain": 13893.057478899374,
+      "stability": 96.11842345890246,
+      "hunger": 134,
+      "earlyRevenue": 4765.636895277703,
+      "completedIrrigation": 3,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 103,
+      "projectMonths": 125,
+      "firstMonthProjects": 3,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "overbuild",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "publicCash": 6178.403568305336,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547082,
+          "publicCash": 2283.791086247569,
+          "hunger": 19
+        },
+        {
+          "month": 120,
+          "population": 567525,
+          "publicCash": 2171.994388498275,
+          "hunger": 42
+        },
+        {
+          "month": 240,
+          "population": 603979,
+          "publicCash": 2193.6326923477695,
+          "hunger": 124
+        }
+      ],
+      "population": 603979,
+      "publicCash": 2193.6326923477695,
+      "prefectureCash": 1197.0439999999999,
+      "publicGrain": 13938.355348378569,
+      "stability": 96.17297074782243,
+      "hunger": 124,
+      "earlyRevenue": 4455.426782934704,
+      "completedIrrigation": 24,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 1732,
+      "projectMonths": 1980,
+      "firstMonthProjects": 24,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "route-upgrade",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "publicCash": 10179.848213115907,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546917,
+          "publicCash": 6636.177850960676,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564763,
+          "publicCash": 3205.804685674365,
+          "hunger": 60
+        },
+        {
+          "month": 240,
+          "population": 602153,
+          "publicCash": 2140.9119806466224,
+          "hunger": 142
+        }
+      ],
+      "population": 602153,
+      "publicCash": 2140.9119806466224,
+      "prefectureCash": 1142.9981611643766,
+      "publicGrain": 14184.070022672495,
+      "stability": 96.42393604420789,
+      "hunger": 142,
+      "earlyRevenue": 4651.643524605413,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 230,
+      "projectMonths": 240,
+      "firstMonthProjects": 1,
+      "selectedRouteId": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-1-jun-1-xian-3"
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531602,
+          "publicCash": 10391.77147094713,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546917,
+          "publicCash": 7002.229294570847,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564816,
+          "publicCash": 3200.8397213312724,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 589116,
+          "publicCash": 2103.6150971230472,
+          "hunger": 227
+        }
+      ],
+      "population": 589116,
+      "publicCash": 2103.6150971230472,
+      "prefectureCash": 1107.8120000000001,
+      "publicGrain": 14880.221004007039,
+      "stability": 90.42104390070081,
+      "hunger": 227,
+      "earlyRevenue": 4641.847952362015,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "publicCash": 10412.750255779749,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547129,
+          "publicCash": 6974.45491540329,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564535,
+          "publicCash": 3239.889437582391,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 602258,
+          "publicCash": 2128.9794938187665,
+          "hunger": 149
+        }
+      ],
+      "population": 602258,
+      "publicCash": 2128.9794938187665,
+      "prefectureCash": 1132.5383625143538,
+      "publicGrain": 13916.751562843721,
+      "stability": 97.34536054873895,
+      "hunger": 149,
+      "earlyRevenue": 4663.003960879277,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "low-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 532623,
+          "publicCash": 8084.453917604083,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 552085,
+          "publicCash": 2044.2005416559252,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 574394,
+          "publicCash": 2036.6328246723142,
+          "hunger": 59
+        },
+        {
+          "month": 240,
+          "population": 621555,
+          "publicCash": 1986.9607917559597,
+          "hunger": 158
+        }
+      ],
+      "population": 621555,
+      "publicCash": 1986.9607917559597,
+      "prefectureCash": 1159.46,
+      "publicGrain": 11957.50937270654,
+      "stability": 92.4902905859614,
+      "hunger": 158,
+      "earlyRevenue": 2082.5178782647195,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "high-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 524994,
+          "publicCash": 26044.635142046,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 512239,
+          "publicCash": 56270.801005694484,
+          "hunger": 29
+        },
+        {
+          "month": 120,
+          "population": 496626,
+          "publicCash": 72204.91707043373,
+          "hunger": 67
+        },
+        {
+          "month": 240,
+          "population": 475135,
+          "publicCash": 95949.79113312147,
+          "hunger": 86
+        }
+      ],
+      "population": 475135,
+      "publicCash": 95949.79113312147,
+      "prefectureCash": 70188.64801574667,
+      "publicGrain": 42530.8207499786,
+      "stability": 0,
+      "hunger": 86,
+      "earlyRevenue": 20482.034418649924,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "sell-all",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "publicCash": 11330.801025636429,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547129,
+          "publicCash": 7831.841718226376,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564523,
+          "publicCash": 3284.2805894029866,
+          "hunger": 62
+        },
+        {
+          "month": 240,
+          "population": 602231,
+          "publicCash": 2123.0860899887602,
+          "hunger": 150
+        }
+      ],
+      "population": 602231,
+      "publicCash": 2123.0860899887602,
+      "prefectureCash": 1128.724,
+      "publicGrain": 8843.607905182238,
+      "stability": 97.35274462375504,
+      "hunger": 150,
+      "earlyRevenue": 5624.956081823897,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "reserve-four",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "publicCash": 10412.750255779749,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547129,
+          "publicCash": 6609.391986555478,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564549,
+          "publicCash": 3240.3897912946645,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 602251,
+          "publicCash": 2127.505898896071,
+          "hunger": 149
+        }
+      ],
+      "population": 602251,
+      "publicCash": 2127.505898896071,
+      "prefectureCash": 1129.6547545279923,
+      "publicGrain": 20502.601746278156,
+      "stability": 97.35628568408036,
+      "hunger": 149,
+      "earlyRevenue": 4663.003960879277,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "targeted-build",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "publicCash": 9648.940878134032,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547376,
+          "publicCash": 5355.203281754488,
+          "hunger": 18
+        },
+        {
+          "month": 120,
+          "population": 566208,
+          "publicCash": 2456.5917336622715,
+          "hunger": 47
+        },
+        {
+          "month": 240,
+          "population": 603359,
+          "publicCash": 2140.709139709429,
+          "hunger": 135
+        }
+      ],
+      "population": 603359,
+      "publicCash": 2140.709139709429,
+      "prefectureCash": 1144.2501135146224,
+      "publicGrain": 13903.310826186422,
+      "stability": 96.93895922757338,
+      "hunger": 135,
+      "earlyRevenue": 4786.791452635225,
+      "completedIrrigation": 3,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 103,
+      "projectMonths": 125,
+      "firstMonthProjects": 3,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "overbuild",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "publicCash": 6184.171656939672,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547330,
+          "publicCash": 2198.3055842175054,
+          "hunger": 19
+        },
+        {
+          "month": 120,
+          "population": 567150,
+          "publicCash": 2157.090134158029,
+          "hunger": 47
+        },
+        {
+          "month": 240,
+          "population": 604199,
+          "publicCash": 2193.9737033057813,
+          "hunger": 130
+        }
+      ],
+      "population": 604199,
+      "publicCash": 2193.9737033057813,
+      "prefectureCash": 1197.3800000000003,
+      "publicGrain": 13962.140059019037,
+      "stability": 97.65261061464146,
+      "hunger": 130,
+      "earlyRevenue": 4472.268539513154,
+      "completedIrrigation": 24,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 1702,
+      "projectMonths": 1949,
+      "firstMonthProjects": 24,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "route-upgrade",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "publicCash": 10200.322085646942,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547129,
+          "publicCash": 6789.068250369202,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564489,
+          "publicCash": 3268.5292827382486,
+          "hunger": 62
+        },
+        {
+          "month": 240,
+          "population": 602237,
+          "publicCash": 2128.2795768579545,
+          "hunger": 150
+        }
+      ],
+      "population": 602237,
+      "publicCash": 2128.2795768579545,
+      "prefectureCash": 1131.8226608515997,
+      "publicGrain": 13916.17112118229,
+      "stability": 97.3441733529041,
+      "hunger": 150,
+      "earlyRevenue": 4672.799534844599,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 1,
+      "pausedProjectMonths": 12,
+      "projectMonths": 24,
+      "firstMonthProjects": 1,
+      "selectedRouteId": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-1-jun-1-xian-3"
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531638,
+          "publicCash": 10412.750255779749,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547129,
+          "publicCash": 6974.45491540329,
+          "hunger": 20
+        },
+        {
+          "month": 120,
+          "population": 564535,
+          "publicCash": 3239.889437582391,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 579557,
+          "publicCash": 2088.3304490190244,
+          "hunger": 328
+        }
+      ],
+      "population": 579557,
+      "publicCash": 2088.3304490190244,
+      "prefectureCash": 1092.556,
+      "publicGrain": 14628.391071078062,
+      "stability": 86.72019693349849,
+      "hunger": 328,
+      "earlyRevenue": 4663.003960879277,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "publicCash": 10396.976923477316,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546717,
+          "publicCash": 7012.366079156622,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 563970,
+          "publicCash": 3052.031683080071,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 602257,
+          "publicCash": 2125.267164198345,
+          "hunger": 140
+        }
+      ],
+      "population": 602257,
+      "publicCash": 2125.267164198345,
+      "prefectureCash": 1128.7479999999998,
+      "publicGrain": 13900.014985224523,
+      "stability": 97.84796949995247,
+      "hunger": 140,
+      "earlyRevenue": 4647.039499084468,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "low-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 532607,
+          "publicCash": 8077.775248217194,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 551693,
+          "publicCash": 2043.5765416559254,
+          "hunger": 22
+        },
+        {
+          "month": 120,
+          "population": 573950,
+          "publicCash": 2032.9974217686263,
+          "hunger": 59
+        },
+        {
+          "month": 240,
+          "population": 621813,
+          "publicCash": 1987.9120691320786,
+          "hunger": 151
+        }
+      ],
+      "population": 621813,
+      "publicCash": 1987.9120691320786,
+      "prefectureCash": 1159.868,
+      "publicGrain": 11979.384935017124,
+      "stability": 92.56700722016143,
+      "hunger": 151,
+      "earlyRevenue": 2076.448028973048,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "high-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 524972,
+          "publicCash": 25994.430917049438,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 512057,
+          "publicCash": 56127.36270038894,
+          "hunger": 27
+        },
+        {
+          "month": 120,
+          "population": 496040,
+          "publicCash": 71998.83047464702,
+          "hunger": 69
+        },
+        {
+          "month": 240,
+          "population": 475458,
+          "publicCash": 95905.01988525671,
+          "hunger": 82
+        }
+      ],
+      "population": 475458,
+      "publicCash": 95905.01988525671,
+      "prefectureCash": 70153.04616619874,
+      "publicGrain": 43394.622010912186,
+      "stability": 0,
+      "hunger": 82,
+      "earlyRevenue": 20429.630719184443,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "sell-all",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "publicCash": 11314.291911468743,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546717,
+          "publicCash": 7870.766753483156,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 564002,
+          "publicCash": 3077.2155967732338,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 602222,
+          "publicCash": 2123.1339138615394,
+          "hunger": 140
+        }
+      ],
+      "population": 602222,
+      "publicCash": 2123.1339138615394,
+      "prefectureCash": 1128.7,
+      "publicGrain": 8901.400586688127,
+      "stability": 97.75096344225567,
+      "hunger": 140,
+      "earlyRevenue": 5606.387910349347,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "reserve-four",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "publicCash": 10396.976923477316,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546717,
+          "publicCash": 6626.882788419511,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 563983,
+          "publicCash": 3042.5968025219127,
+          "hunger": 62
+        },
+        {
+          "month": 240,
+          "population": 602259,
+          "publicCash": 2126.6151443680787,
+          "hunger": 142
+        }
+      ],
+      "population": 602259,
+      "publicCash": 2126.6151443680787,
+      "prefectureCash": 1128.764,
+      "publicGrain": 20592.289616216098,
+      "stability": 97.86176813807924,
+      "hunger": 142,
+      "earlyRevenue": 4647.039499084468,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "targeted-build",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "publicCash": 9633.159267849058,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 547048,
+          "publicCash": 5362.399880141593,
+          "hunger": 19
+        },
+        {
+          "month": 120,
+          "population": 565373,
+          "publicCash": 2374.4012762265875,
+          "hunger": 51
+        },
+        {
+          "month": 240,
+          "population": 603620,
+          "publicCash": 2135.6541663232474,
+          "hunger": 131
+        }
+      ],
+      "population": 603620,
+      "publicCash": 2135.6541663232474,
+      "prefectureCash": 1139.1219999999998,
+      "publicGrain": 13893.850313887386,
+      "stability": 96.91234321520652,
+      "hunger": 131,
+      "earlyRevenue": 4770.822013710631,
+      "completedIrrigation": 3,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 97,
+      "projectMonths": 120,
+      "firstMonthProjects": 3,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "overbuild",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "publicCash": 6183.395752263996,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546908,
+          "publicCash": 2198.8266343847545,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 566555,
+          "publicCash": 2155.927048673077,
+          "hunger": 47
+        },
+        {
+          "month": 240,
+          "population": 604518,
+          "publicCash": 2194.5276176951124,
+          "hunger": 128
+        }
+      ],
+      "population": 604518,
+      "publicCash": 2194.5276176951124,
+      "prefectureCash": 1197.9,
+      "publicGrain": 13938.173954672584,
+      "stability": 97.86409316874695,
+      "hunger": 128,
+      "earlyRevenue": 4468.580322298942,
+      "completedIrrigation": 24,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 1721,
+      "projectMonths": 1962,
+      "firstMonthProjects": 24,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "route-upgrade",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "publicCash": 10183.983226024438,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546717,
+          "publicCash": 6812.185938103791,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 563915,
+          "publicCash": 3061.5070826911656,
+          "hunger": 62
+        },
+        {
+          "month": 240,
+          "population": 602254,
+          "publicCash": 2126.9925697722497,
+          "hunger": 141
+        }
+      ],
+      "population": 602254,
+      "publicCash": 2126.9925697722497,
+      "prefectureCash": 1130.460701361501,
+      "publicGrain": 13904.660278369614,
+      "stability": 97.93686287739547,
+      "hunger": 141,
+      "earlyRevenue": 4656.83507352925,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 1,
+      "pausedProjectMonths": 12,
+      "projectMonths": 24,
+      "firstMonthProjects": 1,
+      "selectedRouteId": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-1-jun-1-xian-3"
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 531620,
+          "publicCash": 10396.976923477316,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 546717,
+          "publicCash": 7012.366079156622,
+          "hunger": 21
+        },
+        {
+          "month": 120,
+          "population": 563970,
+          "publicCash": 3052.031683080071,
+          "hunger": 61
+        },
+        {
+          "month": 240,
+          "population": 585185,
+          "publicCash": 2098.3307492745457,
+          "hunger": 240
+        }
+      ],
+      "population": 585185,
+      "publicCash": 2098.3307492745457,
+      "prefectureCash": 1101.468,
+      "publicGrain": 14400.33285382778,
+      "stability": 90.3670863280729,
+      "hunger": 240,
+      "earlyRevenue": 4647.039499084468,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 0,
+      "pausedProjectMonths": 0,
+      "projectMonths": 0,
+      "firstMonthProjects": 0,
+      "selectedRouteId": null
+    }
+  ]
+}

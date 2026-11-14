@@ -1,23 +1,41 @@
+import {migrateBuildingRules} from '../data/buildingMigration';
+import { initializeEconomy } from '../data/economyFoundation';
 import { openDB, type DBSchema } from 'idb';
 import { z } from 'zod';
 import { gameStateSchema, type GameState } from '../domain/schema';
-import { migrateV1 } from './migrations';
+import { gameStateSchema as oldStateSchema } from '../domain/schemaV4';
+import { initializeEconomy as initializeOld } from '../data/legacyEconomyFoundation';
+import { upgradeEconomy } from '../data/upgradeEconomy';
+import { gameStateSchema as v5StateSchema } from '../domain/schemaV5';
+import { defaultFiscalPolicy,emptyAccounts,defaultCentral } from '../domain/economy';
+import { migrateV1, migrateV3 } from './migrations';
 
-export const saveSchema = z.object({ schemaVersion: z.literal(2), campaignVersion: z.literal('0.2.0'), timestamp: z.string().datetime(), state: gameStateSchema }).strict();
+export const saveSchema = z.object({ schemaVersion: z.literal(6), campaignVersion: z.literal('0.2.0'), timestamp: z.string().datetime(), state: gameStateSchema.refine(s=>s.simulation!==undefined,'Save v6 cần dữ liệu mô phỏng') }).strict();
 export type Save = z.infer<typeof saveSchema>;
 export const slots = ['manual-1', 'manual-2', 'manual-3', 'autosave'] as const;
 export type Slot = typeof slots[number];
 interface SaveDB extends DBSchema { saves: { key: Slot; value: Save } }
 const connect = () => openDB<SaveDB>('de-nghiep', 1, { upgrade(db) { db.createObjectStore('saves'); } });
+function normalizeSave(value:unknown):Save{const save=saveSchema.parse(value);save.state=migrateBuildingRules(save.state);return save;}
 export function decodeSave(value: unknown): Save {
   // Version gate. Add explicit vN -> vN+1 migrations here when a legacy schema exists.
   const version = z.object({ schemaVersion: z.number() }).parse(value).schemaVersion;
-  if (version === 1) return saveSchema.parse(migrateV1(value));
-  if (version !== 2) throw new Error(`Phiên bản save ${version} chưa được hỗ trợ. Bản gốc được giữ nguyên.`);
-  return saveSchema.parse(value);
+  if(version>=1&&version<=4){
+   let old;
+   if(version===1){const v2=migrateV1(value),initialized=initializeOld(v2.state);for(const c of Object.values(initialized.simulation!.counties))c.privateMoney=0;old=migrateV3({...v2,schemaVersion:3,state:initialized});}
+   else if(version===2){const v2=z.object({schemaVersion:z.literal(2),campaignVersion:z.literal('0.2.0'),timestamp:z.string().datetime(),state:oldStateSchema}).strict().parse(value);const initialized=initializeOld(v2.state);for(const c of Object.values(initialized.simulation!.counties))c.privateMoney=0;old=migrateV3({...v2,schemaVersion:3,state:initialized});}
+   else if(version===3)old=migrateV3(value);
+   else old=z.object({schemaVersion:z.literal(4),campaignVersion:z.literal('0.2.0'),timestamp:z.string().datetime(),state:oldStateSchema.refine(s=>s.simulation!==undefined,'Save v4 cần mô phỏng')}).strict().parse(value);
+   return normalizeSave({...old,schemaVersion:6,state:upgradeEconomy(initializeOld(old.state))});
+  }
+  if(version===5){const old=z.object({schemaVersion:z.literal(5),campaignVersion:z.literal('0.2.0'),timestamp:z.string().datetime(),state:v5StateSchema.refine(s=>s.simulation!==undefined)}).strict().parse(value);const state=old.state;const sim=state.simulation!;return normalizeSave({...old,schemaVersion:6,state:{...state,simulation:{...sim,revision:3,central:defaultCentral(),prefectures:Object.fromEntries(Object.entries(sim.prefectures).map(([id,f])=>[id,{...f,fiscalPolicy:defaultFiscalPolicy(),accounts:emptyAccounts(),serviceLevel:1}]))}}});}
+  if(version!==6)throw new Error(`Phiên bản save ${version} chưa được hỗ trợ. Bản gốc được giữ nguyên.`);
+  const parsed=normalizeSave(value);
+  if(parsed.state.simulation&&!parsed.state.simulation.central)parsed.state.simulation.central=defaultCentral();
+  return parsed;
 }
 export function makeSave(state: GameState): Save {
-  return saveSchema.parse({ schemaVersion: 2, campaignVersion: state.campaignVersion, timestamp: new Date().toISOString(), state });
+  return normalizeSave({ schemaVersion: 6, campaignVersion: state.campaignVersion, timestamp: new Date().toISOString(), state:initializeEconomy(gameStateSchema.parse(state)) });
 }
 export async function writeSave(slot: Slot, state: GameState): Promise<void> {
   const save = makeSave(state);

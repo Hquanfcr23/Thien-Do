@@ -50,3 +50,6 @@ Phạm vi GIS hiện tại: Hoàng Hà – Ordos – Ninh Hạ – Bắc Thiểm
 
 
 Bản địa giới hiện tại và diện tích theo cấp: [báo cáo cân bằng](docs/MAP_BALANCE_REPORT.md). Bản này thay thế các số liệu địa giới trước đó.
+
+
+Phase 3: mở **Kinh tế**, chọn phạm vi, xếp chính sách/xây dựng/chuyển hàng rồi **Tiến 1 lượt**. Dùng chạy 1×/2×/4×; hai lượt điều hành mỗi tháng, quyết toán kinh tế sau lượt thứ hai; tháng 12 có tổng kết năm. Save v1/v2 được nâng khi đọc sang v3, bản gốc không bị ghi đè. Chạy `npm run check` và `npm run test:economy-ui` (cần Chrome + dev server 5173 hoặc MAP_TEST_URL). [Công thức, kết quả stress test và giới hạn](docs/PHASE_3_REPORT.md).

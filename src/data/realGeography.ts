@@ -22,5 +22,4 @@ export function projectPolygon(feature:Feature):MultiPolygon{
 export const chinaFeature=countries.features.find(f=>f.properties.code==='CHN')!;
 export const chinaShape=projectPolygon(chinaFeature);
 export const baseLayers={countries:countries.features.map(f=>({name:f.properties.name,path:geographicPath(f)??''})),rivers:rivers.features.map(f=>({name:f.properties.name,path:geographicPath(f)??''})),lakes:lakes.features.map(f=>({name:f.properties.name,path:geographicPath(f)??''})),terrain:terrain.features.filter(f=>f.properties.kind==='Range/mtn'||f.properties.kind==='Plateau').map(f=>({name:f.properties.name,path:geographicPath(f)??''}))};
-export const majorPlaces=places.features.filter(f=>f.properties.code==='CHN'&&['Beijing','Xian','Xi’an','Xi\'an','Luoyang','Zhengzhou','Nanjing','Wuhan','Chengdu','Shanghai','Guangzhou'].includes(f.properties.name)).map(f=>({name:f.properties.name,point:projectGeo((f.geometry as {coordinates:Position}).coordinates)}));
 

@@ -10,11 +10,13 @@ export function territoryData(rootId:string,countryId:string){
   for(const [fi,name]of spec.prefectures.entries()){
    const fId=`${zId}-fu-${fi+1}`,fb={x,y:fi/spec.prefectures.length,w:spec.width,h:1/spec.prefectures.length};add(fId,`${name} Phủ`,'fu',zId,fb,spec.terrain,fi);
    const junCount=fi===0?2:1;
+   const countyCountByOldGroup=Array.from({length:junCount},(_,ji)=>(fi+ji)%2===0?3:2);
+   const totalCounties=countyCountByOldGroup.reduce((sum,count)=>sum+count,0);let countyIndex=0;
    for(let ji=0;ji<junCount;ji++){
-    const jId=`${fId}-jun-${ji+1}`,jb={...fb,x:fb.x+ji*fb.w/junCount,w:fb.w/junCount};add(jId,`${name} ${ji===0?'Thượng':'Hạ'} Quận`,'jun',fId,jb,spec.terrain,ji);
-    const countyCount=(fi+ji)%2===0?3:2;
+    const countyCount=countyCountByOldGroup[ji]!;
     for(let hi=0;hi<countyCount;hi++){
-     const hId=`${jId}-xian-${hi+1}`,hb={...jb,y:jb.y+hi*jb.h/countyCount,h:jb.h/countyCount};add(hId,`${name} ${ji===0?'Bắc':'Nam'} ${['An','Bình','Hòa'][hi]} Huyện`,'xian',jId,hb,spec.terrain,units.length);
+     // Keep county IDs stable for GIS, economy and save references; the old jun segment is historical ID data only.
+     const hId=`${fId}-jun-${ji+1}-xian-${hi+1}`,hb={...fb,y:fb.y+countyIndex*fb.h/totalCounties,h:fb.h/totalCounties};countyIndex++;add(hId,`${name} ${ji===0?'Bắc':'Nam'} ${['An','Bình','Hòa'][hi]} Huyện`,'xian',fId,hb,spec.terrain,units.length);
      if(ji===0&&hi===0)cities.push({id:`city-${fId}`,name:`Thành ${name}`,unitId:hId});
     }
    }

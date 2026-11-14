@@ -1,3 +1,4 @@
+import {grainNumber} from '../domain/economicUnits';
 import { useState } from 'react';
 import { formatSilver } from '../engine/money';
 import { createNewGame } from '../data/foundation';
@@ -18,7 +19,7 @@ export function ArchivePanel({ onEnter, initialMessage }: { onEnter: () => void;
     finally { setBusy(false); }
   }
   return <div className="archive-content">      <p className="eyebrow">{game ? 'HỒ SƠ ĐANG MỞ' : 'KHỞI LẬP TRIỀU ĐẠI'}</p><h2>{game?.dynasty.name ?? 'Thiên mệnh khởi đầu'}</h2>
-      {game ? <><p>Hoàng đế {game.characters.find(c => c.id === game.dynasty.emperorId)?.name}</p><dl><div><dt>Niên lịch</dt><dd>Tháng {game.calendar.month}, năm {game.calendar.year} • {seasonOf(game.calendar.month)}</dd></div><div><dt>Ngân khố</dt><dd>{formatSilver(game.country.treasury)}</dd></div><div><dt>Kho lương</dt><dd>{game.country.grainReserve.toLocaleString('vi-VN')} thạch</dd></div><div><dt>Dân số đã khai báo</dt><dd>{totalPopulation(game).toLocaleString('vi-VN')}</dd></div></dl><p className="note">Save Phase 1 được nâng schema khi đọc, giữ nguyên dữ liệu. Hồ sơ mới Phase 2 có 3 Châu; 1 lượng bạc = 1000 đồng.</p></> : <p>Bắt đầu với Ninh triều, năm đầu tiên. Tạo hồ sơ nền tảng để kiểm tra lưu và tải trước khi mở rộng thế giới.</p>}
+      {game ? <><p>Hoàng đế {game.characters.find(c => c.id === game.dynasty.emperorId)?.name}</p><dl><div><dt>Niên lịch</dt><dd>Tháng {game.calendar.month}, năm {game.calendar.year} • {seasonOf(game.calendar.month)}</dd></div><div><dt>Ngân khố</dt><dd>{formatSilver(game.country.treasury)}</dd></div><div><dt>Kho lương</dt><dd>{grainNumber(game.country.grainReserve)} thạch lương</dd></div><div><dt>Dân số đã khai báo</dt><dd>{totalPopulation(game).toLocaleString('vi-VN')}</dd></div></dl><p className="note">Hồ sơ cũ được chuyển sang mô hình thị trường Phủ khi đọc; hàng hóa và tổng bạc được bảo toàn. Hồ sơ mới có mô phỏng kinh tế; 1 lượng bạc = 1000 đồng.</p></> : <p>Bắt đầu với Ninh triều, năm đầu tiên. Tạo hồ sơ nền tảng để kiểm tra lưu và tải trước khi mở rộng thế giới.</p>}
       <button className="primary" disabled={busy} onClick={() => void perform(async () => {
         if (game) await writeSave('autosave', game);
         const next = createNewGame();
@@ -30,4 +31,5 @@ export function ArchivePanel({ onEnter, initialMessage }: { onEnter: () => void;
       <div className="actions"><button disabled={!game || busy} onClick={() => { if (!game) return; const url = URL.createObjectURL(new Blob([exportSave(game)], { type: 'application/json' })); const a = document.createElement('a'); a.href = url; a.download = 'de-nghiep-save.json'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }}>Xuất JSON</button><label className={`file-button ${busy ? 'disabled' : ''}`}>Nhập JSON<input type="file" accept=".json,application/json" disabled={busy} onChange={e => { const file = e.target.files?.[0]; e.target.value = ''; if (file) void perform(async () => { if (file.size > 10 * 1024 * 1024) throw new Error('Giới hạn file 10 MB.'); const state = importSave(await file.text()); await writeSave(slot, state); replaceGame(state); return 'Đã kiểm tra, nhập và lưu hồ sơ.'; }); }}/></label></div>
       <p role="status" className="status">{busy ? 'Đang xử lý…' : message}</p>
 </div>; }
+
 

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "dedicated left-rail panel tracks queued orders immediately",
+    "queued status transitions to active project after monthly tick",
+    "hierarchical filters and status/type/search controls",
+    "Phủ lists only granary and route upgrades",
+    "Huyện lists only county buildings and route upgrades",
+    "upgrade tooltip and real local upgrade command",
+    "project progress and map selection keep the construction panel active",
+    "no browser runtime errors"
+  ],
+  "errors": []
+}

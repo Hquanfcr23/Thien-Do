@@ -1,0 +1,1430 @@
+{
+  "schemaVersion": 2,
+  "campaignVersion": "0.2.0",
+  "timestamp": "2026-11-13T00:00:00Z",
+  "state": {
+    "campaignId": "foundation-sandbox",
+    "campaignVersion": "0.2.0",
+    "seed": 1701,
+    "calendar": {
+      "year": 1,
+      "month": 1
+    },
+    "country": {
+      "id": "dai-ninh",
+      "name": "Đại Ninh",
+      "treasury": 12000,
+      "grainReserve": 6000,
+      "administrativeCapacity": 60
+    },
+    "dynasty": {
+      "id": "ninh",
+      "name": "Ninh triều",
+      "emperorId": "emperor",
+      "heirId": null,
+      "legitimacy": 70,
+      "successionRule": "designated"
+    },
+    "administrativeProfile": {
+      "id": "fictional-default",
+      "levels": [
+        {
+          "id": "central",
+          "name": "Trung ương",
+          "officeTitle": "Hoàng đế"
+        },
+        {
+          "id": "zhou",
+          "name": "Châu",
+          "officeTitle": "Châu mục"
+        },
+        {
+          "id": "fu",
+          "name": "Phủ",
+          "officeTitle": "Tri phủ"
+        },
+        {
+          "id": "jun",
+          "name": "Quận",
+          "officeTitle": "Quận thủ"
+        },
+        {
+          "id": "xian",
+          "name": "Huyện",
+          "officeTitle": "Huyện lệnh"
+        }
+      ]
+    },
+    "administrativeUnits": [
+      {
+        "id": "capital",
+        "name": "Ninh Kinh",
+        "levelId": "central",
+        "parentId": null,
+        "governorId": "emperor",
+        "locationId": "capital-location",
+        "treasury": 0,
+        "stability": 70,
+        "development": 50,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 100,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": null
+      },
+      {
+        "id": "zhou-tay-linh",
+        "name": "Tây Lĩnh Châu",
+        "levelId": "zhou",
+        "parentId": "capital",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0.3,
+          "h": 1
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1",
+        "name": "Lâm An Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-tay-linh",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0.3,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-1",
+        "name": "Lâm An Thượng Quận",
+        "levelId": "jun",
+        "parentId": "zhou-tay-linh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0.15,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-1-xian-1",
+        "name": "Lâm An Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-1-xian-1",
+        "treasury": 0,
+        "stability": 63,
+        "development": 38,
+        "population": 11250,
+        "resources": {
+          "wood": 180,
+          "iron": 85,
+          "grain": 240
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 78,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0.15,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-1-xian-2",
+        "name": "Lâm An Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-1-xian-2",
+        "treasury": 0,
+        "stability": 64,
+        "development": 39,
+        "population": 12000,
+        "resources": {
+          "wood": 180,
+          "iron": 85,
+          "grain": 240
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 79,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.16666666666666666,
+          "w": 0.15,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-1-xian-3",
+        "name": "Lâm An Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-1-xian-3",
+        "treasury": 0,
+        "stability": 65,
+        "development": 40,
+        "population": 12750,
+        "resources": {
+          "wood": 180,
+          "iron": 85,
+          "grain": 240
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 80,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.3333333333333333,
+          "w": 0.15,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-2",
+        "name": "Lâm An Hạ Quận",
+        "levelId": "jun",
+        "parentId": "zhou-tay-linh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-2",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.15,
+          "y": 0,
+          "w": 0.15,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-2-xian-1",
+        "name": "Lâm An Nam An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1-jun-2",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-2-xian-1",
+        "treasury": 0,
+        "stability": 67,
+        "development": 42,
+        "population": 14250,
+        "resources": {
+          "wood": 180,
+          "iron": 85,
+          "grain": 240
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 82,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.15,
+          "y": 0,
+          "w": 0.15,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-1-jun-2-xian-2",
+        "name": "Lâm An Nam Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-1-jun-2",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-1-jun-2-xian-2",
+        "treasury": 0,
+        "stability": 68,
+        "development": 43,
+        "population": 15000,
+        "resources": {
+          "wood": 180,
+          "iron": 85,
+          "grain": 240
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 83,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.15,
+          "y": 0.25,
+          "w": 0.15,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-2",
+        "name": "Sơn Bình Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-tay-linh",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-2",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.3,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-2-jun-1",
+        "name": "Sơn Bình Thượng Quận",
+        "levelId": "jun",
+        "parentId": "zhou-tay-linh-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-2-jun-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.3,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-2-jun-1-xian-1",
+        "name": "Sơn Bình Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-2-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-2-jun-1-xian-1",
+        "treasury": 0,
+        "stability": 71,
+        "development": 46,
+        "population": 17250,
+        "resources": {
+          "wood": 180,
+          "iron": 85,
+          "grain": 240
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 86,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.3,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-tay-linh-fu-2-jun-1-xian-2",
+        "name": "Sơn Bình Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-tay-linh-fu-2-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-tay-linh-fu-2-jun-1-xian-2",
+        "treasury": 0,
+        "stability": 72,
+        "development": 47,
+        "population": 18000,
+        "resources": {
+          "wood": 180,
+          "iron": 85,
+          "grain": 240
+        },
+        "terrain": "mountains",
+        "controllerId": "dai-ninh",
+        "control": 87,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0,
+          "y": 0.75,
+          "w": 0.3,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-trung-ninh",
+        "name": "Trung Ninh Châu",
+        "levelId": "zhou",
+        "parentId": "capital",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0,
+          "w": 0.38,
+          "h": 1
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1",
+        "name": "Ninh Kinh Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-trung-ninh",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-1",
+        "name": "Ninh Kinh Thượng Quận",
+        "levelId": "jun",
+        "parentId": "zhou-trung-ninh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0,
+          "w": 0.19,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-1-xian-1",
+        "name": "Ninh Kinh Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-1-xian-1",
+        "treasury": 0,
+        "stability": 76,
+        "development": 51,
+        "population": 21000,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 91,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0,
+          "w": 0.19,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-1-xian-2",
+        "name": "Ninh Kinh Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-1-xian-2",
+        "treasury": 0,
+        "stability": 77,
+        "development": 52,
+        "population": 21750,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 92,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.1111111111111111,
+          "w": 0.19,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-1-xian-3",
+        "name": "Ninh Kinh Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-1-xian-3",
+        "treasury": 0,
+        "stability": 78,
+        "development": 53,
+        "population": 22500,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 93,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.2222222222222222,
+          "w": 0.19,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-2",
+        "name": "Ninh Kinh Hạ Quận",
+        "levelId": "jun",
+        "parentId": "zhou-trung-ninh-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-2",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.49,
+          "y": 0,
+          "w": 0.19,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-2-xian-1",
+        "name": "Ninh Kinh Nam An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1-jun-2",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-2-xian-1",
+        "treasury": 0,
+        "stability": 80,
+        "development": 55,
+        "population": 24000,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 75,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.49,
+          "y": 0,
+          "w": 0.19,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-1-jun-2-xian-2",
+        "name": "Ninh Kinh Nam Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-1-jun-2",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-1-jun-2-xian-2",
+        "treasury": 0,
+        "stability": 81,
+        "development": 56,
+        "population": 24750,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 76,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.49,
+          "y": 0.16666666666666666,
+          "w": 0.19,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-2",
+        "name": "Hà Dương Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-trung-ninh",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-2",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.3333333333333333,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-2-jun-1",
+        "name": "Hà Dương Thượng Quận",
+        "levelId": "jun",
+        "parentId": "zhou-trung-ninh-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-2-jun-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.3333333333333333,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-2-jun-1-xian-1",
+        "name": "Hà Dương Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-2-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-2-jun-1-xian-1",
+        "treasury": 0,
+        "stability": 84,
+        "development": 59,
+        "population": 27000,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 79,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.3333333333333333,
+          "w": 0.38,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-2-jun-1-xian-2",
+        "name": "Hà Dương Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-2-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-2-jun-1-xian-2",
+        "treasury": 0,
+        "stability": 60,
+        "development": 60,
+        "population": 27750,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 80,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.5,
+          "w": 0.38,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3",
+        "name": "Bình Nguyên Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-trung-ninh",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.6666666666666666,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3-jun-1",
+        "name": "Bình Nguyên Thượng Quận",
+        "levelId": "jun",
+        "parentId": "zhou-trung-ninh-fu-3",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3-jun-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.6666666666666666,
+          "w": 0.38,
+          "h": 0.3333333333333333
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3-jun-1-xian-1",
+        "name": "Bình Nguyên Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-3-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3-jun-1-xian-1",
+        "treasury": 0,
+        "stability": 63,
+        "development": 63,
+        "population": 30000,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 83,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.6666666666666666,
+          "w": 0.38,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3-jun-1-xian-2",
+        "name": "Bình Nguyên Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-3-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3-jun-1-xian-2",
+        "treasury": 0,
+        "stability": 64,
+        "development": 64,
+        "population": 30750,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 84,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.7777777777777777,
+          "w": 0.38,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-trung-ninh-fu-3-jun-1-xian-3",
+        "name": "Bình Nguyên Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-trung-ninh-fu-3-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-trung-ninh-fu-3-jun-1-xian-3",
+        "treasury": 0,
+        "stability": 65,
+        "development": 35,
+        "population": 31500,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 400
+        },
+        "terrain": "plain",
+        "controllerId": "dai-ninh",
+        "control": 85,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.3,
+          "y": 0.8888888888888888,
+          "w": 0.38,
+          "h": 0.1111111111111111
+        }
+      },
+      {
+        "id": "zhou-dong-giang",
+        "name": "Đông Giang Châu",
+        "levelId": "zhou",
+        "parentId": "capital",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0,
+          "w": 0.32,
+          "h": 1
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1",
+        "name": "Giang Khẩu Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-dong-giang",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0,
+          "w": 0.32,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-1",
+        "name": "Giang Khẩu Thượng Quận",
+        "levelId": "jun",
+        "parentId": "zhou-dong-giang-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0,
+          "w": 0.16,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-1-xian-1",
+        "name": "Giang Khẩu Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-1-xian-1",
+        "treasury": 0,
+        "stability": 69,
+        "development": 39,
+        "population": 34500,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 240
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 89,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0,
+          "w": 0.16,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-1-xian-2",
+        "name": "Giang Khẩu Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-1-xian-2",
+        "treasury": 0,
+        "stability": 70,
+        "development": 40,
+        "population": 35250,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 240
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 90,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.16666666666666666,
+          "w": 0.16,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-1-xian-3",
+        "name": "Giang Khẩu Bắc Hòa Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-1-xian-3",
+        "treasury": 0,
+        "stability": 71,
+        "development": 41,
+        "population": 36000,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 240
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 91,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.3333333333333333,
+          "w": 0.16,
+          "h": 0.16666666666666666
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-2",
+        "name": "Giang Khẩu Hạ Quận",
+        "levelId": "jun",
+        "parentId": "zhou-dong-giang-fu-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-2",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.84,
+          "y": 0,
+          "w": 0.16,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-2-xian-1",
+        "name": "Giang Khẩu Nam An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1-jun-2",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-2-xian-1",
+        "treasury": 0,
+        "stability": 73,
+        "development": 43,
+        "population": 37500,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 240
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 93,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.84,
+          "y": 0,
+          "w": 0.16,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-1-jun-2-xian-2",
+        "name": "Giang Khẩu Nam Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-1-jun-2",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-1-jun-2-xian-2",
+        "treasury": 0,
+        "stability": 74,
+        "development": 44,
+        "population": 38250,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 240
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 94,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.84,
+          "y": 0.25,
+          "w": 0.16,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-2",
+        "name": "Đông Hải Phủ",
+        "levelId": "fu",
+        "parentId": "zhou-dong-giang",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-2",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.5,
+          "w": 0.32,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-2-jun-1",
+        "name": "Đông Hải Thượng Quận",
+        "levelId": "jun",
+        "parentId": "zhou-dong-giang-fu-2",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-2-jun-1",
+        "treasury": 0,
+        "stability": 0,
+        "development": 0,
+        "population": 0,
+        "resources": {},
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 0,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.5,
+          "w": 0.32,
+          "h": 0.5
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-2-jun-1-xian-1",
+        "name": "Đông Hải Bắc An Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-2-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-2-jun-1-xian-1",
+        "treasury": 0,
+        "stability": 77,
+        "development": 47,
+        "population": 40500,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 240
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 77,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.5,
+          "w": 0.32,
+          "h": 0.25
+        }
+      },
+      {
+        "id": "zhou-dong-giang-fu-2-jun-1-xian-2",
+        "name": "Đông Hải Bắc Bình Huyện",
+        "levelId": "xian",
+        "parentId": "zhou-dong-giang-fu-2-jun-1",
+        "governorId": null,
+        "locationId": "loc-zhou-dong-giang-fu-2-jun-1-xian-2",
+        "treasury": 0,
+        "stability": 78,
+        "development": 48,
+        "population": 41250,
+        "resources": {
+          "wood": 60,
+          "iron": 12,
+          "grain": 240
+        },
+        "terrain": "riverland",
+        "controllerId": "dai-ninh",
+        "control": 78,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Địa danh, ranh giới và dữ liệu khởi đầu Đại Ninh do game sáng tạo; không phải địa giới lịch sử."
+        },
+        "bounds": {
+          "x": 0.6799999999999999,
+          "y": 0.75,
+          "w": 0.32,
+          "h": 0.25
+        }
+      }
+    ],
+    "characters": [
+      {
+        "id": "emperor",
+        "name": "Ninh Thế An",
+        "age": 32,
+        "health": 85,
+        "ability": 65,
+        "loyalty": 100,
+        "ambition": 55,
+        "corruption": 0,
+        "prestige": 60,
+        "factionId": null,
+        "provenance": {
+          "kind": "Fictional",
+          "note": "Nhân vật sáng tạo cho dữ liệu kiểm thử Foundation."
+        }
+      }
+    ],
+    "militaryUnits": [],
+    "flags": {},
+    "history": [
+      {
+        "date": {
+          "year": 1,
+          "month": 1
+        },
+        "message": "Khởi lập hồ sơ Ninh triều. Dữ liệu giả tưởng phục vụ Foundation; chưa mô phỏng gameplay."
+      }
+    ],
+    "currency": "silver-tael",
+    "mapView": {
+      "level": "zhou",
+      "selectedId": null,
+      "zoom": 0.6713751297890409,
+      "x": -379.3139697928043,
+      "y": 377.5171425522375
+    },
+    "geography": {
+      "cities": [
+        {
+          "id": "city-zhou-tay-linh-fu-1",
+          "name": "Thành Lâm An",
+          "unitId": "zhou-tay-linh-fu-1-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-tay-linh-fu-2",
+          "name": "Thành Sơn Bình",
+          "unitId": "zhou-tay-linh-fu-2-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-trung-ninh-fu-1",
+          "name": "Thành Ninh Kinh",
+          "unitId": "zhou-trung-ninh-fu-1-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-trung-ninh-fu-2",
+          "name": "Thành Hà Dương",
+          "unitId": "zhou-trung-ninh-fu-2-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-trung-ninh-fu-3",
+          "name": "Thành Bình Nguyên",
+          "unitId": "zhou-trung-ninh-fu-3-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-dong-giang-fu-1",
+          "name": "Thành Giang Khẩu",
+          "unitId": "zhou-dong-giang-fu-1-jun-1-xian-1"
+        },
+        {
+          "id": "city-zhou-dong-giang-fu-2",
+          "name": "Thành Đông Hải",
+          "unitId": "zhou-dong-giang-fu-2-jun-1-xian-1"
+        }
+      ],
+      "roads": [
+        {
+          "id": "road-1",
+          "from": "city-zhou-tay-linh-fu-1",
+          "to": "city-zhou-tay-linh-fu-2"
+        },
+        {
+          "id": "road-2",
+          "from": "city-zhou-tay-linh-fu-2",
+          "to": "city-zhou-trung-ninh-fu-1"
+        },
+        {
+          "id": "road-3",
+          "from": "city-zhou-trung-ninh-fu-1",
+          "to": "city-zhou-trung-ninh-fu-2"
+        },
+        {
+          "id": "road-4",
+          "from": "city-zhou-trung-ninh-fu-2",
+          "to": "city-zhou-trung-ninh-fu-3"
+        },
+        {
+          "id": "road-5",
+          "from": "city-zhou-trung-ninh-fu-3",
+          "to": "city-zhou-dong-giang-fu-1"
+        },
+        {
+          "id": "road-6",
+          "from": "city-zhou-dong-giang-fu-1",
+          "to": "city-zhou-dong-giang-fu-2"
+        }
+      ]
+    }
+  }
+}

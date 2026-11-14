@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "live supply equals delivered stock plus public offers",
+    "nine goods",
+    "four order columns",
+    "monthly update",
+    "manual save/load",
+    "JSON export/import",
+    "reload",
+    "no page errors"
+  ],
+  "errors": []
+}
