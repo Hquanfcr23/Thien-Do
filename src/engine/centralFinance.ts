@@ -1,3 +1,4 @@
+import {hubPath} from './prefectureTransport';
 import {defaultCentral,emptyCentralAccounts,type Route} from '../domain/economy';
 import {crops,centralGranaryProfile} from '../data/economicConfig';
 import {cashFloor,operatingCost,reserveTarget} from './budget';
@@ -16,14 +17,7 @@ function shipmentLimit(ctx:MonthContext,from:string,to:string,requested:number,c
 export function settleCentral(ctx:MonthContext){
  delete ctx.metrics;delete ctx.routing;delete ctx.access;
  const sim=ctx.s.simulation,c=sim.central??=defaultCentral(),p=c.policy,a=c.accounts,capital=capitalCounty(ctx.s),senders=new Set<string>();
- let paths:Map<string,Route[]>|undefined;
- const pathToCapital=(id:string)=>{
-  if(paths)return paths.get(id)??[];
-  const adj=new Map<string,Route[]>();for(const r of sim.routes){if(r.blocked)continue;for(const at of [r.from,r.to]){const list=adj.get(at)??[];list.push(r);adj.set(at,list);}}
-  const open=new Set(Object.keys(sim.counties)),dist=new Map([[capital,0]]),previous=new Map<string,Route>();
-  while(open.size){let at:string|undefined,best=Infinity;for(const id of open){const d=dist.get(id)??Infinity;if(d<best){at=id;best=d;}}if(!at)break;open.delete(at);for(const r of adj.get(at)??[]){const to=r.from===at?r.to:r.from;if(!open.has(to))continue;const d=best+metricsFor(ctx,r).months;if(d<(dist.get(to)??Infinity)){dist.set(to,d);previous.set(to,r);}}}
-  paths=new Map();for(const from of Object.keys(sim.counties)){const path:Route[]=[];let at=from;while(at!==capital){const r=previous.get(at);if(!r){path.length=0;break;}path.push(r);at=r.from===at?r.to:r.from;}paths.set(from,path);}return paths.get(id)??[];
- };
+ const pathToCapital=(id:string)=>hubPath(ctx,id,capital);
  // Assess only locally earned cash. Grants/transfers and the opening balance are excluded.
  for(const [id,f]of Object.entries(sim.prefectures)){
   const due=(f.accounts.tax+f.accounts.sales)*p.cashRemitRate;

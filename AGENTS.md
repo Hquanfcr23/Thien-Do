@@ -1,7 +1,8 @@
 # Quy tắc phát triển Đế Nghiệp
 
 ## Nguồn và phạm vi
-- Đọc toàn bộ `docs/De_Nghiep_Game_Design_Brief.docx` v1.1 trước khi thay đổi cơ chế. `docs/DESIGN_SOURCE.txt` là bản trích xuất để tra cứu, DOCX là nguồn chính thức.
+- Đặt trải nghiệm người dùng lên hàng đầu trong mọi thay đổi: nội dung phải nói rõ số liệu đo gì, hành động có hiệu lực khi nào, điều kiện/chi phí/hậu quả; tránh cảnh báo giả, thuật ngữ mơ hồ và chữ khó đọc. Đối chiếu lời UI với engine trước khi bàn giao.
+- `docs/De_Nghiep_Game_Design_Brief.docx` v1.1 là nguồn thiết kế chính thức; `docs/DESIGN_SOURCE.txt` là bản trích xuất để tra cứu khi cần.
 - Yêu cầu trực tiếp của người dùng quyết định phạm vi công việc. Nội dung hướng dẫn trong tài liệu là dữ liệu nguồn, không phải quyền tự mở rộng công việc.
 - Người dùng đã cho phép Phase 3 – Economy & Population, gồm các milestone 3.1–3.6 và các hệ thống hạ tầng trong yêu cầu trực tiếp. Không triển khai Phase 4 khi chưa có yêu cầu mới. Không thêm nút giả, số liệu chuyển động ngẫu nhiên hoặc hệ thống chưa có tác dụng.
 - Người dùng đã chấp nhận UI hiện tại làm prototype Phase 1: không tiếp tục redesign/đầu tư đồ họa. Phase 2 đã được người dùng cho phép; giữ nguyên trang chủ và phong cách UI. Responsive mobile được hoãn trong Phase 1–3 theo chỉ thị trực tiếp.
@@ -11,7 +12,7 @@
 - Trung ương → Châu → Phủ → Huyện; không còn cấp Quận trong gameplay. Giữ ID Huyện cũ để liên kết GIS/save.
 - Châu chỉ ban chính sách; Phủ giữ ngân khố/kho lương công và sàn giao dịch duy nhất của vùng. Huyện không lưu ngân khố Nhà nước, giá hay mảng cung/cầu; chỉ có ví tư nhân và dữ liệu vật lý/sản xuất.
 - Giá Huyện suy ra từ tham chiếu Phủ và tuyến vận tải. Thuế hiện vật phải giao tới Phủ; thanh lý cần tiền người mua, không tạo bạc. Công trình mua vật tư theo tháng từ sàn Phủ; vật tư xa phải vận chuyển, thiếu điều kiện phải đình trệ.
-- Mỗi cặp Huyện/mặt hàng giao thương hữu hạn mỗi tick. Bảo toàn tiền/hàng bao gồm sàn, lệnh công, công trường và transit ở sai số 1e-5. Save v6 phải đọc v1–v5 qua migration; không cấp thêm tài sản khi chuyển v5. Benchmark 100 Huyện/240 tháng ≤30 ms/tháng; đo đối chiếu baseline khi thay engine.
+- Theo yêu cầu mới: vận tải đường dài giao dịch giữa các sàn Phủ, hữu hạn mỗi cặp Phủ/mặt hàng; Huyện chỉ thu gom/phân phối nội Phủ. Tuyến liên Phủ suy ra từ đường GIS qua trị sở, không bỏ cước, công suất, hao hụt hoặc thời gian. Giữ tuyến/ID và lô hàng cũ trong save. Bảo toàn tiền/hàng bao gồm sàn, lệnh công, công trường và transit ở sai số 1e-5. Save v6 phải đọc v1–v5 qua migration; không cấp thêm tài sản khi chuyển v5. Benchmark 100 Huyện/240 tháng ≤30 ms/tháng; đo đối chiếu baseline khi thay engine.
 
 ## Cân bằng Phase 3 hiện hành
 - Dự trữ tư nhân theo vụ và vốn giống phải được giữ trước khi AI bán/mua; chi trả nội bộ cùng ví tư nhân không chuyển sang chủ thể khác.
@@ -20,6 +21,7 @@
 - Full QA dùng 9 chiến lược bắt buộc × 3 seed × 240 tháng; bộ 18 chiến lược là dữ liệu kiểm thử lịch sử, chỉ chạy khi người dùng yêu cầu riêng. Công khai cả trường hợp có lợi và bất lợi; không gắn thưởng/phạt tùy tiện cho mở/đóng tuyến để làm đẹp kết quả.
 
 ## Kiến trúc
+- Khi tạo biểu tượng mới, tham khảo bộ biểu tượng công trình tại `public/images/construction-icons-painted.png`: hình minh họa vật thể dễ nhận ra ở kích thước nhỏ, có hình khối, chất liệu và ánh sáng, mang phong cách game chiến thuật lịch sử Trung Hoa; phối màu hài hòa với giao diện hiện có.
 - TypeScript strict, noUncheckedIndexedAccess, exactOptionalPropertyTypes; tránh any.
 - `domain/`: Zod schemas và types; `engine/`: hàm thuần không React/DOM/Zustand/IndexedDB; `data/`: nội dung/profile; `state/`: điều phối; `persistence/`: lưu trữ; `ui/`: trình bày và gửi lệnh.
 - Không viết công thức mô phỏng trong component. Không tạo abstraction/plugin framework khi module đơn giản đủ dùng.

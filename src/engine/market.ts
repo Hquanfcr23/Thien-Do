@@ -1,3 +1,4 @@
+import {prefectureCorridors} from './prefectureTransport';
 import { goods,type Simulation } from '../domain/economy';
 import { marketOrders,orderPrice } from './marketOrders';
 import { householdReserve,metricsFor,effect,stock,prefectureOf,prefectureId,policyFor,marketAccess,localPrice,type MonthContext } from './economyContext';
@@ -50,23 +51,31 @@ export function market(ctx:MonthContext){
    capacity-=amount;incoming.set(`${id}:${g}`,(incoming.get(`${id}:${g}`)??0)+amount);
   }
  }
- // Each unordered GIS edge/good is considered once. No while/retry or same-tick re-export of arrivals.
- const exchanged=new Set<string>(),merchantBudget=new Map([...ctx.labour].map(([id,l])=>[id,l.commerce*.8*(1+.2*effect(sim.counties[id]!,'market')+.2*effect(prefectureOf(ctx,id),'market'))]));
- for(const r of sim.routes){if(r.blocked)continue;const m=metricsFor(ctx,r);let capacity=Math.max(0,m.capacity-(booked.get(r.id)??0));
-  if(capacity<=.01||(merchantBudget.get(r.from)??0)<=.01||(merchantBudget.get(r.to)??0)<=.01)continue;const pairKey=[r.from,r.to].sort().join('|');
-  const pa=policyFor(ctx,r.from),pb=policyFor(ctx,r.to);if(!pa.tradeOpen||!pb.tradeOpen)continue;
-  localPrice(ctx,r.from,'grain');localPrice(ctx,r.to,'grain');const qa=ctx.quotes!.get(r.from)!,qb=ctx.quotes!.get(r.to)!;
-  const fa=prefectureOf(ctx,r.from),fb=prefectureOf(ctx,r.to);
-  for(const g of goods){if(capacity<=.01)break;const key=pairKey+':'+g;if(exchanged.has(key))continue;exchanged.add(key);
-   const forward=qa.buy[g]<qb.buy[g],[from,to]=forward?[r.from,r.to]:[r.to,r.from];
-   const seller=sim.counties[from]!,buyer=sim.counties[to]!,u=ctx.units.get(from)!,toUnit=ctx.units.get(to)!,sell=(forward?qa:qb).sell[g],buy=(forward?qb:qa).buy[g];
-   const taxRate=(forward?pb:pa).tradeTax,unitCost=sell*(1+taxRate)+m.cost;
-   if(sell<=0||buy*(1-m.loss)<=unitCost)continue;
-   const need=Math.max(0,householdReserve(ctx,to,g)-stock(toUnit,g)-(incoming.get(`${to}:${g}`)??0));
-   const amount=Math.min(capacity,merchantBudget.get(from)??0,merchantBudget.get(to)??0,Math.max(0,stock(u,g)-householdReserve(ctx,from,g)),need,Math.max(0,buyer.privateMoney-buyer.land*.025-20)/unitCost);
-   if(amount<=.01||!dispatch(ctx,from,to,g,amount,[r]))continue;
-   buyer.privateMoney-=amount*unitCost;seller.privateMoney+=amount*(sell+m.cost);const tax=amount*sell*taxRate;(forward?fb:fa).treasury+=tax;(forward?fb:fa).accounts.tax+=tax;ctx.report.tax+=tax;
-   capacity-=amount;merchantBudget.set(from,(merchantBudget.get(from)??0)-amount);merchantBudget.set(to,(merchantBudget.get(to)??0)-amount);incoming.set(`${to}:${g}`,(incoming.get(`${to}:${g}`)??0)+amount);
+ // One match per Phủ pair/good; only delivered exchange stock may be exported.
+ const budgets=new Map(Object.keys(sim.prefectures).map(id=>[id,0]));
+ for(const [id,l]of ctx.labour){const fu=prefectureId(ctx,id);budgets.set(fu,budgets.get(fu)!+l.commerce*.8*(1+.2*effect(sim.counties[id]!,'market')+.2*effect(sim.prefectures[fu]!,'market')));}
+ const pendingPairs=new Set(sim.shipments.filter(x=>x.purpose==='market').map(x=>[prefectureId(ctx,x.from),x.prefectureId!].sort().join('|')+':'+x.good));
+ for(const link of prefectureCorridors(ctx)){
+  if(!policyFor(ctx,link.from).tradeOpen||!policyFor(ctx,link.to).tradeOpen)continue;
+  let capacity=Math.min(...link.path.map(r=>Math.max(0,metricsFor(ctx,r).capacity-(booked.get(r.id)??0))));
+  for(const g of goods){
+   const key=[link.from,link.to].sort().join('|')+':'+g;if(capacity<=.01||pendingPairs.has(key))continue;
+   const a=sim.prefectures[link.from]!,b=sim.prefectures[link.to]!,forward=a.market.prices[g]<b.market.prices[g];
+   const from=forward?link.from:link.to,to=forward?link.to:link.from,seller=sim.prefectures[from]!,buyer=sim.prefectures[to]!;
+   const sell=seller.market.prices[g],taxRate=policyFor(ctx,to).tradeTax,unitCost=sell*(1+taxRate)+link.cost;
+   if(buyer.market.prices[g]*(1-link.loss)<=unitCost)continue;
+   const sellerNeed=Math.max(0,seller.market.demand[g]-(incoming.get(`${from}:${g}`)??0));
+   const available=Math.max(0,seller.market.inventory[g]-sellerNeed);
+   const need=Math.max(0,buyer.market.demand[g]-buyer.market.inventory[g]-(incoming.get(`${to}:${g}`)??0));
+   const amount=Math.min(capacity,budgets.get(from)??0,budgets.get(to)??0,available,need,buyer.market.merchantMoney/Math.max(.001,unitCost));
+   if(amount<=.01)continue;
+   const path=forward?link.path:[...link.path].reverse();
+   seller.market.inventory[g]-=amount;buyer.market.merchantMoney-=amount*unitCost;
+   seller.market.merchantMoney+=amount*sell;sim.counties[seller.seatCountyId]!.privateMoney+=amount*link.cost;
+   const tax=amount*sell*taxRate;buyer.treasury+=tax;buyer.accounts.tax+=tax;ctx.report.tax+=tax;
+   sim.shipments.push({id:sim.nextId++,from:seller.seatCountyId,to:buyer.seatCountyId,good:g,amount,purpose:'market',prefectureId:to,projectTargetId:null,building:null,path:path.map(r=>r.id),leg:0,remaining:0,entered:false});
+   for(const r of path)booked.set(r.id,(booked.get(r.id)??0)+amount);
+   pendingPairs.add(key);capacity-=amount;budgets.set(from,(budgets.get(from)??0)-amount);budgets.set(to,(budgets.get(to)??0)-amount);incoming.set(`${to}:${g}`,(incoming.get(`${to}:${g}`)??0)+amount);
   }
  }
 }

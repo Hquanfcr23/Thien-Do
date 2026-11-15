@@ -1,0 +1,8 @@
+{
+  "counties": 100,
+  "routes": 294,
+  "months": 240,
+  "msPerMonth": 10.85577625,
+  "maximumError": 4.0745362639427185e-10,
+  "note": "Measured immediately before Phase 4 engine changes in this session; sequential Vitest benchmark."
+}

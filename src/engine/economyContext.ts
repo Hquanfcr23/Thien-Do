@@ -11,7 +11,7 @@ export const bound=(n:number,min=0,max=1)=>Math.max(min,Math.min(max,n));
 export const effect=(c:Pick<CountyEconomy,'buildings'>,key:string)=>(c.buildings[key]?.level??0)*(c.buildings[key]?.condition??0);
 export function stock(u:AdministrativeUnit,key:keyof Stock):number{return u.resources[key]??0;}
 export function random(sim:Simulation){sim.rng=(Math.imul(sim.rng,1664525)+1013904223)>>>0;return sim.rng/4294967296;}
-export function moneyTotal(s:EconomicState){return s.country.treasury+s.administrativeUnits.reduce((n,u)=>n+(u.treasury??0),0)+Object.values(s.simulation.counties).reduce((n,c)=>n+c.privateMoney,0)+Object.values(s.simulation.prefectures).reduce((n,f)=>n+f.treasury+f.market.merchantMoney,0);}
+export function moneyTotal(s:EconomicState){return Object.values(s.court?.officers??{}).reduce((n,o)=>n+o.assets+o.privateMoney,0)+s.country.treasury+s.administrativeUnits.reduce((n,u)=>n+(u.treasury??0),0)+Object.values(s.simulation.counties).reduce((n,c)=>n+c.privateMoney,0)+Object.values(s.simulation.prefectures).reduce((n,f)=>n+f.treasury+f.market.merchantMoney,0);}
 export function projectStock(s:EconomicState,g:Good){return [...Object.values(s.simulation.counties),...Object.values(s.simulation.prefectures)].reduce((n,c)=>n+c.projects.reduce((v,p)=>v+p.materials[g],0),0);}
 export function grainTotal(s:EconomicState){return projectStock(s,'grain')+s.country.grainReserve+s.administrativeUnits.reduce((n,u)=>n+stock(u,'grain'),0)+Object.values(s.simulation.prefectures).reduce((n,f)=>n+f.grainReserve+f.market.inventory.grain+f.market.publicListings.grain,0)+s.simulation.shipments.filter(x=>x.good==='grain').reduce((n,x)=>n+x.amount,0);}
 export function spendPrivate(_ctx:MonthContext,u:AdministrativeUnit,c:CountyEconomy,cost:number){void _ctx;void u;return Math.min(c.privateMoney,cost); /* Local wages/services circulate within the same aggregated private purse. */}
@@ -32,7 +32,7 @@ export function prefectureId(ctx:Pick<MonthContext,'s'|'units'>,id:string):strin
  if(!fu||!ctx.s.simulation.prefectures[fu])throw Error(`Không có Phủ chủ quản: ${id}`);return fu;
 }
 export function prefectureOf(ctx:Pick<MonthContext,'s'|'units'>,id:string):PrefectureEconomy{return ctx.s.simulation.prefectures[prefectureId(ctx,id)]!;}
-export function policyFor(ctx:Pick<MonthContext,'s'|'units'>,id:string){const fu=prefectureId(ctx,id),zhou=ctx.units.get(fu)?.parentId;return (zhou?ctx.s.simulation.zhouPolicies[zhou]:undefined)??ctx.s.simulation.policy;}
+export function policyFor(ctx:Pick<MonthContext,'s'|'units'>,id:string){const fu=prefectureId(ctx,id),zhou=ctx.units.get(fu)?.parentId;return ctx.s.simulation.prefecturePolicies[fu]??(zhou?ctx.s.simulation.zhouPolicies[zhou]:undefined)??ctx.s.simulation.policy;}
 export function countyDemand(ctx:Pick<MonthContext,'s'|'units'|'demands'>,id:string):Stock{
  ctx.demands??=new Map();const cached=ctx.demands.get(id);if(cached)return cached;const u=ctx.units.get(id)!,c=ctx.s.simulation.counties[id]!;const d=emptyStock(),winter=ctx.s.calendar.month>=10||ctx.s.calendar.month<=2;
  d.grain=u.population*.025*(winter?1.15:1)+c.lastMilitary*.015;
@@ -48,8 +48,9 @@ export function marketAccess(ctx:Pick<MonthContext,'s'|'units'|'access'|'routing
   for(const r of sim.routes)for(const endpoint of [r.from,r.to]){if(!adj.has(endpoint))adj.set(endpoint,[]);adj.get(endpoint)!.push(r);}
   ctx.routing={metrics,adj,byId:new Map(sim.routes.map(r=>[r.id,r])),signature:JSON.stringify([Object.keys(sim.counties),sim.routes.map(r=>[r.id,r.from,r.to,r.blocked,metrics.get(r.id)!.months])])};
  }
- const {metrics,adj,byId,signature}=ctx.routing,key=signature+':'+seat;let paths=pathCache.get(key);
+ const {metrics,adj,byId,signature}=ctx.routing,key='local-v1:'+signature+':'+seat;let paths=pathCache.get(key);
  if(!paths){const open=new Set(Object.keys(sim.counties)),dist=new Map([[seat,0]]),previous=new Map<string,Route>();
+  for(const countyId of open)if(prefectureOf(ctx,countyId)!==f)open.delete(countyId);
   while(open.size){let at:string|undefined,best=Infinity;for(const candidate of open){const d=dist.get(candidate)??Infinity;if(d<best){best=d;at=candidate;}}if(!at)break;open.delete(at);
    for(const r of adj.get(at)??[]){if(r.blocked)continue;const to=r.from===at?r.to:r.from;if(!open.has(to))continue;const d=best+metrics.get(r.id)!.months;if(d<(dist.get(to)??Infinity)){dist.set(to,d);previous.set(to,r);}}
   }

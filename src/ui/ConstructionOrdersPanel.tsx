@@ -3,6 +3,7 @@ import type {GameState} from '../domain/schema';
 import type {BuildingKind,CountyEconomy,Order} from '../domain/economy';
 import {buildings,goodsConfig} from '../data/economicConfig';
 import {quantityNumber} from '../domain/economicUnits';
+import {BuildingIcon} from './BuildingIcon';
 
 type FilterStatus='all'|'queued'|'working'|'paused';
 type Project=CountyEconomy['projects'][number];
@@ -56,7 +57,7 @@ export function ConstructionOrdersPanel({game,focus}:{game:GameState;focus:(id:s
    const level=routeId?sim.routes.find(r=>r.id===routeId)?.upgrade?.level??0:site?.buildings[building]?.level??0;
    const state=queued?'queued':stalled?'paused':'working';
    return <article className={`construction-order-card ${state==='paused'?'is-paused':''}`} key={row.key}>
-    <header><span className="construction-order-icon" aria-hidden="true">{building==='farm'?'✿':building==='irrigation'?'〰':building==='granary'?'▤':building==='mine'?'⚒':building==='workshop'?'⚙':building==='road'?'⌁':'印'}</span><div><h5>{buildings[building].name}{routeId?' · nâng cấp tuyến':''}</h5><p>{unit}{routeId?` · ${routeName(routeId)}`:''}</p></div><span className={`construction-status ${state}`}>{queued?'Chờ khởi công':stalled?'Đình trệ':'Đang thi công'}</span></header>
+    <header><BuildingIcon kind={building}/><div><h5>{buildings[building].name}{routeId?' · nâng cấp tuyến':''}</h5><p>{unit}{routeId?` · ${routeName(routeId)}`:''}</p></div><span className={`construction-status ${state}`}>{queued?'Chờ khởi công':stalled?'Đình trệ':'Đang thi công'}</span></header>
     {queued?<p className="construction-queued-note">Đã nhận lệnh. Công trường sẽ khởi tạo khi quyết toán cuối tháng.</p>:<><div className="construction-progress-label"><span>Cấp {level} → {level+1}</span><span>{num(project!.work)} / {num(project!.required)} công-tháng · {num(progress)}%</span></div><progress max="100" value={progress} aria-label={`Tiến độ ${buildings[building].name} tại ${unit}`}/></>}
     {stalled&&<p className="construction-pause-reason"><strong>Lý do:</strong> {project?.pausedReason}</p>}
     {legacy&&<small className="construction-legacy-note">Lệnh từ hồ sơ cũ; định mức và tiến độ được giữ nguyên.</small>}

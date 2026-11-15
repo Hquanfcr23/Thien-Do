@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "flows": [
+    "create",
+    "appointment-delay",
+    "prefecture-override",
+    "zhou-mixed",
+    "inherit",
+    "construction-focus-and-reason",
+    "audit-cost",
+    "sentence-exile",
+    "save-reload",
+    "export-import",
+    "v6-migration"
+  ],
+  "browserErrors": []
+}

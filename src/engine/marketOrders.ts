@@ -1,3 +1,4 @@
+import { constructionPriorities } from './policies';
 import { goods,emptyStock,type Good,type Stock } from '../domain/economy';
 import { projectDefinition,goodsConfig } from '../data/economicConfig';
 import { householdReserve,stock,prefectureId,policyFor,marketAccess,type MonthContext } from './economyContext';
@@ -29,9 +30,10 @@ export function marketOrders(ctx:OrderContext):Map<string,MarketOrders>{
  for(const [id,target]of [...Object.entries(sim.counties),...Object.entries(sim.prefectures)]){
   const fu=prefectureId(ctx,id),f=sim.prefectures[fu]!,seat=sim.prefectures[id]?.seatCountyId??id,c=sim.counties[seat]!;
   if(seat!==f.seatCountyId&&!marketAccess(ctx,seat).path.length)continue;
-  const count=c.projects.length+(seat===f.seatCountyId?f.projects.length:0),work=c.lastConstruction/Math.max(1,count);
+  const priorities=constructionPriorities(ctx.s,fu);
+  const count=c.projects.filter(p=>priorities[p.building]!=='forbid').length+(seat===f.seatCountyId?f.projects.filter(p=>priorities[p.building]!=='forbid').length:0),work=c.lastConstruction/Math.max(1,count);
   const wanted=projects.get(fu)??emptyStock();projects.set(fu,wanted);
-  for(const p of target.projects){if(p.legacyFunded)continue;const fraction=Math.max(0,Math.min(p.required-p.work,work)/p.required);
+  for(const p of target.projects){if(p.legacyFunded||priorities[p.building]==='forbid')continue;const fraction=Math.max(0,Math.min(p.required-p.work,work)/p.required);
    for(const g of goods)wanted[g]+=Math.max(0,(projectDefinition(p).materials[g]??0)*fraction-p.materials[g]-(materials.get(`${id}:${p.building}:${g}`)??0));
   }
  }

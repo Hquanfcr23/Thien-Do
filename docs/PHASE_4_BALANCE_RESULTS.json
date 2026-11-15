@@ -1,0 +1,1373 @@
+{
+  "seeds": [
+    1,
+    42,
+    1701
+  ],
+  "months": 240,
+  "cases": [
+    "open",
+    "low-tax",
+    "high-tax",
+    "sell-all",
+    "reserve-four",
+    "targeted-build",
+    "overbuild",
+    "route-upgrade",
+    "drought-open"
+  ],
+  "weather": "Drought only in months 121–144",
+  "maxError": 9.313225746154785e-10,
+  "results": [
+    {
+      "seed": 1,
+      "scenario": "open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696475,
+          "publicCash": 30783.292738908873,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1767454,
+          "publicCash": 20613.45960887514,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860026,
+          "publicCash": 20098.38900068247,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2058486,
+          "publicCash": 17734.80402474665,
+          "hunger": 2
+        }
+      ],
+      "population": 2058486,
+      "publicCash": 17734.80402474665,
+      "prefectureCash": 4773.760232494914,
+      "publicGrain": 54464.89254718217,
+      "stability": 99.66278584583154,
+      "hunger": 2,
+      "earlyRevenue": 10544.29511738741,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 9,
+      "pausedProjectMonths": 2156,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 44,
+        "Chờ vật tư đang vận chuyển": 850,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 172,
+        "Sàn Phủ thiếu vật tư": 52,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1038
+      },
+      "projectMonths": 2914,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "low-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1698063,
+          "publicCash": 24893.446371571656,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1775629,
+          "publicCash": 16670.149507253802,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1877287,
+          "publicCash": 12463.754547413406,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2068804,
+          "publicCash": 8946.97817361002,
+          "hunger": 41
+        }
+      ],
+      "population": 2068804,
+      "publicCash": 8946.97817361002,
+      "prefectureCash": 4387.9072417857915,
+      "publicGrain": 33771.87960851728,
+      "stability": 99.17007299801958,
+      "hunger": 41,
+      "earlyRevenue": 4780.097803545712,
+      "completedIrrigation": 2,
+      "upgradedRoutes": 8,
+      "pausedProjectMonths": 2370,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 32,
+        "Chờ vật tư đang vận chuyển": 477,
+        "Sàn Phủ thiếu vật tư": 36,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1766,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 59
+      },
+      "projectMonths": 2823,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "high-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1685573,
+          "publicCash": 40976.29451855933,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1712159,
+          "publicCash": 32445.07897243819,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1745674,
+          "publicCash": 28597.55259869546,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 1814789,
+          "publicCash": 24690.382862253267,
+          "hunger": 0
+        }
+      ],
+      "population": 1814789,
+      "publicCash": 24690.382862253267,
+      "prefectureCash": 4518.1697519473755,
+      "publicGrain": 86705.42972319409,
+      "stability": 0,
+      "hunger": 0,
+      "earlyRevenue": 22481.44201061303,
+      "completedIrrigation": 9,
+      "upgradedRoutes": 22,
+      "pausedProjectMonths": 2653,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 59,
+        "Chờ vật tư đang vận chuyển": 890,
+        "Sàn Phủ thiếu vật tư": 114,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 491,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1099
+      },
+      "projectMonths": 3842,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "sell-all",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696475,
+          "publicCash": 33758.54911306039,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1767454,
+          "publicCash": 22233.681983127877,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860026,
+          "publicCash": 19858.479134507703,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2055655,
+          "publicCash": 20403.406370467535,
+          "hunger": 5
+        }
+      ],
+      "population": 2055655,
+      "publicCash": 20403.406370467535,
+      "prefectureCash": 8514.32858923684,
+      "publicGrain": 24912.552353298834,
+      "stability": 99.27450346274007,
+      "hunger": 5,
+      "earlyRevenue": 13737.852188015253,
+      "completedIrrigation": 4,
+      "upgradedRoutes": 8,
+      "pausedProjectMonths": 2064,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 43,
+        "Chờ vật tư đang vận chuyển": 779,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 194,
+        "Sàn Phủ thiếu vật tư": 35,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1013
+      },
+      "projectMonths": 2801,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "reserve-four",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696475,
+          "publicCash": 30783.292738908873,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1767454,
+          "publicCash": 19912.680612580494,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860026,
+          "publicCash": 19392.097049498654,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2056910,
+          "publicCash": 63894.13244961739,
+          "hunger": 5
+        }
+      ],
+      "population": 2056910,
+      "publicCash": 63894.13244961739,
+      "prefectureCash": 44913.5977812533,
+      "publicGrain": 96411.65967783793,
+      "stability": 99.66498373689531,
+      "hunger": 5,
+      "earlyRevenue": 10544.29511738741,
+      "completedIrrigation": 6,
+      "upgradedRoutes": 8,
+      "pausedProjectMonths": 2150,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 48,
+        "Chờ vật tư đang vận chuyển": 808,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 169,
+        "Sàn Phủ thiếu vật tư": 92,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1033
+      },
+      "projectMonths": 3087,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "targeted-build",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696475,
+          "publicCash": 30142.32109997965,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1767454,
+          "publicCash": 20415.833305495944,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860026,
+          "publicCash": 22053.727621362174,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2059405,
+          "publicCash": 16876.919593796898,
+          "hunger": 2
+        }
+      ],
+      "population": 2059405,
+      "publicCash": 16876.919593796898,
+      "prefectureCash": 5111.40952644862,
+      "publicGrain": 54426.76099896871,
+      "stability": 100,
+      "hunger": 2,
+      "earlyRevenue": 10642.821011566815,
+      "completedIrrigation": 8,
+      "upgradedRoutes": 9,
+      "pausedProjectMonths": 2324,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 46,
+        "Sàn Phủ thiếu vật tư": 57,
+        "Chờ vật tư đang vận chuyển": 813,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 214,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1194
+      },
+      "projectMonths": 3044,
+      "firstMonthProjects": 10,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "overbuild",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696475,
+          "publicCash": 27047.466644372358,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1767454,
+          "publicCash": 19938.95901318532,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860026,
+          "publicCash": 28151.853970055603,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2060064,
+          "publicCash": 16006.258655366764,
+          "hunger": 0
+        }
+      ],
+      "population": 2060064,
+      "publicCash": 16006.258655366764,
+      "prefectureCash": 4087.169023321667,
+      "publicGrain": 52133.34123313906,
+      "stability": 100,
+      "hunger": 0,
+      "earlyRevenue": 10812.805488885751,
+      "completedIrrigation": 21,
+      "upgradedRoutes": 4,
+      "pausedProjectMonths": 2978,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 52,
+        "Sàn Phủ thiếu vật tư": 85,
+        "Chờ vật tư đang vận chuyển": 969,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 271,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1601
+      },
+      "projectMonths": 3842,
+      "firstMonthProjects": 27,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1,
+      "scenario": "route-upgrade",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696475,
+          "publicCash": 30616.548270669795,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1767454,
+          "publicCash": 20614.6293510271,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860026,
+          "publicCash": 20099.72416341168,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2058479,
+          "publicCash": 17728.720974503365,
+          "hunger": 2
+        }
+      ],
+      "population": 2058479,
+      "publicCash": 17728.720974503365,
+      "prefectureCash": 4772.236452930769,
+      "publicGrain": 54464.66146426388,
+      "stability": 99.66274846883842,
+      "hunger": 2,
+      "earlyRevenue": 10558.880679631653,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 9,
+      "pausedProjectMonths": 2397,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 45,
+        "Chờ vật tư đang vận chuyển": 854,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 310,
+        "Sàn Phủ thiếu vật tư": 53,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1135
+      },
+      "projectMonths": 3154,
+      "firstMonthProjects": 8,
+      "selectedRouteId": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-1-jun-1-xian-3"
+    },
+    {
+      "seed": 1,
+      "scenario": "drought-open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696475,
+          "publicCash": 30783.292738908873,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1767454,
+          "publicCash": 20613.45960887514,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860026,
+          "publicCash": 20098.38900068247,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2021907,
+          "publicCash": 13922.920522807315,
+          "hunger": 37
+        }
+      ],
+      "population": 2021907,
+      "publicCash": 13922.920522807315,
+      "prefectureCash": 3560.0168893505916,
+      "publicGrain": 52297.28681833465,
+      "stability": 100,
+      "hunger": 37,
+      "earlyRevenue": 10544.29511738741,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 8,
+      "pausedProjectMonths": 2073,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 41,
+        "Chờ vật tư đang vận chuyển": 729,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 164,
+        "Sàn Phủ thiếu vật tư": 43,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1096
+      },
+      "projectMonths": 2789,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696595,
+          "publicCash": 30756.345681680472,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1768193,
+          "publicCash": 20422.54338399319,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860854,
+          "publicCash": 17373.043892226768,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2057341,
+          "publicCash": 13826.838446499325,
+          "hunger": 7
+        }
+      ],
+      "population": 2057341,
+      "publicCash": 13826.838446499325,
+      "prefectureCash": 2917.826614172032,
+      "publicGrain": 52865.7963805902,
+      "stability": 100,
+      "hunger": 7,
+      "earlyRevenue": 10448.941633827666,
+      "completedIrrigation": 6,
+      "upgradedRoutes": 6,
+      "pausedProjectMonths": 2193,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 43,
+        "Chờ vật tư đang vận chuyển": 747,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 217,
+        "Sàn Phủ thiếu vật tư": 38,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1148
+      },
+      "projectMonths": 2938,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "low-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1698183,
+          "publicCash": 25264.401873403363,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1776384,
+          "publicCash": 16418.994001219016,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1877025,
+          "publicCash": 14062.248238595117,
+          "hunger": 2
+        },
+        {
+          "month": 240,
+          "population": 2071090,
+          "publicCash": 8208.07391499188,
+          "hunger": 36
+        }
+      ],
+      "population": 2071090,
+      "publicCash": 8208.07391499188,
+      "prefectureCash": 4117.520148927549,
+      "publicGrain": 31512.23672722985,
+      "stability": 99.49386314986792,
+      "hunger": 36,
+      "earlyRevenue": 4731.546046488322,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 5,
+      "pausedProjectMonths": 2732,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 33,
+        "Chờ vật tư đang vận chuyển": 468,
+        "Sàn Phủ thiếu vật tư": 48,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 141,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 2042
+      },
+      "projectMonths": 3131,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "high-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1685692,
+          "publicCash": 41847.999561513105,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1712882,
+          "publicCash": 33531.03890784355,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1746462,
+          "publicCash": 30341.971207554547,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 1815484,
+          "publicCash": 28333.485674703566,
+          "hunger": 0
+        }
+      ],
+      "population": 1815484,
+      "publicCash": 28333.485674703566,
+      "prefectureCash": 5283.497858967395,
+      "publicGrain": 93439.87459334792,
+      "stability": 0,
+      "hunger": 0,
+      "earlyRevenue": 22542.325511040686,
+      "completedIrrigation": 10,
+      "upgradedRoutes": 21,
+      "pausedProjectMonths": 2425,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 68,
+        "Chờ vật tư đang vận chuyển": 1045,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 345,
+        "Sàn Phủ thiếu vật tư": 129,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 838
+      },
+      "projectMonths": 3693,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "sell-all",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696595,
+          "publicCash": 33943.654395435275,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1768193,
+          "publicCash": 22150.03990945616,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860854,
+          "publicCash": 18116.131352304496,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2057494,
+          "publicCash": 21534.057392940176,
+          "hunger": 5
+        }
+      ],
+      "population": 2057494,
+      "publicCash": 21534.057392940176,
+      "prefectureCash": 10751.890219554654,
+      "publicGrain": 23957.269811945225,
+      "stability": 99.96715909526664,
+      "hunger": 5,
+      "earlyRevenue": 13845.996965995573,
+      "completedIrrigation": 2,
+      "upgradedRoutes": 5,
+      "pausedProjectMonths": 2467,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 47,
+        "Chờ vật tư đang vận chuyển": 806,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 337,
+        "Sàn Phủ thiếu vật tư": 25,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1252
+      },
+      "projectMonths": 3167,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "reserve-four",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696595,
+          "publicCash": 30756.345681680472,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1768193,
+          "publicCash": 19602.349521606164,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860854,
+          "publicCash": 16440.536057467114,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2056578,
+          "publicCash": 60183.128551609894,
+          "hunger": 8
+        }
+      ],
+      "population": 2056578,
+      "publicCash": 60183.128551609894,
+      "prefectureCash": 41903.3093368471,
+      "publicGrain": 96435.33940700434,
+      "stability": 100,
+      "hunger": 8,
+      "earlyRevenue": 10448.941633827666,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 8,
+      "pausedProjectMonths": 2493,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 56,
+        "Chờ vật tư đang vận chuyển": 773,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 414,
+        "Sàn Phủ thiếu vật tư": 79,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1171
+      },
+      "projectMonths": 3454,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "targeted-build",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696595,
+          "publicCash": 30285.197376465614,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1768193,
+          "publicCash": 20220.551369394034,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860854,
+          "publicCash": 16944.67767649088,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2056948,
+          "publicCash": 14697.118462433371,
+          "hunger": 6
+        }
+      ],
+      "population": 2056948,
+      "publicCash": 14697.118462433371,
+      "prefectureCash": 3273.2364446643423,
+      "publicGrain": 53106.90539230938,
+      "stability": 100,
+      "hunger": 6,
+      "earlyRevenue": 10533.23015980944,
+      "completedIrrigation": 7,
+      "upgradedRoutes": 6,
+      "pausedProjectMonths": 2300,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 44,
+        "Sàn Phủ thiếu vật tư": 48,
+        "Chờ vật tư đang vận chuyển": 737,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 231,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1240
+      },
+      "projectMonths": 3063,
+      "firstMonthProjects": 10,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "overbuild",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696595,
+          "publicCash": 27053.545582912677,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1768193,
+          "publicCash": 19545.564000362152,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860854,
+          "publicCash": 22508.98359676531,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2057968,
+          "publicCash": 12860.517732934504,
+          "hunger": 4
+        }
+      ],
+      "population": 2057968,
+      "publicCash": 12860.517732934504,
+      "prefectureCash": 3443.985567277206,
+      "publicGrain": 52217.37668397976,
+      "stability": 100,
+      "hunger": 4,
+      "earlyRevenue": 10929.790751843851,
+      "completedIrrigation": 21,
+      "upgradedRoutes": 2,
+      "pausedProjectMonths": 3206,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 50,
+        "Sàn Phủ thiếu vật tư": 60,
+        "Chờ vật tư đang vận chuyển": 847,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 327,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1922
+      },
+      "projectMonths": 3945,
+      "firstMonthProjects": 27,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 42,
+      "scenario": "route-upgrade",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696595,
+          "publicCash": 30589.62305558222,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1768193,
+          "publicCash": 20423.50577324554,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860854,
+          "publicCash": 17381.17686450664,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2057337,
+          "publicCash": 13814.748595729741,
+          "hunger": 7
+        }
+      ],
+      "population": 2057337,
+      "publicCash": 13814.748595729741,
+      "prefectureCash": 2918.215931353357,
+      "publicGrain": 52873.07941577608,
+      "stability": 100,
+      "hunger": 7,
+      "earlyRevenue": 10463.442444598553,
+      "completedIrrigation": 6,
+      "upgradedRoutes": 6,
+      "pausedProjectMonths": 2432,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 44,
+        "Chờ vật tư đang vận chuyển": 749,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 315,
+        "Sàn Phủ thiếu vật tư": 38,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1286
+      },
+      "projectMonths": 3177,
+      "firstMonthProjects": 8,
+      "selectedRouteId": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-1-jun-1-xian-3"
+    },
+    {
+      "seed": 42,
+      "scenario": "drought-open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696595,
+          "publicCash": 30756.345681680472,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1768193,
+          "publicCash": 20422.54338399319,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1860854,
+          "publicCash": 17373.043892226768,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2011818,
+          "publicCash": 10925.099490505712,
+          "hunger": 45
+        }
+      ],
+      "population": 2011818,
+      "publicCash": 10925.099490505712,
+      "prefectureCash": 3229.5513001825593,
+      "publicGrain": 50443.542097670805,
+      "stability": 100,
+      "hunger": 45,
+      "earlyRevenue": 10448.941633827666,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 7,
+      "pausedProjectMonths": 2119,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 37,
+        "Chờ vật tư đang vận chuyển": 602,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 203,
+        "Sàn Phủ thiếu vật tư": 28,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1249
+      },
+      "projectMonths": 2715,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696574,
+          "publicCash": 30842.977760111215,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1766877,
+          "publicCash": 20293.71192969988,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1859403,
+          "publicCash": 23488.900796832844,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2059669,
+          "publicCash": 14578.508395652765,
+          "hunger": 0
+        }
+      ],
+      "population": 2059669,
+      "publicCash": 14578.508395652765,
+      "prefectureCash": 3276.547368016114,
+      "publicGrain": 54777.510355638355,
+      "stability": 100,
+      "hunger": 0,
+      "earlyRevenue": 10549.193352996752,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 5,
+      "pausedProjectMonths": 2153,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 51,
+        "Chờ vật tư đang vận chuyển": 821,
+        "Sàn Phủ thiếu vật tư": 52,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 160,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1069
+      },
+      "projectMonths": 2903,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "low-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1698163,
+          "publicCash": 25259.416806629353,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1775056,
+          "publicCash": 16466.474402422496,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1872758,
+          "publicCash": 13441.523254585773,
+          "hunger": 7
+        },
+        {
+          "month": 240,
+          "population": 2074177,
+          "publicCash": 8770.03087051003,
+          "hunger": 32
+        }
+      ],
+      "population": 2074177,
+      "publicCash": 8770.03087051003,
+      "prefectureCash": 4134.690197585853,
+      "publicGrain": 34787.51163074218,
+      "stability": 99.5341144241039,
+      "hunger": 32,
+      "earlyRevenue": 4733.234730264984,
+      "completedIrrigation": 0,
+      "upgradedRoutes": 10,
+      "pausedProjectMonths": 3048,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 41,
+        "Chờ vật tư đang vận chuyển": 615,
+        "Sàn Phủ thiếu vật tư": 50,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 2305,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 37
+      },
+      "projectMonths": 3620,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "high-tax",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1685678,
+          "publicCash": 41350.21694840596,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1711605,
+          "publicCash": 33722.176782011666,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1745095,
+          "publicCash": 28788.429342350224,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 1814463,
+          "publicCash": 25489.357839762277,
+          "hunger": 0
+        }
+      ],
+      "population": 1814463,
+      "publicCash": 25489.357839762277,
+      "prefectureCash": 4319.555840637529,
+      "publicGrain": 90233.87820455519,
+      "stability": 0,
+      "hunger": 0,
+      "earlyRevenue": 22503.919700888982,
+      "completedIrrigation": 6,
+      "upgradedRoutes": 20,
+      "pausedProjectMonths": 2348,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 69,
+        "Chờ vật tư đang vận chuyển": 1071,
+        "Sàn Phủ thiếu vật tư": 115,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 826,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 267
+      },
+      "projectMonths": 3719,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "sell-all",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696574,
+          "publicCash": 33976.29842132446,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1766877,
+          "publicCash": 22184.099621873265,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1859403,
+          "publicCash": 20297.02836534066,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2058701,
+          "publicCash": 19323.358148952404,
+          "hunger": 2
+        }
+      ],
+      "population": 2058701,
+      "publicCash": 19323.358148952404,
+      "prefectureCash": 6645.544611896666,
+      "publicGrain": 25622.373275196423,
+      "stability": 100,
+      "hunger": 2,
+      "earlyRevenue": 13871.613913087085,
+      "completedIrrigation": 4,
+      "upgradedRoutes": 6,
+      "pausedProjectMonths": 2087,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 48,
+        "Chờ vật tư đang vận chuyển": 797,
+        "Sàn Phủ thiếu vật tư": 56,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 247,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 939
+      },
+      "projectMonths": 2924,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "reserve-four",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696574,
+          "publicCash": 30842.977760111215,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1766877,
+          "publicCash": 19662.79820791963,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1859403,
+          "publicCash": 22177.510181006466,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2059669,
+          "publicCash": 15798.966850237437,
+          "hunger": 0
+        }
+      ],
+      "population": 2059669,
+      "publicCash": 15798.966850237437,
+      "prefectureCash": 4980.117303172595,
+      "publicGrain": 82051.06298296015,
+      "stability": 100,
+      "hunger": 0,
+      "earlyRevenue": 10549.193352996752,
+      "completedIrrigation": 6,
+      "upgradedRoutes": 6,
+      "pausedProjectMonths": 2340,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 47,
+        "Chờ vật tư đang vận chuyển": 797,
+        "Sàn Phủ thiếu vật tư": 58,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 159,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1279
+      },
+      "projectMonths": 3141,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "targeted-build",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696574,
+          "publicCash": 30205.26307945849,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1766877,
+          "publicCash": 20127.05203488108,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1859403,
+          "publicCash": 21730.462989352633,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2059669,
+          "publicCash": 13610.721195793414,
+          "hunger": 0
+        }
+      ],
+      "population": 2059669,
+      "publicCash": 13610.721195793414,
+      "prefectureCash": 3013.728818944656,
+      "publicGrain": 54756.871628501176,
+      "stability": 100,
+      "hunger": 0,
+      "earlyRevenue": 10658.064962023269,
+      "completedIrrigation": 7,
+      "upgradedRoutes": 6,
+      "pausedProjectMonths": 2188,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 48,
+        "Sàn Phủ thiếu vật tư": 55,
+        "Chờ vật tư đang vận chuyển": 781,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 150,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1154
+      },
+      "projectMonths": 2921,
+      "firstMonthProjects": 10,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "overbuild",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696574,
+          "publicCash": 26867.861457236057,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1766877,
+          "publicCash": 19202.606485020675,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1857260,
+          "publicCash": 28534.450095580247,
+          "hunger": 4
+        },
+        {
+          "month": 240,
+          "population": 2057305,
+          "publicCash": 15002.370711909,
+          "hunger": 4
+        }
+      ],
+      "population": 2057305,
+      "publicCash": 15002.370711909,
+      "prefectureCash": 3642.6364794088827,
+      "publicGrain": 51844.864348366,
+      "stability": 100,
+      "hunger": 4,
+      "earlyRevenue": 11018.411694648996,
+      "completedIrrigation": 21,
+      "upgradedRoutes": 3,
+      "pausedProjectMonths": 2929,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 54,
+        "Sàn Phủ thiếu vật tư": 72,
+        "Chờ vật tư đang vận chuyển": 911,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 283,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1609
+      },
+      "projectMonths": 3735,
+      "firstMonthProjects": 27,
+      "selectedRouteId": null
+    },
+    {
+      "seed": 1701,
+      "scenario": "route-upgrade",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696574,
+          "publicCash": 30676.164482998836,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1766877,
+          "publicCash": 20295.959142465683,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1859403,
+          "publicCash": 23489.705658777602,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2059669,
+          "publicCash": 14581.071524283652,
+          "hunger": 0
+        }
+      ],
+      "population": 2059669,
+      "publicCash": 14581.071524283652,
+      "prefectureCash": 3276.550219208474,
+      "publicGrain": 54777.367009630405,
+      "stability": 100,
+      "hunger": 0,
+      "earlyRevenue": 10563.509245606647,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 5,
+      "pausedProjectMonths": 2404,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 52,
+        "Chờ vật tư đang vận chuyển": 825,
+        "Sàn Phủ thiếu vật tư": 53,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 288,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1186
+      },
+      "projectMonths": 3155,
+      "firstMonthProjects": 8,
+      "selectedRouteId": "road:zhou-dong-giang-fu-1-jun-1-xian-2|zhou-dong-giang-fu-1-jun-1-xian-3"
+    },
+    {
+      "seed": 1701,
+      "scenario": "drought-open",
+      "checkpoints": [
+        {
+          "month": 12,
+          "population": 1696574,
+          "publicCash": 30842.977760111215,
+          "hunger": 0
+        },
+        {
+          "month": 60,
+          "population": 1766877,
+          "publicCash": 20293.71192969988,
+          "hunger": 0
+        },
+        {
+          "month": 120,
+          "population": 1859403,
+          "publicCash": 23488.900796832844,
+          "hunger": 0
+        },
+        {
+          "month": 240,
+          "population": 2009613,
+          "publicCash": 15148.380493836099,
+          "hunger": 45
+        }
+      ],
+      "population": 2009613,
+      "publicCash": 15148.380493836099,
+      "prefectureCash": 3783.7261251419122,
+      "publicGrain": 52303.98054110124,
+      "stability": 100,
+      "hunger": 45,
+      "earlyRevenue": 10549.193352996752,
+      "completedIrrigation": 5,
+      "upgradedRoutes": 7,
+      "pausedProjectMonths": 2233,
+      "pausedReasons": {
+        "Thiếu vật tư tại công trường": 53,
+        "Chờ vật tư đang vận chuyển": 848,
+        "Sàn Phủ thiếu vật tư": 72,
+        "Tuyến vận tải thiếu công suất hoặc bị cắt": 200,
+        "Ngân khố Phủ không đủ theo giá hiện tại": 1060
+      },
+      "projectMonths": 3043,
+      "firstMonthProjects": 7,
+      "selectedRouteId": null
+    }
+  ]
+}

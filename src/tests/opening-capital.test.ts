@@ -4,9 +4,9 @@ import {advanceMonth} from '../engine/month';
 import {exportSave,importSave} from '../persistence/saves';
 it('preserves baseline purchasing power and loaded assets',()=>{
  let s=createNewGame();
- expect(s.country.treasury).toBe(6000);
+ expect(s.country.treasury).toBe(19000);
  expect(s.country.grainReserve).toBe(6000);
- expect(Object.values(s.simulation!.prefectures).reduce((n,f)=>n+f.treasury,0)).toBeCloseTo(6000,8);
+ expect(Object.values(s.simulation!.prefectures).reduce((n,f)=>n+f.treasury,0)).toBeCloseTo(19000,8);
  s.country.treasury=6000;s.country.grainReserve=6000;
  expect(importSave(exportSave(s))).toEqual(s);
  s=createNewGame();

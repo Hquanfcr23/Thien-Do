@@ -15,7 +15,9 @@
     "test:real-gis": "node scripts/real-gis.e2e.mjs",
     "test:economy-ui": "node scripts/economy.e2e.mjs",
     "test:balance-ui": "node scripts/balance.e2e.mjs",
-    "test:full-qa-ui": "node scripts/full-qa.e2e.mjs"
+    "test:full-qa-ui": "node scripts/full-qa.e2e.mjs",
+    "test:prefecture-transport-ui": "node scripts/prefecture-transport.e2e.mjs",
+    "test:phase4-ui": "node scripts/phase4.e2e.mjs"
   },
   "dependencies": {
     "@fontsource/noto-sans": "^5.3.0",

@@ -1,3 +1,4 @@
+import {hubPath} from './prefectureTransport';
 import {routeBonus,routeBonuses} from '../data/economicConfig';
 import { liquidateTax } from './market';
 import type { Route,Good } from '../domain/economy';
@@ -12,9 +13,7 @@ export function routeMetrics(s:EconomicState,r:Route){
  return{capacity:r.blocked?0:r.capacity*seasonal*(.4+r.quality*.6)*(1+.4*improvement+.15*depot+.15*bridge)*(1+routeBonus(r,routeBonuses.capacity)),months:Math.max(1,Math.ceil(r.km/((r.mode==='river'?180:90)*seasonal*(.5+r.quality/2)*(1+.3*improvement+.2*relay+.1*bridge)*(1+routeBonus(r,routeBonuses.speed))))),cost:r.km*(r.mode==='river'?.0005:.0012)/(1+.25*improvement)*(1-routeBonus(r,routeBonuses.discount)),loss:bound((.02*(1-r.quality)+.005/(1+depot+ea('fort')+eb('fort')))*bound(r.km/100,.5,3)*(terrainOf(s,r.from)==='mountains'||terrainOf(s,r.to)==='mountains'?1.4:1),0,.3)*(1-routeBonus(r,routeBonuses.discount))};
 }
 export function findPath(s:EconomicState,from:string,to:string):Route[]{
- if(from===to)return[];const distance=new Map([[from,0]]),prev=new Map<string,Route>(),open=new Set(Object.keys(s.simulation.counties));
- while(open.size){let at:string|undefined,best=Infinity;for(const id of open){const d=distance.get(id)??Infinity;if(d<best){best=d;at=id;}}if(!at)break;if(at===to)break;open.delete(at);for(const r of s.simulation.routes){if(r.blocked||r.from!==at&&r.to!==at)continue;const next=r.from===at?r.to:r.from;if(!open.has(next))continue;const n=best+routeMetrics(s,r).months;if(n<(distance.get(next)??Infinity)){distance.set(next,n);prev.set(next,r);}}}
- const path:Route[]=[];let at=to;while(at!==from){const r=prev.get(at);if(!r)return[];path.unshift(r);at=r.from===at?r.to:r.from;}return path;
+ return hubPath({s,units:new Map(s.administrativeUnits.map(u=>[u.id,u]))},from,to);
 }
 export function dispatch(ctx:MonthContext,from:string,to:string,good:Good,amount:number,path:Route[]){
  if(!path.length||amount<=0)return false;const u=ctx.units.get(from)!;if(stock(u,good)+1e-8<amount)return false;

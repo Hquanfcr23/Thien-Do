@@ -1,0 +1,13 @@
+{
+  "counties": 100,
+  "prefectures": 10,
+  "routes": 294,
+  "months": 240,
+  "shipments": 480,
+  "elapsedMs": 3957.7563,
+  "msPerMonth": 16.49065125,
+  "baselineMsPerMonth": 10.85577625,
+  "speedup": 0.6582988194599046,
+  "maximumError": 4.0745362639427185e-10,
+  "fixture": "Same saved synthetic graph and endowments used by county-market baseline; GIS unchanged in game"
+}

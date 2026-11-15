@@ -5,6 +5,16 @@ import { advanceMonth, queueOrder } from '../engine/month';
 import { decodeSave, exportSave, importSave } from '../persistence/saves';
 
 describe('24 decision turns, 12 economic months', () => {
+  it('rejects a conflicting appointment once rather than executing it on a later turn', () => {
+    const initial=createNewGame(), offices=initial.court!.centralOffices!, person=offices[0]!.holderId!;
+    const queued=queueOrder(queueOrder(initial,{kind:'central-appoint',seat:offices[1]!.seat,characterId:person}),{kind:'central-appoint',seat:offices[2]!.seat,characterId:person});
+    const next=advanceDecisionTurn(queued);
+    expect(next.simulation!.orders.filter(o=>o.kind==='central-appoint')).toHaveLength(0);
+    expect(next.court!.centralOffices!.find(o=>o.seat===offices[1]!.seat)!.holderId).toBe(person);
+    expect(next.history.at(-1)?.message).toContain('bị từ chối');
+    const later=advanceDecisionTurn(next);
+    expect(later.court!.centralOffices!.find(o=>o.seat===offices[1]!.seat)!.holderId).toBe(person);
+  });
   it('keeps orders, resources and reports unchanged in the first half', () => {
     const initial = createNewGame();
     const zhouId = initial.administrativeUnits.find(u => u.levelId === 'zhou')!.id;

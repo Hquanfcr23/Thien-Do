@@ -1,3 +1,4 @@
+import { courtOrderSchemas } from './court';
 import { z } from 'zod';
 const amount=z.number().finite().nonnegative(),ratio=z.number().finite().min(0).max(1);
 export const goods=['grain','wood','stone','ore','iron','tools','fiber','cloth','equipment'] as const;
@@ -17,6 +18,8 @@ export const emptyCentralAccounts=()=>({silverIn:0,silverOut:0,grainIn:0,grainOu
 export const defaultCentral=()=>({policy:{cashRemitRate:.1,grainRemitRate:.1,aidSilverLimit:100,aidGrainLimit:0,cashFloor:1000,grainFloor:1000},accounts:emptyCentralAccounts(),grainYears:{} as Record<string,number>});
 export const centralSchema=z.object({policy:centralPolicySchema,accounts:z.object({silverIn:amount,silverOut:amount,grainIn:amount,grainOut:amount,grainLoss:amount,storageCost:amount,remitDue:amount,remitUnpaid:amount}).strict(),grainYears:z.record(z.string(),z.number().int().positive())}).strict();
 export const orderSchema=z.discriminatedUnion('kind',[
+ ...courtOrderSchemas,
+ z.object({kind:z.literal('prefecture-policy'),prefectureId:z.string(),policy:policySchema.nullable()}).strict(),
  z.object({kind:z.literal('central-policy'),policy:centralPolicySchema}).strict(),
  z.object({kind:z.literal('fiscal'),prefectureId:z.string(),policy:fiscalPolicySchema}).strict(),
  z.object({kind:z.literal('withdraw-grain'),prefectureId:z.string(),amount:amount.positive()}).strict(),
@@ -46,7 +49,7 @@ export const routeSchema=z.object({id:z.string(),from:z.string(),to:z.string(),m
 export const prefectureEconomySchema=z.object({fiscalPolicy:fiscalPolicySchema,accounts:accountsSchema,serviceLevel:ratio,seatCountyId:z.string(),treasury:amount,grainReserve:amount,market:z.object({inventory:stockSchema,publicListings:stockSchema,prices:stockSchema,demand:stockSchema,merchantMoney:amount}).strict(),buildings:installedBuildingsSchema,projects:z.array(projectSchema)}).strict();
 export const shipmentSchema=z.object({id:z.number().int().nonnegative(),from:z.string(),to:z.string(),good:z.enum(goods),amount:amount,purpose:z.enum(['private','tax','market','construction','reserve','relief']),prefectureId:z.string().nullable(),projectTargetId:z.string().nullable(),building:buildingKindSchema.nullable(),path:z.array(z.string()).min(1),leg:z.number().int().nonnegative(),remaining:amount,entered:z.boolean()}).strict();
 export const economicReportSchema=z.object({year:z.number().int(),month:z.number().int(),produced:stockSchema,used:stockSchema,destroyed:stockSchema,goodsError:stockSchema,population:amount,births:amount,deaths:amount,migration:amount,harvest:amount,consumed:amount,loss:amount,tax:amount,spending:amount,treasury:amount,grain:amount,shortageCount:amount,moneyError:z.number().finite(),grainError:z.number().finite(),notes:z.array(z.string())}).strict();
-export const simulationSchema=z.object({buildingRules:z.literal('core-v1').optional(),central:centralSchema.optional(),revision:z.literal(3),rng:z.number().int().nonnegative().max(4294967295),tick:z.number().int().nonnegative(),nextId:z.number().int().nonnegative(),policy:policySchema,zhouPolicies:z.record(z.string(),policySchema),prefectures:z.record(z.string(),prefectureEconomySchema),counties:z.record(z.string(),countyEconomySchema),routes:z.array(routeSchema),shipments:z.array(shipmentSchema),orders:z.array(orderSchema).max(1000),reports:z.array(economicReportSchema).max(240),annual:z.array(economicReportSchema).max(100),weatherMode:z.enum(['normal','drought']),lastMessages:z.array(z.string())}).strict();
+export const simulationSchema=z.object({buildingRules:z.literal('core-v1').optional(),central:centralSchema.optional(),revision:z.literal(3),rng:z.number().int().nonnegative().max(4294967295),tick:z.number().int().nonnegative(),nextId:z.number().int().nonnegative(),policy:policySchema,zhouPolicies:z.record(z.string(),policySchema),prefecturePolicies:z.record(z.string(),policySchema).default({}),prefectures:z.record(z.string(),prefectureEconomySchema),counties:z.record(z.string(),countyEconomySchema),routes:z.array(routeSchema),shipments:z.array(shipmentSchema),orders:z.array(orderSchema).max(1000),reports:z.array(economicReportSchema).max(240),annual:z.array(economicReportSchema).max(100),weatherMode:z.enum(['normal','drought']),lastMessages:z.array(z.string())}).strict();
 export type Simulation=z.infer<typeof simulationSchema>;
 export type CountyEconomy=z.infer<typeof countyEconomySchema>;
 export type Route=z.infer<typeof routeSchema>;

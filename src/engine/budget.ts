@@ -1,10 +1,11 @@
-import {tierBonus} from '../data/economicConfig';
+import {hubPath} from './prefectureTransport';
+import {administrationCostPerHousehold,tierBonus} from '../data/economicConfig';
 import {targetUpkeep,routeUpkeep} from './buildingRules';
 import type {Order} from '../domain/economy';
 import {capitalCounty,effect,type MonthContext} from './economyContext';
-import {findPath,routeMetrics} from './transport';
+import {routeMetrics} from './transport';
 export function reserveTarget(ctx:Pick<MonthContext,'s'|'units'>,id:string){const f=ctx.s.simulation.prefectures[id]!;return ctx.s.administrativeUnits.filter(u=>u.parentId===id).reduce((n,u)=>n+u.population*.025,0)*f.fiscalPolicy.reserveMonths;}
-export function operatingCost(ctx:Pick<MonthContext,'s'|'units'|'operating'>,id:string){ctx.operating??=new Map();const old=ctx.operating.get(id);if(old!==undefined)return old;const f=ctx.s.simulation.prefectures[id]!;let due=targetUpkeep(f);for(const u of ctx.s.administrativeUnits.filter(u=>u.parentId===id)){const c=ctx.s.simulation.counties[u.id]!;due+=c.households*.004*f.fiscalPolicy.administrationShare+targetUpkeep(c);}due+=ctx.s.simulation.routes.filter(r=>r.upgrade?.ownerId===id).reduce((n,r)=>n+routeUpkeep(r),0);ctx.operating.set(id,due);return due;}
+export function operatingCost(ctx:Pick<MonthContext,'s'|'units'|'operating'>,id:string){ctx.operating??=new Map();const old=ctx.operating.get(id);if(old!==undefined)return old;const f=ctx.s.simulation.prefectures[id]!;let due=targetUpkeep(f);for(const u of ctx.s.administrativeUnits.filter(u=>u.parentId===id)){const c=ctx.s.simulation.counties[u.id]!;due+=c.households*administrationCostPerHousehold*f.fiscalPolicy.administrationShare+targetUpkeep(c);}due+=ctx.s.simulation.routes.filter(r=>r.upgrade?.ownerId===id).reduce((n,r)=>n+routeUpkeep(r),0);ctx.operating.set(id,due);return due;}
 export function cashFloor(ctx:Pick<MonthContext,'s'|'units'|'operating'>,id:string){return operatingCost(ctx,id)*ctx.s.simulation.prefectures[id]!.fiscalPolicy.cashBufferMonths;}
 export function spendable(ctx:Pick<MonthContext,'s'|'units'|'operating'>,id:string){return Math.max(0,ctx.s.simulation.prefectures[id]!.treasury-cashFloor(ctx,id));}
 export function offerGrain(ctx:MonthContext,id:string,requested:number){const f=ctx.s.simulation.prefectures[id];if(!f)throw Error('Phủ không tồn tại');const available=Math.max(0,f.grainReserve-reserveTarget(ctx,id)),amount=Math.min(requested,available);f.grainReserve-=amount;f.market.publicListings.grain+=amount;return amount;}
@@ -23,7 +24,7 @@ export function applyFiscalOrder(ctx:MonthContext,order:Order){const sim=ctx.s.s
  }
  if(order.kind==='reserve-transfer'){
   if(order.from===order.to)throw Error('Nguồn và đích trùng nhau');const source=order.from==='central'?ctx.s.country:sim.prefectures[order.from],to=order.to==='central'?ctx.s.country:sim.prefectures[order.to];if(!source||!to)throw Error('Đơn vị không tồn tại');const from=order.from==='central'?capitalCounty(ctx.s):sim.prefectures[order.from]!.seatCountyId,dest=order.to==='central'?capitalCounty(ctx.s):sim.prefectures[order.to]!.seatCountyId;
-  const available=order.from==='central'?ctx.s.country.grainReserve:sim.prefectures[order.from]!.grainReserve-reserveTarget(ctx,order.from),path=from===dest?[]:findPath(ctx.s,from,dest),cost=path.reduce((n,r)=>n+routeMetrics(ctx.s,r).cost*order.amount,0);
+  const available=order.from==='central'?ctx.s.country.grainReserve:sim.prefectures[order.from]!.grainReserve-reserveTarget(ctx,order.from),path=from===dest?[]:hubPath(ctx,from,dest),cost=path.reduce((n,r)=>n+routeMetrics(ctx.s,r).cost*order.amount,0);
   if(available+1e-8<order.amount||source.treasury<cost||from!==dest&&!path.length||path.some(r=>routeMetrics(ctx.s,r).capacity<order.amount))throw Error('Thiếu lương vượt mức dự trữ, bạc cước hoặc tuyến/công suất');
   if(order.from==='central')ctx.s.country.grainReserve-=order.amount;else sim.prefectures[order.from]!.grainReserve-=order.amount;source.treasury-=cost;sim.counties[from]!.privateMoney+=cost;ctx.report.spending+=cost;
   if(from===dest){if(order.to==='central')ctx.s.country.grainReserve+=order.amount;else sim.prefectures[order.to]!.grainReserve+=order.amount;}

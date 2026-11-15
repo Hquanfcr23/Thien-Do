@@ -27,5 +27,5 @@ it('records 12/60/120/240 month scenario outcomes for three seeds',()=>{
  const normal=results.find(r=>r.seed===42&&r.months===120&&r.scenario==='normal')!.after;
  const drought=results.find(r=>r.seed===42&&r.months===120&&r.scenario==='drought')!.after;
  expect(drought.population).toBeLessThan(normal.population);
- fs.writeFileSync('docs/PHASE_3_SCENARIOS.json',JSON.stringify({configuration:'Fictional gameplay calibration, not historical estimates',results},null,2)+'\n');
+ fs.writeFileSync('docs/PHASE_4_SCENARIOS.json',JSON.stringify({configuration:'Fictional gameplay calibration, not historical estimates',results},null,2)+'\n');
 },300000);

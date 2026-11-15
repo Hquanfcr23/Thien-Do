@@ -1,0 +1,68 @@
+{
+  "months": 240,
+  "results": [
+    {
+      "rate": 0.2,
+      "seed": 1,
+      "population": 2017047,
+      "publicCash": 33237.654769712724,
+      "shortages": 0
+    },
+    {
+      "rate": 0.2,
+      "seed": 42,
+      "population": 2017817,
+      "publicCash": 39477.4580149268,
+      "shortages": 0
+    },
+    {
+      "rate": 0.2,
+      "seed": 1701,
+      "population": 2016660,
+      "publicCash": 33601.889865683705,
+      "shortages": 0
+    },
+    {
+      "rate": 0.3,
+      "seed": 1,
+      "population": 1964509,
+      "publicCash": 56782.21841541238,
+      "shortages": 0
+    },
+    {
+      "rate": 0.3,
+      "seed": 42,
+      "population": 1965253,
+      "publicCash": 60438.84626590593,
+      "shortages": 0
+    },
+    {
+      "rate": 0.3,
+      "seed": 1701,
+      "population": 1964133,
+      "publicCash": 48832.896957142606,
+      "shortages": 0
+    },
+    {
+      "rate": 0.4,
+      "seed": 1,
+      "population": 1913314,
+      "publicCash": 31836.640598402286,
+      "shortages": 0
+    },
+    {
+      "rate": 0.4,
+      "seed": 42,
+      "population": 1914030,
+      "publicCash": 30799.975363839367,
+      "shortages": 0
+    },
+    {
+      "rate": 0.4,
+      "seed": 1701,
+      "population": 1912947,
+      "publicCash": 35055.73581973625,
+      "shortages": 0
+    }
+  ]
+}

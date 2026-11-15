@@ -1,5 +1,7 @@
 import type { BuildingKind,Good,Stock,CountyEconomy,Route } from '../domain/economy';
 export const goodsConfig:Record<Good,{name:string;unit:string;price:number}>={grain:{name:'Lương thực',unit:'thạch lương',price:1},wood:{name:'Gỗ',unit:'đơn vị',price:2},stone:{name:'Đá',unit:'đơn vị',price:1.5},ore:{name:'Quặng sắt',unit:'đơn vị',price:3},iron:{name:'Sắt',unit:'đơn vị',price:6},tools:{name:'Công cụ',unit:'bộ',price:12},fiber:{name:'Sợi gai',unit:'bó',price:2},cloth:{name:'Vải',unit:'cuộn',price:4},equipment:{name:'Quân trang',unit:'bộ',price:20}};
+// Shared monthly administrative cost per household, used by both budgeting and settlement.
+export const administrationCostPerHousehold=.0025;
 export const crops={millet:{name:'Kê xuân',sow:4,harvest:9,months:[4,5,6,7,8,9],yield:9},wheat:{name:'Lúa mì đông',sow:10,harvest:6,months:[10,11,12,1,2,3,4,5,6],yield:10}} as const;
 export interface BuildingDefinition {name:string;money:number;materials:Partial<Stock>;work:number;maintenance:number;effect:string;details:string[]}
 const effectDetails:Record<BuildingKind,string[]>={

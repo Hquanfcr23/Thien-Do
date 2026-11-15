@@ -1,3 +1,4 @@
+import {prefectureCorridors} from '../engine/prefectureTransport';
 import {describe,it,expect} from 'vitest';
 import {createNewGame} from '../data/foundation';
 import {emptyStock,goods,type Report} from '../domain/economy';
@@ -26,10 +27,16 @@ describe('physical public taxation and building purchases',()=>{
  it('stalls when the Phủ exchange lacks materials, then progresses after real supply returns',()=>{const ctx=context(),f=Object.values(ctx.s.simulation.prefectures)[0]!,id=f.seatCountyId,u=ctx.units.get(id)!;f.treasury=10000;for(const g of goods)f.market.inventory[g]=0;startBuilding(ctx,id,'irrigation');allocateLabour(ctx);construction(ctx);const project=ctx.s.simulation.counties[id]!.projects[0]!;expect(project.work).toBe(0);expect(project.pausedReason).toMatch(/thiếu vật tư/);for(const g of ['wood','stone','tools'] as const){const n=Math.min(u.resources[g]??0,100);u.resources[g]=(u.resources[g]??0)-n;f.market.inventory[g]+=n;}const money=moneyTotal(ctx.s);construction(ctx);expect(project.work).toBeGreaterThan(0);expect(moneyTotal(ctx.s)).toBeCloseTo(money,6);});
  it('stalls when the treasury cannot pay current exchange prices',()=>{const ctx=context(),f=Object.values(ctx.s.simulation.prefectures)[0]!,id=f.seatCountyId;startBuilding(ctx,id,'irrigation');allocateLabour(ctx);f.treasury=0;for(const g of goods)f.market.inventory[g]=1000;construction(ctx);expect(ctx.s.simulation.counties[id]!.projects[0]!.work).toBe(0);expect(ctx.s.simulation.counties[id]!.projects[0]!.pausedReason).toMatch(/Ngân khố/);});
  it('sends paid construction materials over real routes and does not build remote sites instantly',()=>{const ctx=context(),id=Object.keys(ctx.s.simulation.counties).find(id=>marketAccess(ctx,id).path.length)!,f=ctx.s.simulation.prefectures[ctx.units.get(id)!.parentId!]!;f.treasury=10000;for(const g of goods)f.market.inventory[g]=1000;startBuilding(ctx,id,'irrigation');allocateLabour(ctx);const before=goodsTotal(ctx.s,'wood'),cash=moneyTotal(ctx.s);construction(ctx);expect(ctx.s.simulation.counties[id]!.projects[0]!.work).toBe(0);expect(ctx.s.simulation.shipments.some(x=>x.purpose==='construction'&&x.to===id)).toBe(true);expect(goodsTotal(ctx.s,'wood')).toBeCloseTo(before,6);expect(moneyTotal(ctx.s)).toBeCloseTo(cash,6);});
- it('trades directly across a real GIS border between different Phủ with one direction per pair/good',()=>{const ctx=context(),sim=ctx.s.simulation;const edge=sim.routes.find(r=>ctx.units.get(r.from)!.parentId!==ctx.units.get(r.to)!.parentId)!;const a=edge.from,b=edge.to,fa=sim.prefectures[ctx.units.get(a)!.parentId!]!,fb=sim.prefectures[ctx.units.get(b)!.parentId!]!;
-  for(const [id,c]of Object.entries(sim.counties)){c.privateMoney=100000;const u=ctx.units.get(id)!;for(const g of goods)u.resources[g]=g==='wood'?0:100000;}
+ it('trades between Phủ exchanges rather than border households, with real money and cargo',()=>{
+  const ctx=context(),sim=ctx.s.simulation,link=prefectureCorridors(ctx)[0]!,fa=sim.prefectures[link.from]!,fb=sim.prefectures[link.to]!;
+  for(const [id,c]of Object.entries(sim.counties)){c.privateMoney=100000;const u=ctx.units.get(id)!;for(const g of goods)u.resources[g]=100000;u.resources.wood=ctx.units.get(id)!.parentId===link.to?0:100000;}
+  sim.policy.tradeOpen=false;for(const id of [link.from,link.to])sim.prefecturePolicies[id]={...sim.policy,tradeOpen:true};
   for(const f of Object.values(sim.prefectures)){f.market.inventory.wood=0;f.market.prices.wood=6;}
-  fa.market.inventory.wood=100;fa.market.prices.wood=.4;fb.market.prices.wood=12;ctx.units.get(a)!.resources.wood=1000;
-  allocateLabour(ctx);market(ctx);const trades=sim.shipments.filter(x=>x.purpose==='private'&&x.from===a&&x.to===b&&x.good==='wood');expect(trades).toHaveLength(1);expect(trades[0]!.path).toHaveLength(1);expect(sim.shipments.some(x=>x.purpose==='private'&&x.from===b&&x.to===a&&x.good==='wood')).toBe(false);
+  fa.market.inventory.wood=10000;fa.market.prices.wood=.01;fb.market.prices.wood=100;fa.market.merchantMoney=100000;fb.market.merchantMoney=100000;
+  allocateLabour(ctx);const before=moneyTotal(ctx.s),wood=goodsTotal(ctx.s,'wood');market(ctx);
+  const trades=sim.shipments.filter(x=>x.purpose==='market'&&x.from===fa.seatCountyId&&x.to===fb.seatCountyId&&x.good==='wood');expect(trades).toHaveLength(1);
+  expect(trades[0]!.path).toEqual(link.path.map(r=>r.id));const inventoryBeforeArrival=fb.market.inventory.wood;expect(inventoryBeforeArrival).toBe(0);expect(moneyTotal(ctx.s)).toBeCloseTo(before,6);expect(goodsTotal(ctx.s,'wood')).toBeCloseTo(wood,6);
+  expect(sim.shipments.filter(x=>ctx.units.get(x.from)!.parentId!==ctx.units.get(x.to)!.parentId).every(x=>x.purpose==='market'&&x.prefectureId===link.to)).toBe(true);
+  expect(gameStateSchema.safeParse(ctx.s).success).toBe(true);market(ctx);expect(sim.shipments.filter(x=>x.purpose==='market'&&x.from===fa.seatCountyId&&x.to===fb.seatCountyId&&x.good==='wood')).toHaveLength(1);
  });
 });

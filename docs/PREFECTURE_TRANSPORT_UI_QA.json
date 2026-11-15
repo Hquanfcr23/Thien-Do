@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "viewports": [
+    "1600x1000",
+    "1280x800"
+  ],
+  "checks": [
+    "hub corridors",
+    "close and reopen gate",
+    "local feeder details",
+    "county relief",
+    "save/reload",
+    "export/import",
+    "no horizontal overflow",
+    "no page errors"
+  ],
+  "errors": []
+}

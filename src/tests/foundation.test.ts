@@ -21,7 +21,7 @@ describe('calendar primitives', () => {
 describe('domain invariants', () => {
   it('creates independent, deterministic fictional states', () => {
     const a = createNewGame(); const b = createNewGame(); expect(a).toEqual(b);
-    a.country.treasury = 0; expect(b.country.treasury).toBe(6000);
+    a.country.treasury = 0; expect(b.country.treasury).toBe(19000);
     expect(b.characters[0]?.provenance.kind).toBe('Fictional');
   });
   it('rejects broken dynasty references and duplicated entity IDs', () => {
@@ -33,7 +33,7 @@ describe('domain invariants', () => {
     a.administrativeUnits[0]!.parentId = null; a.administrativeUnits[0]!.population = 2; expect(gameStateSchema.safeParse(a).success).toBe(false);
   });
   it('supports another profile and aggregates only leaf populations', () => {
-    const a = createNewGame(); delete a.simulation; a.administrativeUnits = [a.administrativeUnits[0]!]; a.geography = { cities: [], roads: [] }; a.administrativeProfile.levels = [{ id: 'central', name: 'Triều đình', officeTitle: 'Đế' }, { id: 'district', name: 'Huyện', officeTitle: 'Lệnh' }];
+    const a = createNewGame(); delete a.simulation; delete a.court; a.administrativeUnits = [a.administrativeUnits[0]!]; a.geography = { cities: [], roads: [] }; a.administrativeProfile.levels = [{ id: 'central', name: 'Triều đình', officeTitle: 'Đế' }, { id: 'district', name: 'Huyện', officeTitle: 'Lệnh' }];
     a.administrativeUnits.push({ ...a.administrativeUnits[0]!, id: 'leaf', parentId: 'capital', levelId: 'district', locationId: 'leaf-location', population: 120, bounds: {x:0,y:0,w:1,h:1} });
     expect(gameStateSchema.safeParse(a).success).toBe(true); expect(totalPopulation(a)).toBe(120); expect(childrenOf(a, 'capital')).toHaveLength(1);
   });
@@ -58,7 +58,7 @@ describe('save boundary and IndexedDB', () => {
   });
   it('invalid write preserves previous save', async () => {
     const a = createNewGame(); await writeSave('manual-1', a); a.country.treasury = -1;
-    await expect(writeSave('manual-1', a)).rejects.toThrow(); expect((await readSave('manual-1'))?.state.country.treasury).toBe(6000);
+    await expect(writeSave('manual-1', a)).rejects.toThrow(); expect((await readSave('manual-1'))?.state.country.treasury).toBe(19000);
   });
 });
 

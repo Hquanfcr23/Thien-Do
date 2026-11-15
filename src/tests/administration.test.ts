@@ -48,9 +48,9 @@ describe('Phase 2 administration',()=>{
   const snapshot=useGameStore.getState().game!;expect(importSave(exportSave(snapshot))).toEqual(snapshot);await writeSave('manual-3',snapshot);expect((await readSave('manual-3'))?.state).toEqual(snapshot);
  });
  it('descendants include a selected unit but never siblings',()=>{const s=createNewGame(),province=s.administrativeUnits.find(u=>u.levelId==='zhou')!;expect(descendants(s,province.id).every(u=>u.id.startsWith(province.id))).toBe(true);});
- it('migrates v1 without mutating or replacing old state values',()=>{
+ it('migrates v1 without mutating old state, retaining character attributes while refreshing names',()=>{
   const state=createLegacyGame(77);state.country.treasury=12345;const old={schemaVersion:1,campaignVersion:'0.1.0',timestamp:'2026-11-12T00:00:00Z',state};const before=JSON.stringify(old),save=decodeSave(old);
-  expect(save.schemaVersion).toBe(6);expect(save.state.country).toEqual(state.country);expect(save.state.characters).toEqual(state.characters);expect(save.state.administrativeUnits).toHaveLength(1);expect(save.state.currency).toBe('silver-tael');expect(JSON.stringify(old)).toBe(before);
+  expect(save.schemaVersion).toBe(9);expect(save.state.country).toEqual(state.country);for(const character of state.characters){const migrated=save.state.characters.find(c=>c.id===character.id);expect(migrated).toEqual({...character,name:migrated!.name});expect(migrated!.name).toBeTruthy();}expect(save.state.administrativeUnits).toHaveLength(1);expect(save.state.currency).toBe('silver-tael');expect(JSON.stringify(old)).toBe(before);
  });
  it('uses silver taels and the fixed coin ratio',()=>{expect(toCoins(1)).toBe(1000);expect(toCoins(1.234)).toBe(1234);expect(formatSilver(12000)).toContain('lượng bạc');expect(()=>toCoins(NaN)).toThrow();});
 });

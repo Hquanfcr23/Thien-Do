@@ -1,4 +1,6 @@
 import {quoteBuilding,routeUpkeep} from './buildingRules';
+import { constructionPriorities } from './policies';
+import {centralScore} from './centralCourt';
 import {spendable} from './budget';
 import { buildings,upgradeScale,projectDefinition,buildingUpkeep } from '../data/economicConfig';
 import { emptyStock,goods,type BuildingKind } from '../domain/economy';
@@ -20,15 +22,21 @@ export function startBuilding(ctx:MonthContext,id:string,kind:BuildingKind,route
 export function construction(ctx:MonthContext){
  const targets=[...Object.entries(ctx.s.simulation.counties),...Object.entries(ctx.s.simulation.prefectures)];
  for(const [id,c]of targets){const f=prefectureOf(ctx,id),seat=ctx.s.simulation.prefectures[id]?.seatCountyId??id;
-  const projectsAtSeat=ctx.s.simulation.counties[seat]!.projects.length+(ctx.s.simulation.prefectures[id]?.projects.length??0);
+  const priorities=constructionPriorities(ctx.s,prefectureId(ctx,id));
+  const projectsAtSeat=ctx.s.simulation.counties[seat]!.projects.filter(p=>priorities[p.building]!=='forbid').length+(ctx.s.simulation.prefectures[id]?.projects.filter(p=>priorities[p.building]!=='forbid').length??0);
   const available=ctx.labour.get(seat)!.construction/Math.max(1,projectsAtSeat);
-  for(const p of c.projects){const def=projectDefinition(p),requestedWork=Math.min(p.required-p.work,available),fraction=requestedWork/p.required;
-   p.pausedReason=null;if(requestedWork<=0){p.pausedReason='Thiếu lao động';continue;}
-   if(p.legacyFunded){p.work+=requestedWork;continue;}
+  for(const p of c.projects){if(priorities[p.building]==='forbid'){p.pausedReason='Đình chỉ theo chính sách cấm; giữ tiến độ và vật tư';continue;}const def=projectDefinition(p),works=ctx.s.court?.centralOffices?.find(o=>o.seat==='works'),fuId=prefectureId(ctx,id),active=works?.holderId&&works.lastAction!==null&&works.lastAction!==undefined&&ctx.s.simulation.tick-works.lastAction<3&&works.lastBuilding===p.building&&(works.lastTarget===fuId||works.lastTarget===ctx.units.get(fuId)?.parentId),efficiency=active?1+.12*centralScore(ctx.s,'works')/100:1,workCapacity=Math.min(p.required-p.work,available*efficiency);
+   p.pausedReason=null;if(workCapacity<=0){p.pausedReason='Thiếu lao động';continue;}
+   if(p.legacyFunded){p.work+=workCapacity;continue;}
    const path=seat===f.seatCountyId?[]:[...marketAccess(ctx,seat).path].reverse(),metrics=path.map(r=>metricsFor(ctx,r));
    const pending=ctx.s.simulation.shipments.filter(x=>x.purpose==='construction'&&x.projectTargetId===id&&x.building===p.building);
+   const shippingCost=metrics.reduce((n,m)=>n+m.cost,0),costPerWork=(def.money+goods.reduce((n,g)=>n+(def.materials[g]??0)*(f.market.prices[g]+shippingCost),0))/p.required;
+   // Buy and pay only the work the Phủ can actually fund this month. The normal
+   // two-month cash floor remains protected; no debt or materials are invented.
+   const requestedWork=Math.min(workCapacity,spendable(ctx,fuId)/Math.max(.001,costPerWork)*.999),fraction=requestedWork/p.required;
+   if(requestedWork<=1e-8){p.pausedReason='Ngân khố Phủ không đủ theo giá hiện tại';continue;}
    const missing=emptyStock();for(const g of goods)missing[g]=Math.max(0,(def.materials[g]??0)*fraction-p.materials[g]-pending.filter(x=>x.good===g).reduce((n,x)=>n+x.amount,0));
-   const shippingCost=metrics.reduce((n,m)=>n+m.cost,0),purchase=goods.reduce((n,g)=>n+missing[g]*(f.market.prices[g]+shippingCost),0);
+   const purchase=goods.reduce((n,g)=>n+missing[g]*(f.market.prices[g]+shippingCost),0);
    const canShip=seat===f.seatCountyId||path.length>0&&path.every(r=>{const booked=ctx.s.simulation.shipments.filter(x=>!x.entered&&x.path[x.leg]===r.id).reduce((n,x)=>n+x.amount,0);return goods.reduce((n,g)=>n+missing[g],0)<=metricsFor(ctx,r).capacity-booked;});
    if(goods.some(g=>f.market.inventory[g]+1e-9<missing[g]))p.pausedReason='Sàn Phủ thiếu vật tư';
    else if(spendable(ctx,prefectureId(ctx,id))+1e-9<purchase)p.pausedReason='Ngân khố Phủ không đủ theo giá hiện tại';
